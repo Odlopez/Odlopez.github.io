@@ -25,7 +25,9 @@
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-    list-style-type: none;
+    padding-left: 21px;
+    padding-right: 21px;
+    list-style: none;
   }
   &__item {
     position: relative;
@@ -33,33 +35,24 @@
     margin-top: 10px;
     line-height: 22px;
     color: rgb(50, 50, 50);
-    &:nth-of-type(odd) {
-      padding-left: 20px;
-    }
-    &:nth-of-type(even) {
-      padding-right: 20px;
-    }
     &::before {
       content: "";
       position: absolute;
       top: 0;
+      left: 0;
       width: 49px;
       height: 49px;
     }
     &_ice-cream::before {
-      left: 20px;
       background: url("../img/images/ice-cream.svg") no-repeat 50% 50%;
     }
     &_farmers::before {
-      left: 0;
       background: url("../img/images/cow.svg") no-repeat 50% 50%;
     }
     &_eco::before {
-      left: 20px;
       background: url("../img/images/leaf.svg") no-repeat 50% 50%;
     }
     &_thermopack::before {
-      left: 0;
       background: url("../img/images/therm.svg") no-repeat 50% 50%;
     }
   }
