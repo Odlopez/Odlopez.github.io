@@ -4,16 +4,73 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style/style.css">
-  <script src="js/scripts.js" defer></script>
   <title>Document</title>
 </head>
 <body>
+  <!-- Бэкграунд -->
   <img class="b-ground" src="img/js-bg.jpg" alt="">
+  <!-- Кнопки для запуска скриптов -->
   <div class="lessons">
-    <button class="button button--lesson-1" onclick="greeting()">Урок 1</button>
-    <button class="button button--lesson-2" onclick="declareVariable()">Урок 2</button>
-    
-    <div class="window"></div>
+    <button class="button lesson-1" onclick="greeting()">Урок 1</button>
+    <button class="button lesson-2" onclick="declareVariable()">Урок 2</button>
+    <button class="button lesson-3" onclick="questionAboutJS()">Урок 3</button>
+    <button class="button lesson-4" onclick="loginVerification()">Урок 4</button>
+    <button class="button lesson-5" onclick="ternaryOperatorSimple()">Урок 5</button>
+    <button class="button lesson-6" onclick="ternaryOperatorComplex()">Урок 6</button>
+    <!-- Окно для вывода текста -->
+    <div class="window">
+      <!-- блок для вывода кода -->
+      <div class="window-code"></div>
+      <!-- Текст заданий -->
+      <p class="lesson-1">
+        Сделайте страницу, которая выводит «Я – JavaScript!».<br>
+        Создайте её на диске, откройте в браузере, убедитесь, что всё работает.<br><br>
+        Возьмите решение предыдущей задачи и вынесите скрипт во внешний файл
+      </p>
+      <p class="lesson-2">
+        1. Объявите две переменные: admin и name.<br>
+        2. Запишите в name строку 'Василий'.<br>
+        3. Скопируйте значение из name в admin.<br>
+        4. Выведите admin (должно вывести «Василий»).
+      </p>
+      <p class="lesson-3">
+        Используя конструкцию if..else, напишите код, который будет спрашивать: «Каково «официальное» название JavaScript?».<br>
+        Если посетитель вводит «ECMAScript», то выводить «Верно!», если что-то другое – выводить «Не знаете? «ECMAScript»!».
+      </p>
+      <p class="lesson-4">
+        Напишите код, который будет спрашивать логин (prompt).<br><br>
+        Если посетитель вводит «Админ», то спрашивать пароль, если нажал отмена (escape) – выводить «Вход отменён», если вводит что-то другое – «Я вас не знаю».<br><br>
+        Пароль проверять так. Если введён пароль «Чёрный Властелин», то выводить «Добро пожаловать!», иначе – «Пароль неверен», при отмене – «Вход отменён».<br>
+      </p>
+      <p class="lesson-5">
+        Перепишите if с использованием оператора '?':<br><br>
+        &nbsp;&nbsp;if (a + b &lt; 4) {<br>
+        &nbsp;&nbsp; &nbsp;&nbsp;result = 'Мало';<br>
+        &nbsp;&nbsp;} else {<br>
+        &nbsp;&nbsp; &nbsp;&nbsp;result = 'Много';<br>
+        &nbsp;&nbsp;}
+      </p>
+      <p class="lesson-6">
+        Перепишите if..else с использованием нескольких операторов '?'.<br><br>
+        var message;<br>
+        if (login == 'Вася') {<br>
+        &nbsp;&nbsp;message = 'Привет';<br>
+        } else if (login == 'Директор') {<br>
+        &nbsp;&nbsp;message = 'Здравствуйте';<br>
+        } else if (login == '') {<br>
+        &nbsp;&nbsp;message = 'Нет логина';<br>
+        } else {<br>
+        &nbsp;&nbsp;message = '';<br>
+        }
+      </p>
+    </div>
   </div>
+  <!-- СКРИПТЫ -->
+  <script src="js/lesson-1.js" async></script>
+  <script src="js/lesson-2.js" async></script>
+  <script src="js/lesson-3.js" async></script>
+  <script src="js/lesson-4.js" async></script>
+  <script src="js/lesson-5.js" async></script>
+  <script src="js/lesson-6.js" async></script>
 </body>
 </html>

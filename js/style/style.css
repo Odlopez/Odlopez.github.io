@@ -46,33 +46,36 @@ body {
   box-shadow: 2px 1px 7px #263125;
   cursor: pointer;
 }
+.button:hover ~ .window > .window-code {
+  display: none;
+}
 .button + .button {
   margin-top: 10px;
 }
-.button:hover ~ .window::before {
-  content: "";
+.window-code {
   display: block;
-}
-.button ~ .window::after {
-  position: relative;
-  top: 15px;
+  width: 100%;
+  white-space: pre;
 }
 .window {
   position: fixed;
   top: 10%;
   right: 25%;
-  width: 30vw;
+  width: 35vw;
   min-height: 25vw;
   padding: 20px;
   background-color: white;
-  box-shadow: inset 0px -300px 320px -300px #7A7781, 1px 1px 2px #918F95;
+  box-shadow: inset 0px -300px 300px -300px #7A7781, 1px 1px 5px -2px #E63946;
 }
-.button--lesson-1:hover ~ .window::before {
-  content: "Сделайте страницу, которая выводит «Я – JavaScript!». Создайте её на диске, откройте в браузере, убедитесь, что всё работает.";
+.window > p {
+  display: none;
+  margin: 0;
 }
-.button--lesson-1:hover ~ .window::after {
-  content: "Возьмите решение предыдущей задачи и вынесите скрипт во внешний файл";
-}
-.button--lesson-2:hover ~ .window::before {
-  content: "1. Объявите две переменные: admin и name. 2. Запишите в name строку 'Василий'. 3. Скопируйте значение из name в admin. 4. Выведите admin (должно вывести «Василий»).";
+.lesson-1:hover ~ .window > .lesson-1,
+.lesson-2:hover ~ .window > .lesson-2,
+.lesson-3:hover ~ .window > .lesson-3,
+.lesson-4:hover ~ .window > .lesson-4,
+.lesson-5:hover ~ .window > .lesson-5,
+.lesson-6:hover ~ .window > .lesson-6 {
+  display: block;
 }
