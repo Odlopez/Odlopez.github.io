@@ -1,0 +1,89 @@
+html {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -moz-box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Times New Roman";
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.b-ground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  opacity: 0.5;
+}
+
+.lessons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.button {
+  z-index: 1;
+  min-width: 125px;
+  height: 25px;
+  padding: 0 10px;
+  font-family: serif;
+  font-style: 16px;
+  font-weight: 700;
+  color: #fff;
+  background-image: linear-gradient(5deg, #005B74, #01233C);
+  border-radius: 50px;
+  border: none;
+  box-shadow: 2px 1px 7px #263125;
+  cursor: pointer;
+  & + & {
+    margin-top: 10px;
+  }
+  &:hover ~ .window::before {
+    content: "";
+    display: block;
+  }
+  & ~ .window::after {
+    position: relative;
+    top: 15px;
+  }
+}
+
+.window {
+  position: fixed;
+  top: 10%;
+  right: 25%;
+  width: 30vw;
+  min-height: 25vw;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 
+    inset 0px -300px 320px -300px #7A7781,
+    1px 1px 2px #918F95;
+}
+
+.button--lesson {
+  &-1:hover ~ .window::before {
+    content: "Сделайте страницу, которая выводит «Я – JavaScript!». Создайте её на диске, откройте в браузере, убедитесь, что всё работает.";
+  }
+  &-1:hover ~ .window::after {
+    content: "Возьмите решение предыдущей задачи и вынесите скрипт во внешний файл";
+  }
+  &-2:hover ~ .window::before {
+    content: "1. Объявите две переменные: admin и name. 2. Запишите в name строку 'Василий'. 3. Скопируйте значение из name в admin. 4. Выведите admin (должно вывести «Василий»).";
+  }
+}
