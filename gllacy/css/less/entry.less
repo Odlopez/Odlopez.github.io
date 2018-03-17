@@ -1,0 +1,55 @@
+//out: false
+.entry {
+  position: relative;
+  &:hover > .entry__form {
+    display: block;
+  }
+  &__link {
+    &::before {
+      content: url("../img/images/insert.svg");
+    }
+    &:hover,
+    &:focus {
+      color: rgb(50, 50, 50);
+      background-color: rgb(248, 247, 244);
+      &::before {
+        content: url("../img/images/insert-hover.svg");
+      }
+    }
+    &:hover ~ .entry__form {
+      display: block;
+    }
+  }
+  &__form {
+    right: -2px;
+    width: 277px;
+    padding-left: 20px;
+  }
+  &__email,
+  &__password {
+    &::-webkit-input-placeholder {
+      font-size: 14px;
+      line-height: 24px;
+    }
+    &::-moz-placeholder {
+      font-size: 14px;
+      line-height: 24px;
+    }
+    &:-moz-placeholder {
+      font-size: 14px;
+      line-height: 24px;
+    }
+    &:-ms-input-placeholder {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+  &__btn {
+    float: left;
+    margin-right: 20px;
+  }
+  &__restoring,
+  &__registration {
+    clear: right;
+  }
+}

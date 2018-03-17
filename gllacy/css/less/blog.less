@@ -1,0 +1,23 @@
+//out: false
+.blog {
+  flex-basis: @double-cell;
+  max-width: @double-cell; // против переполнения контента и наезжания на соседний блок
+  min-height: 220px;
+  padding: 25px 100px 25px 20px;
+  color: rgb(50, 50, 50);
+  background: rgb(255, 255, 255) url("../img/images/fruit-bg.jpg") no-repeat 100% 0;
+  border-radius: 14px;
+  &__title {
+    margin: 0 0 5px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+  }
+  &__link {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    color: rgb(50, 50, 50);
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+}

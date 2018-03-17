@@ -1,0 +1,37 @@
+//out: false
+.distribution {
+  flex-basis: @double-cell;
+  max-width: @double-cell; // против переполнения контента и наезжания на соседний блок
+  min-height: 210px;
+  padding: 5px;
+  background-image: repeating-linear-gradient(135deg, rgb(254, 158, 144) 0px,  rgb(254, 158, 144) 5px, rgb(255, 255, 255) 5px,
+   rgb(255, 255, 255) 10px, rgb(146, 205, 255) 10px, rgb(146, 205, 255) 15px, rgb(255, 255, 255) 15px,  rgb(255, 255, 255) 20px);
+  background-size: cover;
+  border-radius: 14px;
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    min-height: inherit;
+    padding: 30px 20px 15px;
+    background-color: rgb(248, 247, 244);
+    border-radius: 14px;
+  }
+  &__info {
+    flex-basis: 100%;
+    max-width: 100%; // против переполнения контента и выезжания текста за пределы блока
+    line-height: 22px;
+    color: rgb(90, 90, 90);
+  }
+  &__form {
+    display: flex;
+    width: 100%;
+  }
+  &__email {
+    flex-grow: 10;
+  }
+  &__submith {
+    margin-left: 11px;
+    padding: 0 19px;
+  }
+}

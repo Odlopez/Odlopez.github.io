@@ -1,0 +1,26 @@
+//out: false
+.bread-crumbs {
+  .without_indentation;
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: 5px;
+  font-size: 14px;
+  line-height: 16px;
+  list-style-type: none;
+  &__item {
+    &_arrows {
+      font-size: 0;
+    }
+  }
+  &__arrows {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 2px 5px 0;
+  }
+  &__arrow {
+    stroke-width: 2;
+    fill: none;
+    stroke: rgb(255, 255, 255);
+  }
+}

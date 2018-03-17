@@ -1,0 +1,35 @@
+//out: false
+.contacts {
+  position: absolute;
+  top: 50%;
+  right: @indent;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 302px;
+  max-height: 430px;
+  padding: 26px 25px 31px;
+  color: rgb(50, 50, 50);
+  background-color: rgba(255, 255, 255, 0.98);
+  border-radius: 15px;
+  &__type {
+    margin: 0;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  &__adress {
+    margin: 3px 0 15px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  &__btn {
+    margin-top: 25px;
+    padding: 8px 27px 8px 28px;
+    align-self: center;
+  }
+  &__tel {
+    margin: 8px 0 2px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+  }
+}

@@ -1,0 +1,16 @@
+//out: false
+.banners {
+  margin-bottom: 80px;
+  padding: 0 @indent;
+  &__list {
+    .without_indentation;
+    display: flex;
+    max-width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+  }
+  &__item {
+    flex-basis: @double-cell;
+  }
+}

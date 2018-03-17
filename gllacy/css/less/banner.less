@@ -1,0 +1,42 @@
+//out: false
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 229px;
+  padding: 15px 20px 25px 19px;
+  border-radius: 12px;
+  &__title {
+    margin: 0 0 17px;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 41px;
+  }
+  &__info {
+    width: 100%; //для IE-11
+    margin: 0;
+    margin-bottom: 44px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+  }
+  &__link {
+    align-self: flex-end;
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+  &_first {
+    background: rgb(108, 17, 35) url("../img/images/raspberry-bg.jpg") no-repeat 50% 50%;
+    background-size: cover;
+  }
+  &_second {
+    background: rgb(70, 43, 31) url("../img/images/chocolate-bg.jpg") no-repeat;
+    background-size: cover;
+    .banner__link {
+      padding-top: 10px;
+      padding-right: 21px;
+      padding-left: 21px;
+    }
+  }
+}

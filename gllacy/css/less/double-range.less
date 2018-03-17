@@ -1,0 +1,40 @@
+//out: false
+.double-range {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  &__lever {
+    position: relative;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    cursor: pointer;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: -1;
+      transform: translate(-50%, -50%);
+      box-sizing: content-box;
+      width: 4px;
+      height: 4px;
+      border: 8px solid rgb(255, 255, 255);
+      border-radius: 50%;
+    }
+    &:hover::before {
+      border-width: 9px;
+    }
+    &_left {
+      margin-left: 20px;
+    }
+    &_right {
+      margin-right: 53px;
+    }
+  }
+  &__square {
+    flex-grow: 1;
+    height: 4px;
+    background-color: rgb(255, 255, 255);
+  }
+}

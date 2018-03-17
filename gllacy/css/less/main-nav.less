@@ -1,0 +1,21 @@
+//out: false
+.main-nav {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  &__logo-link {
+    height: 64px;
+  }
+  &__list {
+    .without_indentation;
+    display: flex;
+    align-items: center;
+    max-width: 435px; //ОЧЕНЬ СПОРНОЕ РЕШЕНИЕ!!!!
+    min-height: 64px;
+    margin-left: 10px;
+    list-style-type: none;
+  }
+  &__item_catalog:hover > .main-menu {
+    display: block;
+  }
+}

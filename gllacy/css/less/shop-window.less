@@ -1,0 +1,135 @@
+//out: false
+.shop-window {
+  padding: 0 @indent;
+  &__content {
+    width: 100%;
+  }
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: -10;
+    transform: translateX(-50%);
+  }
+  &__desc {
+    display: block;
+    margin: 273px auto 0;
+    width: 800px;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 60px;
+    text-align: center;
+  }
+  &__link {
+    position: absolute;
+    left: 50%;
+    margin-top: 32px;
+    transform: translateX(-50%);
+  }
+   &__slider {
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    margin: 52px 4px 63px 0;
+    font-size: 0;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      background-color: rgb(178, 193, 183);
+    }
+    &:hover {
+      outline: none;
+    }
+    &:active {
+      background-color: rgb(255, 255, 255);
+    }
+  }
+}
+input[id="slider_1"] {
+  &:focus ~ label[for="slider_1"] {
+    animation: // чтобы видно было куда попадаешь в случае с focus, а не hover
+      flicker 0.25s ease-in-out 1,
+      outline 0.1s 0.2s ease-in-out 1 forwards;
+  }
+  &:checked {
+    & ~ label[for="slider_1"] {
+    background-color: rgb(255, 255, 255);
+    }
+    & ~ .shop-window__content_second,
+    & ~ .shop-window__content_third {
+      display: none;
+    }
+    & ~ .shop-window__content_first {
+      display: block;
+    }
+    & ~ .background-viewport {
+      background-color: rgb(132, 157, 143);
+    }
+  }
+}
+input[id="slider_2"] {
+  &:focus ~ label[for="slider_2"] {
+    animation: // чтобы видно было куда попадаешь в случае с focus, а не hover
+      flicker 0.25s ease-in-out 1,
+      outline 0.1s 0.2s ease-in-out 1 forwards;
+  }
+  &:checked {
+    & ~ label[for="slider_2"] {
+    background-color: rgb(255, 255, 255);
+    }
+    & ~ .shop-window__content_first,
+    & ~ .shop-window__content_third {
+      display: none;
+    }
+    & ~ .shop-window__content_second {
+      display: block;
+    }
+    & ~ .background-viewport {
+      background-color: rgb(152, 161, 170);
+    }
+  }
+}
+input[id="slider_3"] {
+  &:focus ~ label[for="slider_3"] {
+    animation: // чтобы видно было куда попадаешь в случае с focus, а не hover
+      flicker 0.25s ease-in-out 1,
+      outline 0.1s 0.2s ease-in-out 1 forwards;
+  }
+  &:checked {
+    & ~ label[for="slider_3"] {
+    background-color: rgb(255, 255, 255);
+    }
+    & ~ .shop-window__content_first,
+    & ~ .shop-window__content_second {
+      display: none;
+    }
+    & ~ .shop-window__content_third {
+      display: block;
+    }
+    & ~ .background-viewport {
+      background-color: rgb(175, 158, 146);
+    }
+  }
+}
+@keyframes flicker {
+  12.5% {
+    transform: translateX(1.5px) skew(-3deg, -3deg) scale(1.2);
+  }
+  37.5% {
+    transform: translateX(-1.5px) skew(3deg, 3deg);
+  }
+  62.5% {
+    transform: translateX(1px) skew(-2deg, -2deg);
+  }
+  87.5% {
+    transform: translateX(-1px) skew(2deg, 2deg);
+  }
+}
+@keyframes outline {
+  to {
+    outline: 1px solid rgb(77, 144, 254);
+    outline-offset: 2px;
+  }
+}

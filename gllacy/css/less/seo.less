@@ -1,0 +1,70 @@
+//out: false
+.seo {
+  width: 100%;
+  margin-top: -42px;
+  padding: 0 @indent;
+  &__wrap {
+    display: block;
+    width: 100%;
+    padding: 26px 0 24px;
+    background: url("../img/images/wafer.jpg") no-repeat;
+    background-size: cover;
+    border-radius: 13px;
+  }
+  &__title {
+    margin: 0 20px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0.08px;
+    color: rgb(50, 50, 50);
+  }
+  &__list {
+    .without_indentation;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    list-style-type: none;
+  }
+  &__item {
+    position: relative;
+    flex-basis: @double-cell;
+    margin-top: 10px;
+    line-height: 22px;
+    color: rgb(50, 50, 50);
+    &:nth-of-type(odd) {
+      padding-left: 20px;
+    }
+    &:nth-of-type(even) {
+      padding-right: 20px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 49px;
+      height: 49px;
+    }
+    &_ice-cream::before {
+      left: 20px;
+      background: url("../img/images/ice-cream.svg") no-repeat 50% 50%;
+    }
+    &_farmers::before {
+      left: 0;
+      background: url("../img/images/cow.svg") no-repeat 50% 50%;
+    }
+    &_eco::before {
+      left: 20px;
+      background: url("../img/images/leaf.svg") no-repeat 50% 50%;
+    }
+    &_thermopack::before {
+      left: 0;
+      background: url("../img/images/therm.svg") no-repeat 50% 50%;
+    }
+  }
+  &__description {
+    margin: 13px 0 0;
+    padding-left: 56px;
+  }
+}

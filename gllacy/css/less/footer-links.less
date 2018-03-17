@@ -1,0 +1,47 @@
+//out: false
+.footer-links {
+  .without_indentation;
+  margin-top: 14px;
+  list-style-type: none;
+  &_left {
+    .footer-links__item {
+      padding-left: 25px;
+    }
+  }
+  &__item {
+    position: relative;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    padding: 0 15px;
+    font-size: 13px;
+    line-height: 16px;
+    &:hover,
+    &:focus {
+      .footer-links__link_hover {
+        color: rgb(255, 255, 255);
+        visibility: visible;
+      }
+      .footer-links__link_normal {
+        visibility: hidden;
+      }
+      &::before {
+        content: url("../img/images/heart.svg");
+        position: absolute;
+        margin-top: 2px;
+        margin-left: -22px;
+      }
+    }
+  }
+  &__link {
+    color: rgb(255, 255, 255);
+    text-decoration: underline solid rgba(255, 255, 255, 0.3);
+    outline: none;
+    &_normal {
+      position: absolute;
+    }
+    &_hover {
+      font-weight: 700;
+      visibility: hidden;
+    }
+  }
+}
