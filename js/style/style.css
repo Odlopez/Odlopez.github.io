@@ -40,11 +40,19 @@ body {
   font-style: 16px;
   font-weight: 700;
   color: #fff;
-  background-image: linear-gradient(5deg, #005B74, #01233C);
+  background-image: linear-gradient(0deg, #005B74, #01233C);
   border-radius: 50px;
   border: none;
   box-shadow: 2px 1px 7px #263125;
   cursor: pointer;
+  outline: none;
+}
+.button:focus {
+  background-image: linear-gradient(120deg, #FFBA08, #D00000 27%, #3F88C5 84%);
+}
+.button:active {
+  background-image: linear-gradient(120deg, #a67800, #6f0000 27%, #26557d 84%);
+  box-shadow: none;
 }
 .button:hover ~ .window > .window-code {
   display: none;
@@ -52,18 +60,13 @@ body {
 .button + .button {
   margin-top: 10px;
 }
-.window-code {
-  display: block;
-  width: 100%;
-  white-space: pre;
-}
 .window {
   position: fixed;
   top: 10%;
   right: 25%;
-  width: 35vw;
-  min-height: 25vw;
-  padding: 20px;
+  width: 50vw;
+  min-height: 35vw;
+  padding: 50px;
   background-color: white;
   box-shadow: inset 0px -300px 300px -300px #7A7781, 1px 1px 5px -2px #E63946;
 }
@@ -71,11 +74,18 @@ body {
   display: none;
   margin: 0;
 }
+.window-code {
+  display: block;
+  width: 100%;
+  white-space: pre;
+}
 .lesson-1:hover ~ .window > .lesson-1,
 .lesson-2:hover ~ .window > .lesson-2,
 .lesson-3:hover ~ .window > .lesson-3,
 .lesson-4:hover ~ .window > .lesson-4,
 .lesson-5:hover ~ .window > .lesson-5,
-.lesson-6:hover ~ .window > .lesson-6 {
+.lesson-6:hover ~ .window > .lesson-6,
+.lesson-7:hover ~ .window > .lesson-7,
+.lesson-8:hover ~ .window > .lesson-8 {
   display: block;
 }
