@@ -19,6 +19,7 @@
     <button class="button lesson-6" onclick="ternaryOperatorComplex()">Урок 6</button>
     <button class="button lesson-7" onclick="withinRangeCondition()">Урок 7</button>
     <button class="button lesson-8" onclick="repeatCycleWhileNot()">Урок 8</button>
+    <button class="button lesson-9" onclick="constructionSwitch()">Урок 9</button>
     <!-- Окно для вывода текста -->
     <div class="window">
       <!-- блок для вывода кода -->
@@ -73,6 +74,19 @@
         Если посетитель ввёл другое число – попросить ввести ещё раз, и так далее.<br>
         Цикл должен спрашивать число пока либо посетитель не введёт число, большее 100, либо не нажмёт кнопку Cancel (ESC).
       </p>
+      <p class="lesson-9">
+        Перепишите код с использованием одной конструкции switch:<br><br>
+        var a = +prompt('a?', '');<br>
+        if (a == 0) {<br>
+        &nbsp;&nbsp;alert( 0 );<br>
+        }<br>
+        if (a == 1) {<br>
+        &nbsp;&nbsp;alert( 1 );<br>
+        }<br>
+        if (a == 2 || a == 3) {<br>
+        &nbsp;&nbsp;alert( '2,3' );<br>
+        }
+      </p>
     </div>
   </div>
   <!-- СКРИПТЫ -->
@@ -84,5 +98,6 @@
   <script src="js/lesson-6.js" async></script>
   <script src="js/lesson-7.js" async></script>
   <script src="js/lesson-8.js" async></script>
+  <script src="js/lesson-9.js" async></script>
 </body>
 </html>

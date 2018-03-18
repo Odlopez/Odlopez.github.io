@@ -86,6 +86,7 @@ body {
 .lesson-5:hover ~ .window > .lesson-5,
 .lesson-6:hover ~ .window > .lesson-6,
 .lesson-7:hover ~ .window > .lesson-7,
-.lesson-8:hover ~ .window > .lesson-8 {
+.lesson-8:hover ~ .window > .lesson-8,
+.lesson-9:hover ~ .window > .lesson-9 {
   display: block;
 }
