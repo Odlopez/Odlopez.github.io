@@ -28,6 +28,7 @@ body {
   height: 100%;
   z-index: -10;
   opacity: 0.5;
+  animation: breath 100s ease 20s infinite;
 }
 
 .lessons {
@@ -105,5 +106,112 @@ body {
   &-8:hover ~ .window > &-8,
   &-9:hover ~ .window > &-9   {
     display: block;
+  }
+}
+
+svg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+ellipse {
+  position: absolute;
+  cx: 80%;
+  cy: 20%;
+  rx: 80px;
+  ry: 100px;
+  fill: none;
+  stroke: #005B74;
+  stroke-width: 2px;
+  stroke-opacity: 0;
+  animation: move 50s cubic-bezier(1, 0, 0, 0.5) 0s infinite normal;
+}
+
+@keyframes breath {
+  3% {
+    transform: scale(1);
+  }
+  4.5% {
+    transform: scale(1.004);
+  }
+  6% {
+    transform: scale(1);
+  }
+
+}
+
+@keyframes move {
+  4.2% {
+    stroke-opacity: 0;
+  }
+  5% {
+    rx: 60px;
+    ry: 40px;
+    stroke-opacity: 0.3;
+  }
+  5.2% {
+    stroke-opacity: 0;
+  }
+  36% {
+    rx: 100px;
+    ry: 34px;
+    transform: scale(1.04);
+    stroke-opacity: 0;
+  }
+  36.1% {
+    cx: 75%;
+    cy: 40%;
+    rx: 100px;
+    ry: 34px;
+    transform: scale(1.04);
+    stroke-opacity: 0.5;
+  }
+  36.2% {
+    stroke-opacity: 0.2;
+  }
+  36.3% {
+    stroke-opacity: 0.07;
+  }
+  36.4% {
+    stroke-opacity: 0.3;
+  }
+  36.5% {
+    stroke-opacity: 0;
+  }
+  36.7% {
+    stroke-opacity: 0.1;
+    transform: rotate(4deg);
+  }
+  37% {
+    stroke-opacity: 0;
+  }
+  69% {
+    cx: 5%;
+    cy: 80%;
+    rx: 800px;
+    ry: 4px;
+  }
+  69.2% {
+    stroke-opacity: 0.1;
+  }
+  69.5% {
+    stroke-opacity: 0.4;
+  }
+  69.6% {
+    cx: 5%;
+    cy: 78%;
+    stroke-opacity: 0.2;
+  }
+  69.7% {
+    cx: 5%;
+    cy: 80%;
+    stroke-opacity: 0.4;
+  }
+  69.8% {
+    stroke-opacity: 0;
   }
 }
