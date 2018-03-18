@@ -16,6 +16,13 @@ function constructionSwitch() {
   document.querySelector(".window-code").innerHTML = "";
 
   // выполняем задание
+  perform9();
+
+  // записываем результат в окно
+  document.querySelector(".window-code").innerHTML = "Задание №9" + "</br></br>" + perform9;
+}
+
+function perform9() {
   var a = +prompt("a?", "");
   switch (a) {
     case 0:
@@ -31,10 +38,4 @@ function constructionSwitch() {
       alert("2,3");
       break;
   };
-
-  // записываем результат в окно
-  document.querySelector(".window-code").innerHTML = 'Задание №9' + '</br></br>' + 'var a = +prompt("a?", "");' + '</br>' +
-  'switch (a) {' + '</br>' + '  case 0:' + '</br>' + '    alert(0);' + '</br>' + '    break;' + '</br></br>' +
-  '  case 1:' + '</br>' + '    alert(1);' + '</br>' + '    break;' + '</br></br>' + '  case 2:' + '</br>' + '  case 3:' + '</br>' +
-  '    alert("2,3");' + '</br>' + '    break;' + '</br>' + '};';
 }

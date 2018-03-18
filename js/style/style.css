@@ -101,10 +101,6 @@ svg {
 }
 ellipse {
   position: absolute;
-  cx: 80%;
-  cy: 20%;
-  rx: 80px;
-  ry: 100px;
   fill: none;
   stroke: #005B74;
   stroke-width: 2px;

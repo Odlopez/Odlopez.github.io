@@ -1,7 +1,7 @@
 /*Используя конструкцию if..else, напишите код, который будет спрашивать: «Каково «официальное» название JavaScript?».
 Если посетитель вводит «ECMAScript», то выводить «Верно!», если что-то другое – выводить «Не знаете? «ECMAScript»!».*/
 
-function questionAboutJS() {
+function askAboutJS() {
 
   //очищаем текстовое окно
   document.querySelector(".window-code").innerHTML = "";
