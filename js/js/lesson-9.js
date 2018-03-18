@@ -10,19 +10,19 @@ if (a == 2 || a == 3) {
   alert( '2,3' );
 } */
 
-function constructionSwitch() {
+function perform9() {
 
   //очищаем текстовое окно
   document.querySelector(".window-code").innerHTML = "";
 
   // выполняем задание
-  perform9();
+  constructionSwitch();
 
   // записываем результат в окно
-  document.querySelector(".window-code").innerHTML = "Задание №9" + "</br></br>" + perform9;
+  document.querySelector(".window-code").innerHTML = "Задание №9" + "</br></br>" + constructionSwitch;
 }
 
-function perform9() {
+function constructionSwitch() {
   var a = +prompt("a?", "");
   switch (a) {
     case 0:
