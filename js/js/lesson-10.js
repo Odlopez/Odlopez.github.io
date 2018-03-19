@@ -10,7 +10,7 @@ function perform10(x, n) {
   pow(x, n);
 
   // записываем результат в окно
-  document.querySelector(".window-code").innerHTML = "Задание №10" + "</br></br>" +pow;
+  document.querySelector(".window-code").innerHTML = "Задание №10" + "</br></br>" + pow;
 }
 
 function pow(x, n) {

@@ -21,6 +21,8 @@
     <button class="button lesson-8" onclick="repeatCycleWhileNot()">Урок 8</button>
     <button class="button lesson-9" onclick="perform9()">Урок 9</button>
     <button class="button lesson-10" onclick="perform10(2, 3)">Урок 10</button>
+    <button class="button lesson-11" onclick="perform11(100)">Урок 11</button>
+    <button class="button lesson-12" onclick="perform12(76)">Урок 12</button>
     <!-- Окно для вывода текста -->
     <div class="window">
       <!-- блок для вывода кода -->
@@ -92,6 +94,17 @@
         Напишите функцию pow(x,n), которая возвращает x в степени n. Иначе говоря, умножает x на себя n раз и возвращает результат.<br>
         P.S. В этой задаче функция обязана поддерживать только натуральные значения n, т.е. целые от 1 и выше.
       </p>
+      <p class="lesson-11">
+        Напишите функцию sumTo(n), которая для данного n вычисляет сумму чисел от 1 до n.<br>
+        Сделайте три варианта решения:<br>
+        1. С использованием цикла.<br>
+        2. Через рекурсию, т.к. sumTo(n) = n + sumTo(n-1) для n > 1.<br>
+        3. С использованием формулы для суммы арифметической прогрессии.
+      </p>
+      <p class="lesson-12">
+        Напишите функцию fib(n), которая возвращает n-е число Фибоначчи.<br>
+        Все запуски функций должны срабатывать быстро.
+      </p>
     </div>
   </div>
   <svg>
@@ -108,5 +121,7 @@
   <script src="js/lesson-8.js" async></script>
   <script src="js/lesson-9.js" async></script>
   <script src="js/lesson-10.js" async></script>
+  <script src="js/lesson-11.js" async></script>
+  <script src="js/lesson-12.js" async></script>
 </body>
 </html>
