@@ -1,29 +1,29 @@
 html {
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 *,
 *::before,
 *::after {
-  -moz-box-sizing: inherit;
   -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
   box-sizing: inherit;
 }
 body {
   margin: 0 auto;
   padding: 20px;
-  font-family: "Times New Roman";
   font-weight: 400;
   font-size: 16px;
+  font-family: "Times New Roman";
 }
 .b-ground {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: -10;
   width: 100%;
   height: 100%;
-  z-index: -10;
   opacity: 0.5;
   animation: breath 100s ease 20s infinite;
 }
@@ -37,19 +37,19 @@ body {
   min-width: 125px;
   height: 25px;
   padding: 0 10px;
-  font-family: serif;
-  font-style: 16px;
   font-weight: 700;
-  color: #fff;
-  background-image: linear-gradient(0deg, #005B74, #01233C);
-  border-radius: 50px;
+  font-family: serif;
+  color: #ffffff;
+  font-style: 16px;
+  background-image: linear-gradient(0deg, #005b74, #01233c);
   border: none;
+  border-radius: 50px;
+  outline: none;
   box-shadow: 2px 1px 7px #263125;
   cursor: pointer;
-  outline: none;
 }
 .button:focus {
-  background-image: linear-gradient(120deg, #FFBA08, #D00000 27%, #3F88C5 84%);
+  background-image: linear-gradient(120deg, #ffba08, #d00000 27%, #3f88c5 84%);
 }
 .button:active {
   background-image: linear-gradient(120deg, #a67800, #6f0000 27%, #26557d 84%);
@@ -69,7 +69,7 @@ body {
   min-height: 35vw;
   padding: 50px;
   background-color: white;
-  box-shadow: inset 0px -300px 300px -300px #7A7781, 1px 1px 5px -2px #E63946;
+  box-shadow: inset 0 -300px 300px -300px #7a7781, 1px 1px 5px -2px #e63946;
 }
 .window > p {
   display: none;
@@ -98,17 +98,17 @@ svg {
   position: fixed;
   top: 0;
   right: 0;
+  z-index: -1;
   width: 100%;
   height: 100%;
-  z-index: -1;
 }
 ellipse {
   position: absolute;
-  fill: none;
-  stroke: #005B74;
-  stroke-width: 2px;
-  stroke-opacity: 0;
   animation: move 50s cubic-bezier(1, 0, 0, 0.5) 0s infinite normal;
+  fill: none;
+  stroke: #005b74;
+  stroke-opacity: 0;
+  stroke-width: 2px;
 }
 @keyframes breath {
   3% {
@@ -134,17 +134,17 @@ ellipse {
     stroke-opacity: 0;
   }
   36% {
+    transform: scale(1.04);
     rx: 100px;
     ry: 34px;
-    transform: scale(1.04);
     stroke-opacity: 0;
   }
   36.1% {
+    transform: scale(1.04);
     cx: 75%;
     cy: 40%;
     rx: 100px;
     ry: 34px;
-    transform: scale(1.04);
     stroke-opacity: 0.5;
   }
   36.2% {
@@ -160,8 +160,8 @@ ellipse {
     stroke-opacity: 0;
   }
   36.7% {
-    stroke-opacity: 0.1;
     transform: rotate(4deg);
+    stroke-opacity: 0.1;
   }
   37% {
     stroke-opacity: 0;
