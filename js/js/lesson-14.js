@@ -14,7 +14,5 @@ function perform14(num) {
 }
 
 function getDecimal(num) {
-  var result = Math.abs(num) - Math.floor( Math.abs(num) );
-  var digit = num.toString().split(".")[1].length;
-  return Math.round(result * ("1e" + digit)) / ("1e" + digit);
+  return  num.toString().split(".")[1] ? "0." + num.toString().split(".")[1] : "0.0";
 }
