@@ -4,7 +4,8 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    max-width: 900px;
+    max-width: 860px;
+    margin-bottom: 2px;
     font-weight: 500;
     line-height: 1.125;
     color: rgb(255, 255, 255);
@@ -15,46 +16,55 @@
     margin-left: 0;
     margin-bottom: 38px;
     margin-right: 0;
-    padding: 7px 15px;
+    padding: 9px 15px;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 18px;
     border: none;
     &-sorting {
-      flex-basis: 193px;
+      width: 193px;
       padding-top: 8px;
     }
     &-range {
-      flex-basis: 220px;
+      width: 220px;
       margin-left: auto;
       margin-right: auto;
       padding: 8px 20px 4px;
     }
     &-fat {
-      flex-basis: 415px;
-      padding: 7px 0px;
+      width: 415px;
+      padding-left: 0;
+      padding-right: 0;
     }
   }
   &__legend {
     position: absolute;
-    margin-top: -32px;
+    top: -22px;
+    left: 13px;
     font-size: 14px;
     line-height: 16px;
   }
   &__label {
     position: relative;
     display: inline-block;
-    vertical-align: middle;
     margin-left: 45px;
+    vertical-align: middle;
     cursor: pointer;
+    &_fillers {
+      margin-right: 17px;
+      margin-left: 32px;
+      &:last-of-type {
+        margin-right: 5px;
+      }
+    }
     &_fat,
     &_fillers {
       &::before {
         content: "";
         position: absolute;
-        top: -3px;
-        left: -29px;
-        width: 25px;
-        height: 25px;
+        top: -1px;
+        left: -32px;
+        background-repeat: no-repeat;
+        background-size: contain;
         opacity: 0.8;
       }
       &:hover {
@@ -64,10 +74,15 @@
       }
     }
     &_fat::before {
-      content: url("../img/images/radio.svg");
+      top: -2px;
+      width: 22px;
+      height: 22px;
+      background-image: url("../img/images/radio.svg");
     }
     &_fillers::before {
-      content: url("../img/images/checkbox.svg");
+      width: 24px;
+      height: 20px;
+      background-image: url("../img/images/checkbox.svg");
     }
   }
   &__sorting {
@@ -140,7 +155,7 @@
     }
     &:checked + label {
       &::before {
-        content: url("../img/images/radio-on.svg");
+        background-image: url("../img/images/radio-on.svg");
       }
     }
     &:disabled + label,
@@ -156,7 +171,7 @@
     }
     &:checked + label {
       &::before {
-        content: url("../img/images/checkbox-on.svg");
+        background-image: url("../img/images/checkbox-on.svg");
       }
     }
     &:disabled + label,
