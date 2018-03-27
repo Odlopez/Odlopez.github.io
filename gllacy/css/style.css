@@ -988,11 +988,6 @@ input[id="slider_3"]:checked ~ .background-viewport {
   z-index: -5;
   height: inherit;
 }
-.map__wrap {
-  position: absolute;
-  width: 100%;
-  height: 430px;
-}
 .iframe {
   width: 100%;
 }
@@ -1000,7 +995,7 @@ input[id="slider_3"]:checked ~ .background-viewport {
   position: absolute;
   top: 50%;
   right: 2.3%;
-  transform: translateY(-50%);
+  transform: translateY(calc(215px - 50%));
   z-index: 10;
   width: 302px;
   max-height: 430px;
