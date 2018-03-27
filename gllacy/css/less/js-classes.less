@@ -1,0 +1,40 @@
+//out: false
+.js-modal-show {
+  display: block;
+}
+.js-modal-animation {
+  animation: modal-error 0.4s;
+}
+.js-rotate-normal {
+  animation: modal-rotate 0.4s;
+}
+.js-rotate-reverse {
+  animation: modal-rotate-reverse 0.4s;
+}
+@keyframes modal-error {
+  0%, 100% {
+    transform: translate(-50%, -50%);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate(-40%, -50%);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translate(-60%, -50%);
+  }
+}
+@keyframes modal-rotate {
+  0% {
+    transform: translate(-50%, -50%) scale(0) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1) rotate(360deg);
+  }
+}
+@keyframes modal-rotate-reverse {
+  0% {
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0) rotate(-360deg);
+  }
+}

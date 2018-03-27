@@ -974,7 +974,7 @@ input[id="slider_3"]:checked ~ .background-viewport {
 .distribution__email {
   flex-grow: 10;
 }
-.distribution__submith {
+.distribution__submit {
   margin-left: 11px;
   padding: 0 19px;
 }
@@ -1209,9 +1209,56 @@ input[id="slider_3"]:checked ~ .background-viewport {
 .feedback-form__text {
   min-height: 155px;
 }
-.feedback-form__submith {
+.feedback-form__submit {
   display: block;
   margin-left: auto;
+}
+.js-modal-show {
+  display: block;
+}
+.js-modal-animation {
+  animation: modal-error 0.4s;
+}
+.js-rotate-normal {
+  animation: modal-rotate 0.4s;
+}
+.js-rotate-reverse {
+  animation: modal-rotate-reverse 0.4s;
+}
+@keyframes modal-error {
+  0%,
+  100% {
+    transform: translate(-50%, -50%);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translate(-40%, -50%);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translate(-60%, -50%);
+  }
+}
+@keyframes modal-rotate {
+  0% {
+    transform: translate(-50%, -50%) scale(0) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1) rotate(360deg);
+  }
+}
+@keyframes modal-rotate-reverse {
+  0% {
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0) rotate(-360deg);
+  }
 }
 .catalog {
   display: flex;
@@ -1366,7 +1413,7 @@ input[id="slider_3"]:checked ~ .background-viewport {
 .filter__range {
   width: 100%;
 }
-.filter__submith {
+.filter__submit {
   align-self: flex-start;
   min-height: 36px;
   margin-left: auto;
@@ -1377,12 +1424,12 @@ input[id="slider_3"]:checked ~ .background-viewport {
   border: 2px solid #ffffff;
   border-radius: 18px;
 }
-.filter__submith:hover,
-.filter__submith:focus {
+.filter__submit:hover,
+.filter__submit:focus {
   color: #323232;
   background-color: #ffffff;
 }
-.filter__submith:active {
+.filter__submit:active {
   padding: 7px 29px;
   color: #323232;
   background-color: #eaeaea;
