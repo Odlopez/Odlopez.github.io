@@ -10,7 +10,7 @@ modalButtonOpen.addEventListener("click", function (evt) {
   evt.preventDefault();
   overlay.classList.add("js-modal-show");
   feedBackForm.classList.add("js-rotate-normal");
-  setTimeout( () => {
+  setTimeout( function() {
     feedBackForm.classList.remove("js-rotate-normal");
   }, 400);
   login.focus();
@@ -19,7 +19,7 @@ modalButtonOpen.addEventListener("click", function (evt) {
 modalButtonClose.addEventListener("click", function (evt) {
   evt.preventDefault();
   feedBackForm.classList.add("js-rotate-reverse");
-  setTimeout( () => {
+  setTimeout( function() {
     overlay.classList.remove("js-modal-show");
     feedBackForm.classList.remove("js-rotate-reverse");
   }, 390);
@@ -33,7 +33,7 @@ feedBackForm.addEventListener("submit", function (evt) {
 
     feedBackForm.classList.add("js-modal-animation");
 
-    setTimeout( () => {
+    setTimeout( function() {
       feedBackForm.classList.remove("js-modal-animation");
     }, 400);
   }
