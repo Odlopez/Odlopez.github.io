@@ -5,7 +5,7 @@
     <title>HTML Academy: Глейси</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-min.css">
   </head>
   <body>
     <div class="container">
@@ -219,7 +219,7 @@
           <section class="distribution">
             <h2 class="visuallyhidden">Подписка на наши новости</h2>
             <div class="distribution__wrapper">
-              <label class="distribution__info" for="distribution__email" aria-label="Приглашение подписаться на рассылку"> <!-- Вероятно, такой большой label - это плохо -->
+              <label class="distribution__info" for="distribution__email" aria-label="Приглашение подписаться на рассылку">
                 Подпишитесь на&nbsp;нашу сладкую рассылку и&nbsp;будете всегда в&nbsp;курсе всего самого вкусного, что у&nbsp;нас происходит. Обещаем не&nbsp;спамить и&nbsp;не слать всякой ненужной ерунды. Честно =)
               </label>
               <form class="distribution__form" action="https://echo.htmlacademy.ru" method="post">
@@ -258,16 +258,16 @@
       <footer class="footer">
         <ul class="social">
           <li class="social__item">
-            <a  class="social__link social__link_twitter" href="https://twitter.com/" target="_blank">twitter</a>
+            <a  class="social__link social__link_twitter" href="https://twitter.com/htmlacademy_ru" target="_blank">twitter</a>
           </li>
           <li class="social__item">
-            <a  class="social__link social__link_instagram" href="https://www.instagram.com/" target="_blank">instagram</a>
+            <a  class="social__link social__link_instagram" href="https://www.instagram.com/htmlacademy/" target="_blank">instagram</a>
           </li>
           <li class="social__item">
-            <a  class="social__link social__link_facebook" href="https://www.facebook.com/" target="_blank">facebook</a>
+            <a  class="social__link social__link_facebook" href="https://www.facebook.com/htmlacademy/" target="_blank">facebook</a>
           </li>
           <li class="social__item">
-            <a  class="social__link social__link_vk" href="https://vk.com/feed" target="_blank">vkontakte</a>
+            <a  class="social__link social__link_vk" href="https://vk.com/htmlacademy" target="_blank">vkontakte</a>
           </li>
         </ul>
         <ul class="footer-links footer-links_left">
@@ -329,18 +329,18 @@
       <form class="feedback-form popup" action="https://echo.htmlacademy.ru" method="post">
         <p class="feedback-form__title">
           <b class="feedback-form__subtitle">Мы обязательно вам ответим!</b>
-          <a class="feedback-form__close button-close" href="#map">Закрыть окно</a> <!-- пока JS'ом не научился будет ссылка, а должна быть кнопка -->
+          <a class="feedback-form__close button-close" href="#map">Закрыть окно</a>
         </p>
         <input class="feedback-form__login input-text" type="text" name="feedback-form__login" id="feedback-form__login" placeholder="Как вас зовут?">
         <input class="feedback-form__email input-text" type="email" name="feedback-form__email" id="feedback-form__email" placeholder="Ваша почта для ответа?" >
         <label class="visuallyhidden" for="feedback-form__login">Логин пользователя</label>
         <label class="visuallyhidden" for="feedback-form__email">email пользователя</label>
-        <textarea class="feedback-form__text input-text" name="feedback-form__text" id="feedback-form__text" cols="30" rows="10" placeholder="Напишите что-нибудь..." ></textarea>
+        <textarea class="feedback-form__text input-text" name="feedback-form__text" id="feedback-form__text" placeholder="Напишите что-нибудь..." ></textarea>
         <label class="visuallyhidden" for="feedback-form__text">Написать сообщение</label>
         <button class="feedback-form__submit button" type="submit">Отправить</button>
       </form>
     </div>
-
-    <script src="js/modal-popup.js"></script>
+    <!-- SCRIPTS -->
+    <script src="js/modal-popup-min.js"></script>
   </body>
 </html>
