@@ -19,25 +19,27 @@
           </a>
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a class="main-nav-link main-nav-link_actual">Каталог</a>
-              <!-- Выпадающее главное меню -->
-              <ul class="main-menu popup">
-                <li class="main-menu__item main-menu__title">
-                  <a class="main-menu__link" href="#">Новинки</a>
-                </li>
-                <li class="main-menu__item">
-                  <a class="main-menu__link main-menu__link_active">Сливочное</a>
-                </li>
-                <li class="main-menu__item">
-                  <a class="main-menu__link" href="#">Щербеты</a>
-                </li>
-                <li class="main-menu__item">
-                  <a class="main-menu__link" href="#">Фруктовый лед</a>
-                </li>
-                <li class="main-menu__item">
-                  <a class="main-menu__link" href="#">Мелорин</a>
-                </li>
-              </ul>
+              <div class="main-nav__wrap">
+                <a class="main-nav-link main-nav-link_actual">Каталог</a>
+                <!-- Выпадающее главное меню -->
+                <ul class="main-menu popup">
+                  <li class="main-menu__item main-menu__title">
+                    <a class="main-menu__link main-menu__link_upper" href="#">Новинки</a>
+                  </li>
+                  <li class="main-menu__item">
+                      <a class="main-menu__link main-menu__link_active">Сливочное</a>
+                  </li>
+                  <li class="main-menu__item">
+                    <a class="main-menu__link" href="#">Щербеты</a>
+                  </li>
+                  <li class="main-menu__item">
+                    <a class="main-menu__link" href="#">Фруктовый лед</a>
+                  </li>
+                  <li class="main-menu__item">
+                    <a class="main-menu__link" href="#">Мелорин</a>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li class="main-nav__item">
               <a class="main-nav-link" href="#"><span class="link-border link-border_main-nav">Доставка и оплата</span></a>
@@ -58,7 +60,7 @@
           <form class="entry__form popup" action="https://echo.htmlacademy.ru" method="post"> <!-- Выпадающее меню входа -->
             <input class="entry__email input-text" type="email" name="user-email" placeholder="Электронная почта">
             <input class="entry__password input-text" type="password" name="user-password" placeholder="Пароль">
-            <a class="entry__btn button" href="#">Войти</a>
+            <button class="entry__btn button" type="submit">Войти</button>
             <a class="entry__restoring link link_dark" href="#"><span class="link-border link-border_dark">Забыли пароль?</span></a>
             <a class="entry__registration link link_dark" href="#"><span class="link-border link-border_dark">Новая регистрация</span></a>
           </form>

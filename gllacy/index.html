@@ -16,25 +16,27 @@
           </a>
           <ul class="main-nav__list">
             <li class="main-nav__item main-nav__item_catalog">
-              <a class="main-nav-link main-nav-link_catalog" href="catalog.html"><span class="link-border link-border_main-nav">Каталог</span></a>
-              <!-- Выпадающее главное меню -->
-              <ul class="main-menu popup">
-                <li class="main-menu__item main-menu__title">
-                  <a class="main-menu__link main-menu__link_upper" href="#">Новинки</a>
-                </li>
-                <li class="main-menu__item">
-                  <a class="main-menu__link" href="catalog.html">Сливочное</a>
-                </li>
-                <li class="main-menu__item">
-                  <a class="main-menu__link" href="#">Щербеты</a>
-                </li>
-                <li class="main-menu__item">
-                  <a class="main-menu__link" href="#">Фруктовый лед</a>
-                </li>
-                <li class="main-menu__item">
-                  <a class="main-menu__link" href="#">Мелорин</a>
-                </li>
-              </ul>
+              <div class="main-nav__wrap">
+                <a class="main-nav-link main-nav-link_catalog" href="catalog.html"><span class="link-border link-border_main-nav">Каталог</span></a>
+                <!-- Выпадающее главное меню -->
+                <ul class="main-menu popup">
+                  <li class="main-menu__item main-menu__title">
+                    <a class="main-menu__link main-menu__link_upper" href="#">Новинки</a>
+                  </li>
+                  <li class="main-menu__item">
+                    <a class="main-menu__link" href="catalog.html">Сливочное</a>
+                  </li>
+                  <li class="main-menu__item">
+                    <a class="main-menu__link" href="#">Щербеты</a>
+                  </li>
+                  <li class="main-menu__item">
+                    <a class="main-menu__link" href="#">Фруктовый лед</a>
+                  </li>
+                  <li class="main-menu__item">
+                    <a class="main-menu__link" href="#">Мелорин</a>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li class="main-nav__item">
               <a class="main-nav-link" href="#"><span class="link-border link-border_main-nav">Доставка и оплата</span></a>
@@ -55,7 +57,7 @@
           <form class="entry__form popup" action="https://echo.htmlacademy.ru" method="post"> <!-- Выпадающее меню входа -->
             <input class="input-text entry__email" type="email" name="user-email" placeholder="Электронная почта">
             <input class="input-text entry__password" type="password" name="user-password" placeholder="Пароль">
-            <a class="entry__btn button" href="#">Войти</a>
+            <button class="entry__btn button" type="submit">Войти</button>
             <a class="entry__restoring link link_dark" href="#"><span class="link-border link-border_dark">Забыли пароль?</span></a>
             <a class="entry__registration link link_dark" href="#"><span class="link-border link-border_dark">Новая регистрация</span></a>
           </form>
@@ -212,7 +214,7 @@
           <article class="blog">
             <h2 class="blog__title">Новое в&nbsp;нашем блоге</h2>
             <a class="blog__link link_dark" href="#" target="_blank">
-                <span class="link-border link-border_dark">10&nbsp;способов сервировки фруктовых щербетов к столу</span>
+              10&nbsp;способов сервировки фруктовых щербетов к столу
             </a>
           </article>
           <!-- DISTRIBUTION -->
