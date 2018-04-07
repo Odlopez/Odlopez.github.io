@@ -2,7 +2,6 @@
    Создайте её на диске, откройте в браузере, убедитесь, что всё работает.*/
 
 function greeting() {
-
   //очищаем текстовое окно
   document.querySelector(".window-code").innerHTML = "";
 

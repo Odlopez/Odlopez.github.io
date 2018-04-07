@@ -6,7 +6,6 @@ if (a + b < 4) {
 }*/
 
 function ternaryOperatorSimple() {
-
   //очищаем текстовое окно
   document.querySelector(".window-code").innerHTML = "";
 

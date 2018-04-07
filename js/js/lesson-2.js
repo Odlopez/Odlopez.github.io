@@ -4,7 +4,6 @@
    4. Выведите admin (должно вывести «Василий»).*/
 
 function declareVariable() {
-
   //очищаем текстовое окно
   document.querySelector(".window-code").innerHTML = "";
 

@@ -2,7 +2,6 @@
 P.S. В этой задаче функция обязана поддерживать только натуральные значения n, т.е. целые от 1 и выше. */
 
 function perform10(x, n) {
-
   //очищаем текстовое окно
   document.querySelector(".window-code").innerHTML = "";
 

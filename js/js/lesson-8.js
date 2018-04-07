@@ -3,7 +3,6 @@
 Цикл должен спрашивать число пока либо посетитель не введёт число, большее 100, либо не нажмёт кнопку Cancel (ESC). */
 
 function repeatCycleWhileNot() {
-
   //очищаем текстовое окно
   document.querySelector(".window-code").innerHTML = "";
 

@@ -5,7 +5,6 @@
 иначе – «Пароль неверен», при отмене – «Вход отменён».*/
 
 function loginVerification() {
-
   //очищаем текстовое окно
   document.querySelector(".window-code").innerHTML = "";
 

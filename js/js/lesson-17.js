@@ -2,7 +2,6 @@
 'use strict'
 
 function perform17(num) {
-
   //очищаем текстовое окно
   document.querySelector(".window-code").innerHTML = "";
 
@@ -10,7 +9,7 @@ function perform17(num) {
   alert ( sumSquareDifference(num) );
 
   // записываем результат в окно
-  document.querySelector(".window-code").innerHTML = "Задание №16" + "</br></br>" + "const sumSquareDifference = " + sumSquareDifference;
+  document.querySelector(".window-code").innerHTML = "Задание №17" + "</br></br>" + "const sumSquareDifference = " + sumSquareDifference;
 }
 
 const sumSquareDifference = (num) => {

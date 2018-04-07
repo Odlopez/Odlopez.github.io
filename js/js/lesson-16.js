@@ -2,7 +2,6 @@
 'use strict'
 
 function perform16(str) {
-
   //очищаем текстовое окно
   document.querySelector(".window-code").innerHTML = "";
 

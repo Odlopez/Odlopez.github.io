@@ -2,7 +2,6 @@
 'use strict'
 
 function perform14(num) {
-
   //очищаем текстовое окно
   document.querySelector(".window-code").innerHTML = "";
 

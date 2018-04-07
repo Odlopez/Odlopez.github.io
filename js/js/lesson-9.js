@@ -11,7 +11,6 @@ if (a == 2 || a == 3) {
 } */
 
 function perform9() {
-
   //очищаем текстовое окно
   document.querySelector(".window-code").innerHTML = "";
 

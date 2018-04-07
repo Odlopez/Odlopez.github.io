@@ -1,7 +1,6 @@
 // Напишите условие if для проверки того факта, что переменная age находится между 14 и 90 включительно.
 
 function withinRangeCondition() {
-
   //очищаем текстовое окно
   document.querySelector(".window-code").innerHTML = "";
 

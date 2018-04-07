@@ -13,7 +13,6 @@ if (login == 'Вася') {
 }*/
 
 function ternaryOperatorComplex() {
-
   //очищаем текстовое окно
   document.querySelector(".window-code").innerHTML = "";
 
