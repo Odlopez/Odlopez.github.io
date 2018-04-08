@@ -101,7 +101,8 @@ body {
 .lesson-19:hover ~ .window > .lesson-19,
 .lesson-20:hover ~ .window > .lesson-20,
 .lesson-21:hover ~ .window > .lesson-21,
-.lesson-22:hover ~ .window > .lesson-22 {
+.lesson-22:hover ~ .window > .lesson-22,
+.lesson-23:hover ~ .window > .lesson-23 {
   display: block;
 }
 svg {
