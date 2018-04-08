@@ -67,7 +67,9 @@ body {
   right: 25%;
   width: 50vw;
   min-height: 35vw;
+  max-height: 40vw;
   padding: 50px;
+  overflow: scroll;
   background-color: white;
   box-shadow: inset 0 -300px 300px -300px #7a7781, 1px 1px 5px -2px #e63946;
 }
@@ -102,7 +104,10 @@ body {
 .lesson-20:hover ~ .window > .lesson-20,
 .lesson-21:hover ~ .window > .lesson-21,
 .lesson-22:hover ~ .window > .lesson-22,
-.lesson-23:hover ~ .window > .lesson-23 {
+.lesson-23:hover ~ .window > .lesson-23,
+.lesson-24:hover ~ .window > .lesson-24,
+.lesson-25:hover ~ .window > .lesson-25,
+.lesson-26:hover ~ .window > .lesson-26 {
   display: block;
 }
 svg {
