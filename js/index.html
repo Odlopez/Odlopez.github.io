@@ -38,6 +38,7 @@
     <button class="button lesson-25" onclick="perform25(33)">Урок 25</button>
     <button class="button lesson-26" onclick="perform26(2235)">Урок 26</button>
     <button class="button lesson-27" onclick="perform27(3, 5)">Урок 27</button>
+    <button class="button lesson-28" onclick="perform28('ACGTGGTCTTAA')">Урок 28</button>
     <!-- Окно для вывода текста -->
     <div class="window">
       <!-- блок для вывода кода -->
@@ -171,6 +172,16 @@
       <p class="lesson-27">
         Реализуйте функцию Аккермана ackermann(m, n).
       </p>
+      <p class="lesson-28">
+        Реализуйте функцию, которая принимает на вход цепь ДНК и возвращает соответствующую цепь РНК (совершает транскрипцию РНК).<br>
+        Если во входном параметре нет ни одного нуклеотида (т.е. передана пустая строка), то функция должна вернуть пустую строку.<br>
+        Если в переданной цепи ДНК встретится "незнакомый" нуклеотид (не являющийся одним из четырех перечисленных выше), то функция должна вернуть null.<br>
+        Цепь РНК составляется на основе цепи ДНК последовательной заменой каждого нуклеотида:<br>
+        G -> C<br>
+        C -> G<br>
+        T -> A<br>
+        A -> U
+      </p>
     </div>
   </div>
   <svg>
@@ -204,5 +215,6 @@
   <script src="js/lesson-25.js" async></script>
   <script src="js/lesson-26.js" async></script>
   <script src="js/lesson-27.js" async></script>
+  <script src="js/lesson-28.js" async></script>
 </body>
 </html>
