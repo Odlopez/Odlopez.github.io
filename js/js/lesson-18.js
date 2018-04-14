@@ -9,7 +9,8 @@ function perform18(str) {
   alert ( solution(str) );
 
   // записываем результат в окно
-  document.querySelector(".window-code").innerHTML = "Задание №18" + "</br></br>" + "const solution = " + solution;
+  document.querySelector(".window-code").innerHTML = "Задание №18" + "</br></br>" + "const solution = " + solution + "</br></br>" +
+  "Версия №2" + "</br></br>" + "const solution = " +  version_2;
 }
 
 const solution = (str) => {
@@ -25,3 +26,23 @@ const solution = (str) => {
   };
   return arrNew.join(" ");
 };
+
+const version_2 = (str) => {
+  if (this == '') {
+    return null;
+  }
+  let counter = 0;
+  const result = this.split(' ');
+  // console.log(result);
+  let newArr = [];
+  for (let i = 0; i < result.length; i++) {
+    if (result[i] === ' ') {
+      counter++;
+    }
+    newArr[i] = result[i][0] ? result[i][0].toUpperCase() + result[i].slice(1) : '';
+  }
+  if (counter === result.length) {
+    return null;
+  }
+  return newArr.join(' ');
+}
