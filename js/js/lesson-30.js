@@ -27,6 +27,6 @@ function perform30(n, p) {
 }
 
 const digPow = (n, p) => {
-  const result = ('' + n).split('').reduce( (value, item, i, arr) => {return value + Math.pow(+item, p + i)}, 0 );
+  const result = ('' + n).split('').reduce( (value, item, i) => {return value + Math.pow(+item, p + i)}, 0 );
   return !(result % n) ? result / n : -1;
 }
