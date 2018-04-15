@@ -40,6 +40,7 @@
     <button class="button lesson-27" onclick="perform27(3, 5)">Урок 27</button>
     <button class="button lesson-28" onclick="perform28('ACGTGGTCTTAA')">Урок 28</button>
     <button class="button lesson-29" onclick="perform29(9119)">Урок 29</button>
+    <button class="button lesson-30" onclick="perform30(46288, 3)">Урок 30</button>
     <!-- Окно для вывода текста -->
     <div class="window">
       <!-- блок для вывода кода -->
@@ -188,6 +189,23 @@
         Например, если мы запустим 9119 через функцию, выйдет 811181, потому что 9^2 = 81, а 1^2 = 1.<br>
         Примечание. Функция принимает целое число и возвращает целое число.
       </p>
+      <p class="lesson-30">
+        Some numbers have funny properties. For example:<br><br>
+
+          89 --> 8¹ + 9² = 89 * 1<br>
+          695 --> 6² + 9³ + 5⁴= 1390 = 695 * 2<br>
+          46288 --> 4³ + 6⁴+ 2⁵ + 8⁶ + 8⁷ = 2360688 = 46288 * 51<br><br>
+
+        Given a positive integer n written as abcd... (a, b, c, d... being digits)<br>
+        and a positive integer p we want to find a positive integer k, if it exists,<br>
+        such as the sum of the digits of n taken to the successive powers of p is equal to k * n.<br>
+        In other words:<br><br>
+
+        Is there an integer k such as : (a ^ p + b ^ (p+1) + c ^(p+2) + d ^ (p+3) + ...) = n * k<br>
+        If it is the case we will return k, if not return -1.<br><br>
+
+        Note: n, p will always be given as strictly positive integers.
+      </p>
     </div>
   </div>
   <svg>
@@ -223,5 +241,6 @@
   <script src="js/lesson-27.js" async></script>
   <script src="js/lesson-28.js" async></script>
   <script src="js/lesson-29.js" async></script>
+  <script src="js/lesson-30.js" async></script>
 </body>
 </html>
