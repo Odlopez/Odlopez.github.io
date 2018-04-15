@@ -9,7 +9,8 @@ function perform28(str) {
   alert ( dnaToRna(str) );
 
   // записываем результат в окно
-  document.querySelector(".window-code").innerHTML = "Задание №28" + "</br></br>" + "const dnaToRna = " + dnaToRna;
+  document.querySelector(".window-code").innerHTML = "Задание №28" + "</br></br>" + "const dnaToRna = " + dnaToRna + "</br></br>" +
+  "Версия №2" + "</br></br>" + "const solution = " +  version_2;
 }
 
 const dnaToRna = (str) => {
@@ -37,3 +38,8 @@ const dnaToRna = (str) => {
   }
   return result;
 };
+
+const version_2 = (str) => {
+  const DNK = ['A', 'T', 'C', 'G'];
+  return str.split('').map( (item) => { return ['T', 'A', 'G', 'C'][DNK.indexOf(item)]} ).join('');
+}
