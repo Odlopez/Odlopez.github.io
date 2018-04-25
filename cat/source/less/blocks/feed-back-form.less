@@ -1,0 +1,26 @@
+.feed-back-form {
+  @media @desktop {
+    width: 100%;
+  }
+}
+
+.feed-back-form__wrap {
+  padding: 0 @indent-mobile;
+
+  @media @tablet {
+    padding-right: 67 / 768 * 100%;
+    padding-left: 70 / 768 * 100%;
+  }
+
+  @media @desktop {
+    padding: 0 @indent-desktop;
+  }
+}
+
+.feed-back-form__text {
+  min-height: 150px;
+  padding-right: 14px;
+  padding-left: 15px;
+
+  resize: vertical;
+}

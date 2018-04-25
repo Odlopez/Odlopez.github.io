@@ -1,0 +1,55 @@
+//out: false
+//МИКСИНЫ-КЛАССЫ
+.without_indentation() {
+  padding: 0;
+  margin: 0;
+}
+
+.visuallyhidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.clearfix::before {
+  content: "";
+  display: table;
+  width: 100%;
+  clear: both;
+}
+
+.form-wrap() {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 @indent-mobile;
+
+  & + & {
+    margin-top: 14px;
+  }
+}
+
+.placeholder(@color: @color-main) {
+  &::-webkit-input-placeholder {
+    color: @color;
+  }
+
+  &::-moz-placeholder {
+    color: @color;
+  }
+
+  &:-ms-input-placeholder {
+    color: @color;
+  }
+
+  &:-moz-placeholder {
+    color: @color;
+  }
+}

@@ -1,0 +1,26 @@
+.programs__list {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  @media @desktop {
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+}
+
+.programs__item {
+  margin: 20px @indent-mobile 0;
+
+  @media @tablet {
+    margin: 0;
+  }
+
+  @media @desktop {
+    width: (@cell-d + @small-cell-d) * 2;
+  }
+}

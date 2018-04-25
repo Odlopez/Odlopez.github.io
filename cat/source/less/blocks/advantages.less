@@ -1,0 +1,130 @@
+.advantages {
+  @media @tablet {
+    border-bottom: 1px solid rgb(230, 230, 230);
+  }
+
+  @media @desktop {
+    margin-top: 29px;
+
+    border-bottom: none;
+  }
+}
+
+.advantages__title {
+  margin: 17px 0 28px;
+  padding: 0 @indent-mobile;
+
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 60px;
+  color: @text-dark;
+
+  @media @tablet {
+    margin: 46px 0;
+    padding: 0;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.advantages__list {
+  .without_indentation();
+
+  display: flex;
+  flex-direction: column;
+
+  list-style: none;
+
+  @media @tablet {
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    counter-reset: section;
+  }
+}
+
+.advantages__item {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  min-height: 60px;
+  margin: 0 @indent-mobile 20px;
+  padding-left: 80px;
+
+  font-size: 14px;
+  line-height: 18px;
+  font-family: @font-extra;
+  color: @text-light;
+
+  @media @tablet {
+    width: (@cell-t + @small-cell-t) * 2;
+    margin: 27px 0 106px;
+    padding: 113px 80px 0 0;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    counter-increment: section;
+
+    &::after {
+      content: counter(section);
+      position: absolute;
+      top: -40px;
+      left: 115px;
+      z-index: -1;
+
+      font-size: 281px;
+      line-height: 281px;
+      font-family: @font-main;
+      color: rgb(242, 242, 242);
+    }
+  }
+
+  @media @desktop {
+    width: @cell-d;
+    margin-bottom: 38px;
+    padding: 110px 0 50px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    width: 60px;
+    height: 60px;
+
+    background-color: @color-main;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translateY(-50%);
+
+    @media @tablet {
+      top: 0;
+
+      width: 80px;
+      height: 80px;
+
+      transform: translateY(0);
+    }
+  }
+
+  &:first-child::before {
+    background-image: url("../img/advantage-leaf@1x.png");
+  }
+
+  &:nth-child(2)::before {
+    background-image: url("../img/advantage-powder@1x.png");
+  }
+
+  &:nth-child(3)::before {
+    background-image: url("../img/advantage-dining@1x.png");
+  }
+
+  &:nth-child(4)::before {
+    background-image: url("../img/advantage-clock@1x.png");
+  }
+}
