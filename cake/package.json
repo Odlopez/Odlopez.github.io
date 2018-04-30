@@ -1,0 +1,48 @@
+{
+  "name": "cake",
+  "version": "14.0.0",
+  "private": true,
+  "description": "Торты на заказ",
+  "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "1.x",
+    "autoprefixer": "8.3.x",
+    "browser-sync": "2.23.x",
+    "gulp": "3.9.x",
+    "gulp-bem-css": "^1.1.3",
+    "gulp-less": "3.5.x",
+    "gulp-plumber": "1.2.x",
+    "gulp-postcss": "7.0.x",
+    "gulp-posthtml": "^3.0.4",
+    "posthtml": "^0.11.3",
+    "posthtml-include": "^1.1.0",
+    "stylelint": "9.2.x",
+    "stylelint-config-htmlacademy": "0.1.x"
+  },
+  "scripts": {
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
+    "test": "npm run editorconfig && npm run stylelint",
+    "build": "gulp style",
+    "insert-svg": "gulp html",
+    "start": "gulp serve"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "IE 11",
+    "Firefox ESR"
+  ],
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "source/*.html",
+    "source/js/**/*.js",
+    "source/img/**/*.svg",
+    "source/less/**/*.less"
+  ],
+  "engines": {
+    "node": "8.11"
+  },
+  "dependencies": {
+    "npm": "^5.8.0"
+  }
+}
