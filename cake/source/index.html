@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
   <title>Торты на заказ</title>
 </head>
 <body>
@@ -142,10 +143,12 @@
         <p class="designer__description">
           Соберите торт в 3 шага
         </p>
+        <!-- FILLING -->
         <div class="designer__section filling">
           <h3 class="filling__caption">Выберите начинку</h3>
           <button class="filling__left-control" type="button">Назад</button>
           <img class="filling__img" src="" alt="Шоколадная начинка">
+          <!-- pagination -->
           <ul class="filling__pagination pagination">
             <li class="pagination__item">
               <a href="" class="pagination__link pagination__link--active"></a>
@@ -171,7 +174,97 @@
           </p>
           <span class="filling__price">1000 руб/кг</span>
           <a class="filling__button button" href="#">Выбрать</a>
+          <button class="filling__right-control" type="button">Вперед</button>
           <span class="filling__counter">1/12</span>
+        </div>
+        <!-- SIZE -->
+        <div class="designer__size size">
+          <h3 class="size__caption">Размер</h3>
+          <div class="size__wrap">
+            <ul class="size__list">
+              <li class="size__item">
+                <p class="size__weight">1&nbsp;кг</p>
+                <span class="size__radius">17-18&nbsp;см</span>
+                <span class="size__amount">(1 кг – 6 персон)</span>
+              </li>
+              <li class="size__item">
+                <p class="size__weight">2&nbsp;кг</p>
+                <span class="size__radius">23-24&nbsp;см</span>
+                <span class="size__amount">(10–12 персон)</span>
+              </li>
+              <li class="size__item">
+                <p class="size__weight">5&nbsp;кг</p>
+                <span class="size__radius">Два яруса 25 и 20 см</span>
+                <span class="size__amount">(15–20 персон)</span>
+              </li>
+              <li class="size__item">
+                <p class="size__weight">8&nbsp;кг</p>
+                <span class="size__radius">Три яруса 30,25 и 18 см</span>
+                <span class="size__amount">(25–30 персон)</span>
+              </li>
+            </ul>
+            <!-- pagination -->
+            <ul class="size__pagination pagination">
+              <li class="pagination__item">
+                <a href="" class="pagination__link pagination__link--active"></a>
+              </li>
+              <li class="pagination__item">
+                <a href="" class="pagination__link"></a>
+              </li>
+              <li class="pagination__item">
+                <a href="" class="pagination__link"></a>
+              </li>
+              <li class="pagination__item">
+                <a href="" class="pagination__link"></a>
+              </li>
+            </ul>
+            <a class="filling__button button" href="#">Выбрать</a>
+          </div>
+        </div>
+        <!-- DECORATION -->
+        <div class="designer__decoration decoration">
+          <h3 class="decoration__caption">Офрмление</h3>
+          <div class="decoration__wrap">
+            <button class="decoration__left-control" type="button">Назад</button>
+            <ul class="decoration__list">
+              <li class="decoration__item">
+                <div class="decoration__inner">
+                  <img class="decoration__image" src="" alt="Маршмэллоу">
+                </div>
+                <span class="decoration__name">Маршмэллоу</span>
+                <span class="decoration__price">600 руб/кг</span>
+              </li>
+              <li class="decoration__item">
+                <div class="decoration__inner">
+                  <img class="decoration__image" src="" alt="Ягодное ассорти">
+                </div>
+                <span class="decoration__name">Ягодное ассорти</span>
+                <span class="decoration__price">700 руб/кг</span>
+              </li>
+            </ul>
+            <button class="decoration__right-control" type="button">Назад</button>
+            <span class="decoration__counter">1/35</span>
+          </div>
+          <!-- selection-result -->
+          <div class="designer__result  selection-result">
+            <h4 class="selection-result__caption">Ваш выбор</h4>
+            <!-- order-form -->
+            <form class="selection-result__form order-form" action="https://echo.htmlacademy.ru" method="post">
+              <div class="order-form__inner">
+                <label class="order-form__label" for="">Новинка</label>
+                <input class="order-form__input" type="text" placeholder="Шоколадный ганаш">
+              </div>
+              <div class="order-form__inner">
+                <label class="order-form__label" for="">Размер</label>
+                <input class="order-form__input" type="text" placeholder="2 кг">
+              </div>
+              <div class="order-form__inner">
+                <label class="order-form__label" for="">Оформление</label>
+                <input class="order-form__input" type="text" placeholder="Маршмэллоу">
+              </div>
+              <button class="order-form__submit button" type="submit">заказать торт</button>
+            </form>
+          </div>
         </div>
       </div>
     </section>
