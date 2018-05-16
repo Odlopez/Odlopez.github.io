@@ -4,16 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/circe-bold.woff" as="font">
+    <link rel="preload" href="fonts/circe-regular.woff" as="font">
+    <link rel="preload" href="fonts/IntroScriptR-H2Base.otf" as="font">
+    <link rel="preload" href="fonts/opensans-light.woff2" as="font">
+    <link rel="preload" href="fonts/opensans-light.woff" as="font">
+    <link rel="preload" href="fonts/PlayfairDisplay-Bold.ttf" as="font">
+    <link rel="preload" href="fonts/PlayfairDisplay-BoldItalic.ttf" as="font">
+    <link rel="preload" href="fonts/roboto-regular.woff2" as="font">
+    <link rel="preload" href="fonts/roboto-regular.woff" as="font">
     <script src="js/picturefill.min.js"></script>
     <title>Торты на заказ</title>
   </head>
   <body>
     <!-- HEADER -->
     <header class="header">
-      <div class="container">
-        <img class="header__logo" src="" alt="Логотип магазина Cakes">
-        <button class="header__button"></button>
+      <div class="header__container container">
+        <div class="header__inner">
+          <span class="header__logo">Cakes</span>
+          <button class="header__button"></button>
+        </div>
         <nav class="header__navigation">
           <ul class="header__menu-list main-menu">
             <li class="main-menu__item">
@@ -56,23 +67,23 @@
       <h1 class="visuallyhidden">Cakes - Торты на заказ!</h1>
       <!-- SHOP-WINDOW -->
       <section class="shop-window">
-        <div class="container">
-          <h2 class="shop-window__title">Торты  на заказ</h2>
+        <div class="shop-window__container container">
+          <h2 class="shop-window__title">Торты на&nbsp;заказ</h2>
           <p class="shop-window__slogan">Ручная работа</p>
           <ul class="shop-window__features features">
-            <li class="features__item">
+            <li class="features__item features__item--naturally">
               <p class="features__description">
                 Натуральные ингредиенты
               </p>
             </li>
-            <li class="features__item">
+            <li class="features__item features__item--delivery">
               <p class="features__description">
                   Доставка бесплатно при заказе от&nbsp;2000&nbsp;рублей*
               </p>
             </li>
           </ul>
           <a class="shop-window__button button" href="#">Выбрать торт</a>
-          <img src="img/cake-main.png" alt="Очень вкусный торт">
+          <img class="shop-window__image" src="img/main-cake-mobile.png" alt="Очень вкусный торт">
         </div>
       </section>
       <!-- PRODUCTION -->
@@ -85,7 +96,7 @@
                 <article class="production__grade product-grade">
                   <h3 class="product-grade__title">Классические</h3>
                   <span class="product-grade__amount">24 вида</span>
-                  <img class="product-grade__img" src="" alt="Классический торт">
+                  <img class="product-grade__img" src="img/classic-mobile.jpg" alt="Классический торт">
                   <a class="product-grade__link product-grade__link--visible" href="#">Смотреть</a>
                 </article>
               </li>
@@ -93,7 +104,7 @@
                 <article class="production__grade product-grade">
                   <h3 class="product-grade__title">Муссовые</h3>
                   <span class="product-grade__amount">12 видов</span>
-                  <img class="product-grade__img" src="" alt="Муссовый торт">
+                  <img class="product-grade__img" src="img/mousse-mobile.jpg" alt="Муссовый торт">
                   <a class="product-grade__link" href="#">Смотреть</a>
                 </article>
               </li>
@@ -101,7 +112,7 @@
                 <article class="production__grade product-grade">
                   <h3 class="product-grade__title">Свадебные</h3>
                   <span class="product-grade__amount">20 видов</span>
-                  <img class="product-grade__img" src="" alt="Свадебный торт">
+                  <img class="product-grade__img" src="img/wedding-mobile.jpg" alt="Свадебный торт">
                   <a class="product-grade__link" href="#">Смотреть</a>
                 </article>
               </li>
@@ -113,7 +124,7 @@
                 <article class="production__grade product-grade">
                   <h3 class="product-grade__title">Мужчинам</h3>
                   <span class="product-grade__amount">12 видов</span>
-                  <img class="product-grade__img" src="" alt="Шоколадный торт">
+                  <img class="product-grade__img" src="img/mans-mobile.jpg" alt="Шоколадный торт">
                   <a class="product-grade__link" href="#">Смотреть</a>
                 </article>
               </li>
@@ -121,7 +132,7 @@
                 <article class="production__grade product-grade">
                   <h3 class="product-grade__title">Женщинам</h3>
                   <span class="product-grade__amount">16 видов</span>
-                  <img class="product-grade__img" src="" alt="Нежный торт">
+                  <img class="product-grade__img" src="img/womans-mobile.jpg" alt="Нежный торт">
                   <a class="product-grade__link" href="#">Смотреть</a>
                 </article>
               </li>
@@ -129,7 +140,7 @@
                 <article class="production__grade product-grade">
                   <h3 class="product-grade__title">Детские</h3>
                   <span class="product-grade__amount">18 видов</span>
-                  <img class="product-grade__img" src="" alt="Детский торт">
+                  <img class="product-grade__img" src="img/cids-mobile.jpg" alt="Детский торт">
                   <a class="product-grade__link" href="#">Смотреть</a>
                 </article>
               </li>
@@ -145,13 +156,13 @@
             Соберите торт в 3 шага
           </p>
           <!-- FILLING -->
-          <div class="designer__section filling">
+          <div class="designer__filling filling">
             <h3 class="filling__caption">Выберите начинку</h3>
             <button class="filling__left-control" type="button">Назад</button>
-            <img class="filling__img" src="" alt="Шоколадная начинка">
+            <img class="filling__img" src="img/filling-mobile.png" alt="Шоколадная начинка">
             <!-- pagination -->
             <ul class="filling__pagination pagination">
-              <li class="pagination__item">
+              <li class="pagination__item pagination__item--active">
                 <a href="" class="pagination__link pagination__link--active"></a>
               </li>
               <li class="pagination__item">
@@ -163,7 +174,7 @@
               <li class="pagination__item">
                 <a href="" class="pagination__link"></a>
               </li>
-              <li class="pagination__item">
+              <li class="pagination__item pagination__item--last">
                 <a href="" class="pagination__link pagination__link--last"></a>
               </li>
             </ul>

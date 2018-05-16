@@ -1,0 +1,27 @@
+.features__item {
+  position: relative;
+
+  margin-bottom: 28px;
+  padding-left: 42px;
+
+  &::before {
+    position: absolute;
+    left: 0;
+  }
+
+  &--naturally::before {
+    content: url("../../../img/cereals-mobile.png");
+  }
+
+  &--delivery::before {
+    content: url("../../../img/gift-mobile.png");
+  }
+}
+
+.features__description {
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 14px;
+  font-family: @font-extra;
+}

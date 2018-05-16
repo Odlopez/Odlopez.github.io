@@ -1,0 +1,46 @@
+.header {
+  background-color: rgb(255, 255, 255);
+}
+
+.header__container {
+  position: relative;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 40px;
+}
+
+.header__logo {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 2.043;
+  font-family: @font-main;
+  text-align: left;
+  color: rgb(0, 0, 0);
+  letter-spacing: 0.05em;
+}
+
+.header__button {
+  width: 18px;
+  height: 14px;
+
+  background: url("../../../img/button-menu.svg") no-repeat;
+  border: none;
+}
+
+.header__navigation {
+  display: none;
+}
+
+.header__menu-list {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+}
+
+.header__tel {
+  display: none;
+}

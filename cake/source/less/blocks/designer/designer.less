@@ -1,0 +1,50 @@
+.designer {
+  padding-top: 37px;
+  counter-reset: section;
+}
+
+.designer__title {
+  margin: 0 30px 7px;
+  font-family: @font-main;
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 700;
+  color: @text-color;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+
+.designer__description {
+  font-family: @font-fourth;
+  font-size: 22px;
+  color: rgb(50, 49, 61);
+  text-align: center;
+  .without-indentation;
+  margin-bottom: 20px;
+}
+
+.designer__filling {
+  position: relative;
+  counter-increment: section;
+
+  &::before {
+    content: "0" counter(section);
+    font-family: @font-main;
+    font-size: 30px;
+    color: @color-decorative;
+    position: absolute;
+    top: 5px;
+  }
+}
+
+.designer .designer__size {
+
+}
+
+.designer .designer__decoration {
+
+}
+
+.designer .designer__result {
+
+}

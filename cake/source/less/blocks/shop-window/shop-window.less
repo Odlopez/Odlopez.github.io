@@ -1,0 +1,50 @@
+.shop-window {
+  position: relative;
+
+  padding-top: 128px;
+  padding-bottom: 46px;
+}
+
+.shop-window__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.shop-window__title {
+  margin: 0 45px 20px;
+
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 36px;
+  font-family: @font-main;
+  text-align: center;
+  color: @text-color;
+  letter-spacing: 0.075em;
+}
+
+.shop-window__slogan {
+  margin: 0 0 23px;
+
+  font-size: 22px;
+  font-family: @font-fourth;
+  text-align: center;
+  color: rgb(50, 49, 61);
+}
+
+.shop-window__features {
+  .reset-list;
+  margin-bottom: 14px;
+}
+
+.shop-window__button {
+  align-self: center;
+}
+
+.shop-window__image {
+  position: absolute;
+  top: -40px;
+  right: 50%;
+  z-index: -1;
+
+  transform: translateX(50%);
+}

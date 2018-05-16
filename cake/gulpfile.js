@@ -11,6 +11,8 @@ var include = require("posthtml-include");
 const gulpBemCss = require('gulp-bem-css');
 const webp = require('gulp-webp');
 var svgmin = require('gulp-svgmin');
+var minify = require('gulp-csso');
+var rename = require("gulp-rename");
 
 gulp.task("style", function() {
   gulp.src("source/less/style.less")
@@ -19,6 +21,9 @@ gulp.task("style", function() {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(gulp.dest("source/css"))
+    .pipe(minify())
+    .pipe(rename("style.min.css"))
     .pipe(gulp.dest("source/css"))
     .pipe(server.stream());
 });
@@ -45,12 +50,12 @@ gulp.task("html", function () {
 gulp.task('bem-less', () => {
   return gulp.src('source/*.html')
     .pipe(gulpBemCss({
-      folder: 'source/css',
+      folder: 'source/less',
       extension: 'less',
       elementSeparator: '__',
       modifierSeparator: '--'
     }))
-    .pipe(gulp.dest('source/css/f'));
+    .pipe(gulp.dest('source'));
 });
 
 gulp.task('webp', () => {
@@ -63,4 +68,10 @@ gulp.task('svg-optim', function () {
   return gulp.src('source/img/logo-mobile.svg')
       .pipe(svgmin())
       .pipe(gulp.dest('source/svgo'));
+});
+
+gulp.task('minify', function() {
+  return gulp.src("build/*.html")
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest("build"));
 });
