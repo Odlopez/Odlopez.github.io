@@ -60,9 +60,9 @@ gulp.task('bem-less', () => {
 });
 
 gulp.task('webp', () => {
-  return gulp.src('source/img/*.png')
+  return gulp.src('source/img/*.{png,jpg}')
     .pipe(webp())
-    .pipe(gulp.dest('source/webp'))
+    .pipe(gulp.dest('source/img'))
 });
 
 gulp.task('svg-optim', function () {
