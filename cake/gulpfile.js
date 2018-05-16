@@ -13,6 +13,7 @@ const webp = require('gulp-webp');
 var svgmin = require('gulp-svgmin');
 var minify = require('gulp-csso');
 var rename = require("gulp-rename");
+var imagemin = require('gulp-imagemin');
 
 gulp.task("style", function() {
   gulp.src("source/less/style.less")
@@ -75,3 +76,13 @@ gulp.task('minify', function() {
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest("build"));
 });
+
+gulp.task("images-min", function () {
+  return gulp.src("source/img/**/*.{png,jpg,svg}")
+    .pipe(imagemin([
+      imagemin.optipng({optimizationLevel: 5}),
+      imagemin.jpegtran({progressive: true}),
+      imagemin.svgo()
+    ]))
+    .pipe(gulp.dest("source/img"));
+})
