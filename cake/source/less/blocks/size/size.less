@@ -1,35 +1,81 @@
 .size {
+  padding: 18px 21px 25px;
 
+  font-weight: 400;
+  font-family: @font-extra;
+  color: rgb(47, 47, 47);
+
+  background-color: rgb(255, 255, 255);
 }
 
-.size .size__caption {
+.size__caption {
+  .without-indentation;
 
+  margin-bottom: 19px;
+  margin-left: 40px;
+
+  font-size: 16px;
+  font-family: @font-main;
+  color: @color-decorative;
+  letter-spacing: 0.01em;
 }
 
-.size .size__wrap {
-
+.size__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.size .size__list {
-
+.size__list {
+  .reset-list;
 }
 
-.size .size__item {
+.size__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 57px;
 
+  &--second {
+    display: none;
+  }
+
+  &--third {
+    display: none;
+  }
+
+  &--fourth {
+    display: none;
+  }
 }
 
-.size .size__weight {
+.size__weight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 110px;
+  height: 110px;
+  margin-top: 31px;
+  margin-bottom: 69px;
 
+  font-size: 16px;
+
+  background-image: url("../../../img/dotted-circle-mobile.svg");
 }
 
-.size .size__radius {
-
+.size__radius {
+  font-size: 14px;
 }
 
-.size .size__amount {
-
+.size__amount {
+  font-size: 14px;
 }
 
-.size .size__pagination {
+.size__pagination {
+  position: absolute;
+  top: 242px;
+  right: 50%;
 
-}
+  transform: translateX(50%);
+}

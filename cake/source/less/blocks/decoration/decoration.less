@@ -1,47 +1,81 @@
 .decoration {
+  display: flex;
+  flex-direction: column;
+  padding: 19px 20px 25px;
 
+  font-weight: 400;
+  font-family: @font-extra;
+  color: rgb(47, 47, 47);
+
+  background-color: rgb(255, 255, 255);
 }
 
-.decoration .decoration__caption {
+.decoration__caption {
+  .without-indentation;
 
+  margin-bottom: 25px;
+  margin-left: 40px;
+
+  font-size: 16px;
+  font-family: @font-main;
+  color: @color-decorative;
+  letter-spacing: 0.1em;
 }
 
-.decoration .decoration__wrap {
-
+.decoration__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.decoration .decoration__left-control {
-
+.decoration__left-control {
+  display: none;
 }
 
-.decoration .decoration__list {
-
+.decoration__right-control {
+  display: none;
 }
 
-.decoration .decoration__item {
-
+.decoration__list {
+  .reset-list;
 }
 
-.decoration .decoration__inner {
+.decoration__item {
+  display: none;
 
+  &:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
-.decoration .decoration__image {
-
+.decoration__inner {
+  margin-bottom: 24px;
 }
 
-.decoration .decoration__name {
+.decoration__name {
+  margin-bottom: 3px;
 
+  font-size: 14px;
 }
 
-.decoration .decoration__price {
+.decoration__price {
+  margin-bottom: 30px;
 
+  font-weight: 700;
+  font-size: 18px;
+  font-family: @font-main;
 }
 
-.decoration .decoration__right-control {
+.decoration__counter {
+  position: absolute;
+  top: 244px;
+  right: 62px;
 
+  font-size: 12px;
 }
 
-.decoration .decoration__counter {
-
-}
+.decoration__button {
+  padding: 13px 62px;
+}

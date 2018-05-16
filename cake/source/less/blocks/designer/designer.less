@@ -1,50 +1,82 @@
 .designer {
   padding-top: 37px;
+
   counter-reset: section;
 }
 
 .designer__title {
   margin: 0 30px 7px;
-  font-family: @font-main;
+
+  font-weight: 700;
   font-size: 24px;
   line-height: 29px;
-  font-weight: 700;
+  font-family: @font-main;
+  text-align: center;
   color: @text-color;
   letter-spacing: 0.01em;
-  text-align: center;
 }
 
 .designer__description {
-  font-family: @font-fourth;
-  font-size: 22px;
-  color: rgb(50, 49, 61);
-  text-align: center;
   .without-indentation;
+
   margin-bottom: 20px;
+
+  font-size: 22px;
+  font-family: @font-fourth;
+  text-align: center;
+  color: rgb(50, 49, 61);
 }
 
 .designer__filling {
   position: relative;
+
+  margin-bottom: 10px;
+
   counter-increment: section;
 
   &::before {
     content: "0" counter(section);
-    font-family: @font-main;
-    font-size: 30px;
-    color: @color-decorative;
     position: absolute;
     top: 5px;
+
+    font-size: 30px;
+    font-family: @font-main;
+    color: @color-decorative;
   }
 }
 
-.designer .designer__size {
+.designer__size {
+  position: relative;
 
+  margin-bottom: 10px;
+
+  counter-increment: section;
+
+  &::before {
+    content: "0" counter(section);
+    position: absolute;
+    top: 5px;
+
+    font-size: 30px;
+    font-family: @font-main;
+    color: @color-decorative;
+  }
 }
 
-.designer .designer__decoration {
+.designer__decoration {
+  position: relative;
 
-}
+  margin-bottom: 10px;
 
-.designer .designer__result {
+  counter-increment: section;
 
+  &::before {
+    content: "0" counter(section);
+    position: absolute;
+    top: 5px;
+
+    font-size: 30px;
+    font-family: @font-main;
+    color: @color-decorative;
+  }
 }
