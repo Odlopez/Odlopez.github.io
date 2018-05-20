@@ -56,21 +56,41 @@
   text-align: center;
 
   &:first-of-type::before {
-    content: url("../../../img/cereals-big-mobile.png");
+    content: "";
     position: absolute;
     top: -69px;
     right: 50%;
 
+    width: 61px;
+    height: 61px;
+
+    background: url("../../../img/cereals-big-mobile.png") no-repeat center;
+    background-size: cover;
     transform: translateX(50%);
   }
 
   &:last-of-type::before {
-    content: url("../../../img/gift-big-mobile.png");
+    content: "";
     position: absolute;
     top: -57px;
     right: 50%;
 
+    width: 84px;
+    height: 50px;
+
+    background: url("../../../img/gift-big-mobile.png") no-repeat center;
+    background-size: cover;
     transform: translateX(50%);
+  }
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    &:first-of-type::before {
+      background-image: url("../../../img//cereals-big-mobile@2x.png");
+    }
+
+    &:last-of-type::before {
+      background-image: url("../../../img/gift-big-mobile.png");
+    }
   }
 }
 
