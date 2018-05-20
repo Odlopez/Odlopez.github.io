@@ -1,0 +1,87 @@
+.advantages {
+  margin-bottom: 35px;
+
+  color: @text-color;
+}
+
+.advantages__title {
+  .without-indentation;
+
+  margin-bottom: 6px;
+
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+  font-family: @font-main;
+  text-align: center;
+}
+
+.advantages__subtitle {
+  display: block;
+  margin-bottom: 12px;
+
+  font-size: 22px;
+  font-family: @font-fourth;
+  text-align: center;
+  color: rgb(50, 49, 61);
+}
+
+.advantages__inner {
+  padding-top: 10px;
+  padding-bottom: 17px;
+
+  background-color: rgb(255, 255, 255);
+}
+
+.advantages__list {
+  .reset-list;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-weight: 400;
+  font-family: @font-extra;
+  color: rgb(0, 0, 0);
+}
+
+.advantages__termin {
+  position: relative;
+
+  margin-top: 71px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 27px;
+  text-align: center;
+
+  &:first-of-type::before {
+    content: url("../../../img/cereals-big-mobile.png");
+    position: absolute;
+    top: -69px;
+    right: 50%;
+
+    transform: translateX(50%);
+  }
+
+  &:last-of-type::before {
+    content: url("../../../img/gift-big-mobile.png");
+    position: absolute;
+    top: -57px;
+    right: 50%;
+
+    transform: translateX(50%);
+  }
+}
+
+.advantages__description {
+  margin-left: 0;
+  padding: 0 30px;
+
+  font-size: 14px;
+  text-align: center;
+
+  &:last-child {
+    padding: 0 50px;
+  }
+}

@@ -4,15 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/circe-bold.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/circe-regular.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/IntroScriptR-H2Base.otf" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensans-light.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensans-light.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/PlayfairDisplay-Bold.ttf" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/PlayfairDisplay-BoldItalic.ttf" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/roboto-regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/roboto-regular.woff" as="font" crossorigin="anonymous">
+    <script src="js/picturefill.min.js"></script>
     <title>Торты на заказ</title>
   </head>
   <body>
     <!-- HEADER -->
     <header class="header">
-      <div class="container">
-        <img class="header__logo" src="" alt="Логотип магазина Cakes">
-        <button class="header__button"></button>
+      <div class="header__container container">
+        <div class="header__inner">
+          <span class="header__logo">Cakes</span>
+          <button class="header__button"></button>
+        </div>
         <nav class="header__navigation">
           <ul class="header__menu-list main-menu">
             <li class="main-menu__item">
@@ -55,23 +67,23 @@
       <h1 class="visuallyhidden">Cakes - Торты на заказ!</h1>
       <!-- SHOP-WINDOW -->
       <section class="shop-window">
-        <div class="container">
-          <h2 class="shop-window__title">Торты  на заказ</h2>
+        <div class="shop-window__container container">
+          <h2 class="shop-window__title">Торты на&nbsp;заказ</h2>
           <p class="shop-window__slogan">Ручная работа</p>
           <ul class="shop-window__features features">
-            <li class="features__item">
+            <li class="features__item features__item--naturally">
               <p class="features__description">
                 Натуральные ингредиенты
               </p>
             </li>
-            <li class="features__item">
+            <li class="features__item features__item--delivery">
               <p class="features__description">
                   Доставка бесплатно при заказе от&nbsp;2000&nbsp;рублей*
               </p>
             </li>
           </ul>
           <a class="shop-window__button button" href="#">Выбрать торт</a>
-          <img src="img/cake-main.png" alt="Очень вкусный торт">
+          <img class="shop-window__image" src="img/main-cake-mobile.png" alt="Очень вкусный торт">
         </div>
       </section>
       <!-- PRODUCTION -->
@@ -84,7 +96,9 @@
                 <article class="production__grade product-grade">
                   <h3 class="product-grade__title">Классические</h3>
                   <span class="product-grade__amount">24 вида</span>
-                  <img class="product-grade__img" src="" alt="Классический торт">
+                  <a href="#">
+                    <img class="product-grade__img" src="img/classic-mobile.jpg" alt="Классический торт">
+                  </a>
                   <a class="product-grade__link product-grade__link--visible" href="#">Смотреть</a>
                 </article>
               </li>
@@ -92,7 +106,9 @@
                 <article class="production__grade product-grade">
                   <h3 class="product-grade__title">Муссовые</h3>
                   <span class="product-grade__amount">12 видов</span>
-                  <img class="product-grade__img" src="" alt="Муссовый торт">
+                  <a href="#">
+                    <img class="product-grade__img" src="img/mousse-mobile.jpg" alt="Муссовый торт">
+                  </a>
                   <a class="product-grade__link" href="#">Смотреть</a>
                 </article>
               </li>
@@ -100,7 +116,9 @@
                 <article class="production__grade product-grade">
                   <h3 class="product-grade__title">Свадебные</h3>
                   <span class="product-grade__amount">20 видов</span>
-                  <img class="product-grade__img" src="" alt="Свадебный торт">
+                  <a href="#">
+                    <img class="product-grade__img" src="img/wedding-mobile.jpg" alt="Свадебный торт">
+                  </a>
                   <a class="product-grade__link" href="#">Смотреть</a>
                 </article>
               </li>
@@ -112,7 +130,9 @@
                 <article class="production__grade product-grade">
                   <h3 class="product-grade__title">Мужчинам</h3>
                   <span class="product-grade__amount">12 видов</span>
-                  <img class="product-grade__img" src="" alt="Шоколадный торт">
+                  <a href="#">
+                    <img class="product-grade__img" src="img/mans-mobile.jpg" alt="Шоколадный торт">
+                  </a>
                   <a class="product-grade__link" href="#">Смотреть</a>
                 </article>
               </li>
@@ -120,7 +140,9 @@
                 <article class="production__grade product-grade">
                   <h3 class="product-grade__title">Женщинам</h3>
                   <span class="product-grade__amount">16 видов</span>
-                  <img class="product-grade__img" src="" alt="Нежный торт">
+                  <a href="#">
+                    <img class="product-grade__img" src="img/womans-mobile.jpg" alt="Нежный торт">
+                  </a>
                   <a class="product-grade__link" href="#">Смотреть</a>
                 </article>
               </li>
@@ -128,7 +150,9 @@
                 <article class="production__grade product-grade">
                   <h3 class="product-grade__title">Детские</h3>
                   <span class="product-grade__amount">18 видов</span>
-                  <img class="product-grade__img" src="" alt="Детский торт">
+                  <a href="#">
+                    <img class="product-grade__img" src="img/cids-mobile.jpg" alt="Детский торт">
+                  </a>
                   <a class="product-grade__link" href="#">Смотреть</a>
                 </article>
               </li>
@@ -144,14 +168,14 @@
             Соберите торт в 3 шага
           </p>
           <!-- FILLING -->
-          <div class="designer__section filling">
+          <div class="designer__filling filling">
             <h3 class="filling__caption">Выберите начинку</h3>
             <button class="filling__left-control" type="button">Назад</button>
-            <img class="filling__img" src="" alt="Шоколадная начинка">
+            <img class="filling__img" src="img/filling-mobile.png" alt="Шоколадная начинка">
             <!-- pagination -->
             <ul class="filling__pagination pagination">
-              <li class="pagination__item">
-                <a href="" class="pagination__link pagination__link--active"></a>
+              <li class="pagination__item pagination__item--active">
+                <a href="" class="pagination__link pagination__link"></a>
               </li>
               <li class="pagination__item">
                 <a href="" class="pagination__link"></a>
@@ -162,8 +186,8 @@
               <li class="pagination__item">
                 <a href="" class="pagination__link"></a>
               </li>
-              <li class="pagination__item">
-                <a href="" class="pagination__link pagination__link--last"></a>
+              <li class="pagination__item pagination__item--last">
+                <a href="" class="pagination__link pagination__link"></a>
               </li>
             </ul>
             <p class="filling__name">
@@ -182,22 +206,22 @@
             <h3 class="size__caption">Размер</h3>
             <div class="size__wrap">
               <ul class="size__list">
-                <li class="size__item">
+                <li class="size__item size__item--first">
                   <p class="size__weight">1&nbsp;кг</p>
                   <span class="size__radius">17-18&nbsp;см</span>
                   <span class="size__amount">(1 кг – 6 персон)</span>
                 </li>
-                <li class="size__item">
+                <li class="size__item size__item--second">
                   <p class="size__weight">2&nbsp;кг</p>
                   <span class="size__radius">23-24&nbsp;см</span>
                   <span class="size__amount">(10–12 персон)</span>
                 </li>
-                <li class="size__item">
+                <li class="size__item size__item--third">
                   <p class="size__weight">5&nbsp;кг</p>
                   <span class="size__radius">Два яруса 25 и 20 см</span>
                   <span class="size__amount">(15–20 персон)</span>
                 </li>
-                <li class="size__item">
+                <li class="size__item size__item--fourth">
                   <p class="size__weight">8&nbsp;кг</p>
                   <span class="size__radius">Три яруса 30,25 и 18 см</span>
                   <span class="size__amount">(25–30 персон)</span>
@@ -205,8 +229,8 @@
               </ul>
               <!-- pagination -->
               <ul class="size__pagination pagination">
-                <li class="pagination__item">
-                  <a href="" class="pagination__link pagination__link--active"></a>
+                <li class="pagination__item pagination__item--active">
+                  <a href="" class="pagination__link pagination__link"></a>
                 </li>
                 <li class="pagination__item">
                   <a href="" class="pagination__link"></a>
@@ -229,7 +253,7 @@
               <ul class="decoration__list">
                 <li class="decoration__item">
                   <div class="decoration__inner">
-                    <img class="decoration__image" src="" alt="Маршмэллоу">
+                    <img class="decoration__image" src="img/marshmallow-mobile.jpg" alt="Маршмэллоу">
                   </div>
                   <span class="decoration__name">Маршмэллоу</span>
                   <span class="decoration__price">600 руб/кг</span>
@@ -242,8 +266,9 @@
                   <span class="decoration__price">700 руб/кг</span>
                 </li>
               </ul>
-              <button class="decoration__right-control" type="button">Назад</button>
+              <button class="decoration__right-control" type="button">Вперед</button>
               <span class="decoration__counter">1/35</span>
+              <button class="decoration__button button" type="button">Выбрать</button>
             </div>
             <!-- selection-result -->
             <div class="designer__result  selection-result">
@@ -256,7 +281,7 @@
                 </div>
                 <div class="order-form__inner">
                   <label class="order-form__label" for="">Размер</label>
-                  <input class="order-form__input" type="text" placeholder="2 кг">
+                  <input class="order-form__input" type="text" placeholder="1 кг">
                 </div>
                 <div class="order-form__inner">
                   <label class="order-form__label" for="">Оформление</label>
@@ -276,49 +301,50 @@
           <ul class="reviews__list">
             <li class="reviews__item">
               <article class="user-review">
-                <img class="user-review__avatar" src="" alt="Аватар пользователя">
+                <img class="user-review__avatar" src="img/user-mobile.png" alt="Аватар пользователя">
                 <span class="user-review__name">Мария</span>
                 <span class="user-review__data-user">юрист, 33 года</span>
                 <p class="user-review__excerpt">
                   Заказывала торт брауни на юбилей мужа. Гости были в восторге!
                   Отдельное спасибо за своевременную доставку! Теперь будем заказывать торты
                   только у вас для наших семейных праздников:)
-                  <a href="#">Развернуть</a>
+                  <a class="user-review__link" href="#">Развернуть</a>
                 </p>
+                <span class="user-review__counter">1/26</span>
               </article>
             </li>
           </ul>
           <!-- pagination -->
           <ul class="reviews__pagination pagination">
-            <li class="pagination__item">
-              <a href="" class="pagination__link pagination__link--active"></a>
-            </li>
-            <li class="pagination__item">
+            <li class="pagination__item reviews__pagination-item reviews__pagination-item--active">
               <a href="" class="pagination__link"></a>
             </li>
-            <li class="pagination__item">
+            <li class="pagination__item reviews__pagination-item">
               <a href="" class="pagination__link"></a>
             </li>
-            <li class="pagination__item">
+            <li class="pagination__item reviews__pagination-item">
               <a href="" class="pagination__link"></a>
             </li>
-            <li class="pagination__item">
-              <a href="" class="pagination__link pagination__link--last"></a>
+            <li class="pagination__item reviews__pagination-item">
+              <a href="" class="pagination__link"></a>
+            </li>
+            <li class="pagination__item reviews__pagination-item pagination__item--last">
+              <a href="" class="pagination__link"></a>
             </li>
           </ul>
-          <button class="reviews__fight-control" type="button">Вперед</button>
+          <button class="reviews__right-control" type="button">Вперед</button>
         </div>
       </section>
       <!-- INFO-ABPUT -->
       <section class="info-about">
-        <div class="container">
+        <div class="info-about__container container">
           <h2 class="info-about__title">О нас</h2>
           <!-- confectioner -->
           <div class="info-about__confectioner confectioner">
             <h3 class="confectioner__caption">О кондитере</h3>
             <dl class="confectioner__list">
               <dt class="confectioner__termin">
-                Кондитер – как призвание
+                Кондитер — как призвание
               </dt>
               <dd class="confectioner__description">
                 Павел — профессиональный повар в  различных гастрономических областях,
@@ -346,7 +372,7 @@
               <a class="info-about__social-link social__link" href="#">Twitter</a>
             </li>
           </ul>
-          <img class="info-about__image" src="" alt="Кондитер - Павел">
+          <img class="info-about__image" src="img/confectioner-mobile.png" alt="Кондитер - Павел">
           <p class="info-about__quote">
             Я за простые рецепты. В Италии это называют cucina povera: когда обычные ингредиенты превращаются в божественное&nbsp;блюдо
           </p>
@@ -355,24 +381,24 @@
       <!-- ADVANTAGES -->
       <section class="advantages">
         <div class="container">
-          <h2 class="advantages__title">Забота о клиентах</h2>
+          <h2 class="advantages__title">Наши преимущества</h2>
           <span class="advantages__subtitle">Почему нас выбирают?</span>
-          <div class="advantages__inner">
-            <dl class="advantages__list">
-              <dt class="advantages__termin">
-                Без искусственных добавок
-              </dt>
-              <dd class="advantages__description">
-                Работаем  с натуральными ингредиентами  и свежими продуктами
-              </dd>
-              <dt class="advantages__termin">
-                Свежий торт в день торжества
-              </dt>
-              <dd class="advantages__description">
-                Торты изготавливаются в течение  суток до отправки
-              </dd>
-            </dl>
-          </div>
+        </div>
+        <div class="advantages__inner">
+          <dl class="advantages__list">
+            <dt class="advantages__termin">
+              Без искусственных добавок
+            </dt>
+            <dd class="advantages__description">
+              Работаем  с натуральными ингредиентами  и свежими продуктами
+            </dd>
+            <dt class="advantages__termin">
+              Свежий торт в день торжества
+            </dt>
+            <dd class="advantages__description">
+              Торты изготавливаются в течение  суток до отправки
+            </dd>
+          </dl>
         </div>
       </section>
       <!-- CARE -->
@@ -424,20 +450,20 @@
             <form class="contacts__form form" action="https://echo.htmlacademy.ru" method="post">
               <input class="form__input input" type="text" name="user-name" id="user-name" placeholder="Ваше имя">
               <input class="form__input input" type="email" name="user-email" id="user-email" placeholder="Email адрес">
-              <textarea name="feedback" id="user-feedback" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
-              <button class="form__submit" type="submit">Отправить</button>
+              <textarea class="form__feedback input" name="feedback " id="user-feedback" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
+              <button class="form__submit button" type="submit">Отправить</button>
             </form>
           </div>
           <div class="contacts__wrap">
             <p class="contacts__tel">
               Или позвоните по телефону:
-              <span class="tel">+7 906 899 92 96</span>
+              <span class="tel">+7&nbsp;906&nbsp;899&nbsp;92&nbsp;96</span>
             </p>
             <p class="contacts__email">
-              Наша почта:
+              Наша почта :
               <span class="email">bakerybypavel@mail.ru</span>
             </p>
-            <span class="contacts__text">Мы в соцсетях:</span>
+            <span class="contacts__text">Мы в соц. сетях:</span>
             <ul class="contacts__social-list social">
               <li class="contacts__item social__item">
                 <a class="contacts__link social__link" href="#">Instagram</a>
@@ -452,7 +478,7 @@
       <!-- FOOTER -->
       <footer class="footer">
         <div class="container">
-          <img class="footer__logo" src="" alt="Логотип магазина Cakes">
+          <a class="footer__logo" href="#">Cakes</a>
           <nav class="footer__navigation">
             <ul class="footer__menu-list">
               <li class="footer__item">
@@ -492,8 +518,8 @@
             <li class="footer__social-item social-item">
               <a class="footer__social-link social__link" href="#">Instagram</a>
             </li>
-            <li class="footer__item social__item">
-              <a class="footer__link social__link" href="#">VK</a>
+            <li class="footer__social-item social__item">
+              <a class="footer__social-link social__link" href="#">VK</a>
             </li>
           </ul>
           <div class="footer__band"></div>

@@ -1,0 +1,39 @@
+.reviews {
+  margin-bottom: 45px;
+}
+
+.reviews__title {
+  .without-indentation;
+
+  margin-bottom: 19px;
+
+  font-weight: 700;
+  font-size: 24px;
+  font-family: @font-main;
+  text-align: center;
+  color: @text-color;
+  letter-spacing: 0.025em;
+}
+
+.reviews__left-control {
+  display: none;
+}
+
+.reviews__right-control {
+  display: none;
+}
+
+.reviews__list {
+  .reset-list;
+}
+
+.reviews__pagination-item {
+  background-color: rgb(255, 255, 255);
+
+  &--active {
+    width: 8px;
+    height: 8px;
+
+    background-color: @color-decorative;
+  }
+}

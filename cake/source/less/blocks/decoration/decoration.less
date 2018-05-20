@@ -1,0 +1,82 @@
+.decoration {
+  display: flex;
+  flex-direction: column;
+  padding: 19px 20px 25px;
+
+  font-weight: 400;
+  font-family: @font-extra;
+  color: rgb(47, 47, 47);
+
+  background-color: rgb(255, 255, 255);
+}
+
+.decoration__caption {
+  .without-indentation;
+
+  margin-bottom: 25px;
+  margin-left: 40px;
+
+  font-size: 16px;
+  font-family: @font-main;
+  color: @color-decorative;
+  letter-spacing: 0.1em;
+}
+
+.decoration__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.decoration__left-control {
+  display: none;
+}
+
+.decoration__right-control {
+  display: none;
+}
+
+.decoration__list {
+  .reset-list;
+}
+
+.decoration__item {
+  display: none;
+
+  &:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.decoration__inner {
+  margin-bottom: 24px;
+}
+
+.decoration__name {
+  margin-bottom: 3px;
+
+  font-size: 14px;
+}
+
+.decoration__price {
+  margin-bottom: 30px;
+
+  font-weight: 700;
+  font-size: 18px;
+  font-family: @font-main;
+}
+
+.decoration__counter {
+  position: absolute;
+  top: 244px;
+  right: 62px;
+
+  font-size: 12px;
+}
+
+.decoration__button {
+  padding: 13px 62px;
+}
