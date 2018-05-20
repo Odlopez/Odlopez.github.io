@@ -1,47 +1,85 @@
 .footer {
-
+  background-color: rgb(137, 137, 137);
+  color: rgb(255, 255, 255);
+  padding-top: 39px;
+  padding-bottom: 10px;
 }
 
-.footer .footer__logo {
-
+.footer__logo {
+  display: block;
+  font-family: @font-main;
+  font-size: 28px;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  margin-bottom: 21px;
+  letter-spacing: 0.05em;
 }
 
-.footer .footer__navigation {
-
+.footer__menu-list {
+  .reset-list;
 }
 
-.footer .footer__menu-list {
+.footer__item {
+  margin-bottom: 14px;
 
+  &:last-child {
+    margin-bottom: 10px;
+  }
 }
 
-.footer .footer__item {
-
+.footer__link {
+  color: rgb(255, 255, 255);
+  font-family: @font-third;
+  font-size: 14px;
 }
 
-.footer .footer__link {
-
+.footer__tel {
+  font-family: @font-third;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 29px;
 }
 
-.footer .footer__tel {
-
+.footer__social {
+  .reset-list;
+  font-size: 0;
+  margin-bottom: 26px;
 }
 
-.footer .footer__social {
+.footer__social-item {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 30px;
+  height: 30px;
 
+  & + & {
+    margin-left: 19px;
+  }
+
+  &:first-child {
+    width: 23px;
+    background-image: url("../../../img/insta-footer.png");
+  }
+
+  &:last-child {
+    background-image: url("../../../img/vk-footer.png");
+  }
 }
 
-.footer .footer__social-item {
-
+.footer__social-link {
+  font-size: 0;
 }
 
-.footer .footer__social-link {
-
+.footer__band {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-bottom: 4px;
 }
 
-.footer .footer__band {
-
+.footer__copyrighted {
+  font-family: @font-third;
+  font-size: 12px;
+  letter-spacing: 0.07em;
+  opacity: 0.5;
 }
-
-.footer .footer__copyrighted {
-
-}

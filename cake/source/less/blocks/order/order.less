@@ -1,19 +1,63 @@
 .order {
-  background-color: rgb(227, 53, 61);
+  padding-top: 30px;
+  padding-bottom: 126px;
+
+  color: rgb(255, 255, 255);
+
+  background: rgb(227, 57, 61) url("../../../img//bg-gift-mobile.png") no-repeat center bottom;
+
+  counter-reset: order;
 }
 
 .order__title {
   .without-indentation;
+
+  margin-bottom: 35px;
+
+  font-weight: 700;
+  font-size: 24px;
+  font-family: @font-main;
+  text-align: center;
 }
 
 .order__list {
   .without-indentation;
+
+  margin-left: 46px;
 }
 
 .order__termin {
+  position: relative;
 
+  margin-bottom: 5px;
+
+  font-weight: 700;
+  font-size: 15px;
+  font-family: @font-extra;
+  letter-spacing: 0.02em;
+
+  counter-increment: order;
+
+  &::before {
+    content: counter(order);
+    position: absolute;
+    top: -15px;
+    left: -26px;
+
+    font-weight: 700;
+    font-size: 35px;
+    font-family: @font-main;
+  }
 }
 
 .order__descripiont {
+  .without-indentation;
 
+  margin-bottom: 20px;
+  padding-right: 10px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.25;
+  font-family: @font-extra;
 }
