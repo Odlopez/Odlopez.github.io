@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -354,16 +354,16 @@
               <!-- order-form -->
               <form class="selection-result__form order-form" action="https://echo.htmlacademy.ru" method="post">
                 <div class="order-form__inner">
-                  <label class="order-form__label" for="">Новинка</label>
-                  <input class="order-form__input" type="text" placeholder="Шоколадный ганаш">
+                  <label class="order-form__label" for="filling">Начинка</label>
+                  <input class="order-form__input" type="text" id="filling" placeholder="Шоколадный ганаш">
                 </div>
                 <div class="order-form__inner">
-                  <label class="order-form__label" for="">Размер</label>
-                  <input class="order-form__input" type="text" placeholder="1 кг">
+                  <label class="order-form__label" for="size">Размер</label>
+                  <input class="order-form__input" type="text" id="size" placeholder="1 кг">
                 </div>
                 <div class="order-form__inner">
-                  <label class="order-form__label" for="">Оформление</label>
-                  <input class="order-form__input" type="text" placeholder="Маршмэллоу">
+                  <label class="order-form__label" for="decor">Оформление</label>
+                  <input class="order-form__input" type="text" id="decor" placeholder="Маршмэллоу">
                 </div>
                 <button class="order-form__submit button" type="submit">заказать торт</button>
               </form>
@@ -379,9 +379,10 @@
           <ul class="reviews__list">
             <li class="reviews__item">
               <article class="user-review">
+                <h2 class="visuallyhidden">Отзывы пользователей</h2>
                 <picture class="user-review__avatar">
-                  <source type="image/webp" media="(min-width: 1366px)" srcset="img/user-d.webp 1x img/user-d@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/user-t.webp 1x img/user-t@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 1366px)" srcset="img/user-d.webp 1x, img/user-d@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/user-t.webp 1x, img/user-t@2x.webp 2x">
                   <source type="image/webp" srcset="img/user-mobile.webp 1x, img/user-mobile@2x.webp 2x">
 
                   <source media="(min-width: 1366px)" srcset="img/user-d.png 1x, img/user-d@2x.png 2x">
@@ -459,8 +460,8 @@
             </li>
           </ul>
           <picture class="info-about__image">
-            <source type="image/webp" media="(min-width: 1366px)" srcset="img/confectioner-d.webp 1x img/confectioner-d@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/confectioner-t.webp 1x img/confectioner-t@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1366px)" srcset="img/confectioner-d.webp 1x, img/confectioner-d@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/confectioner-t.webp 1x, img/confectioner-t@2x.webp 2x">
             <source type="image/webp" srcset="img/confectioner-mobile.webp 1x, img/confectioner-mobile@2x.webp 2x">
 
             <source media="(min-width: 1366px)" srcset="img/confectioner-d.png 1x, img/confectioner-d@2x.png 2x">
@@ -621,5 +622,6 @@
         </div>
       </footer>
     </main>
+    <script src="js/menu-open.js"></script>
   </body>
 </html>
