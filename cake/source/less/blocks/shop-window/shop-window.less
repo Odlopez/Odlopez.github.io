@@ -33,6 +33,7 @@
 
 .shop-window__features {
   .reset-list;
+
   margin-bottom: 14px;
 }
 
@@ -47,4 +48,48 @@
   z-index: -1;
 
   transform: translateX(50%);
+}
+
+@media @tablet {
+  .shop-window {
+    padding-top: 102px;
+    padding-bottom: 108px;
+  }
+
+  .shop-window__container {
+    padding-left: 46px;
+  }
+
+  .shop-window__title {
+    width: 282px;
+    margin: 0;
+    margin-bottom: 22px;
+
+    font-size: 60px;
+    line-height: 55px;
+    text-align: left;
+    letter-spacing: 0.07em;
+  }
+
+  .shop-window__slogan {
+    width: 282px;
+
+    font-size: 36px;
+    text-align: left;
+    margin-bottom: 54px;
+  }
+
+  .shop-window__features {
+    order: 2;
+  }
+
+  .shop-window__button {
+    align-self: flex-start;
+    margin-bottom: 164px;
+  }
+
+  .shop-window__image {
+    top: 13px;
+    right: 31%;
+  }
 }

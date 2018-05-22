@@ -36,6 +36,7 @@
 }
 
 .header__menu-list {
+  .reset-list;
   position: absolute;
   left: 0;
   z-index: 1;
@@ -43,4 +44,46 @@
 
 .header__tel {
   display: none;
+}
+
+@media @tablet {
+  .header__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header__logo {
+    font-size: 20px;
+    line-height: 2;
+  }
+
+  .header__inner {
+    justify-content: flex-end;
+    width: 138px;
+    min-height: 60px;
+  }
+
+  .header__button {
+    width: 26px;
+    height: 20px;
+    margin-left: 26px;
+
+    background-size: contain;
+  }
+
+  .header__tel {
+    display: block;
+    margin-right: 26px;
+
+    font-weight: 700;
+    font-size: 15px;
+    font-family: @font-extra;
+    color: @text-color;
+  }
+
+  .header__menu-list {
+    margin-top: 30px;
+  }
 }
