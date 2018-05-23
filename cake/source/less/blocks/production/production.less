@@ -22,9 +22,15 @@
 
 @media @tablet {
   .production__title {
+    margin-bottom: 38px;
+
     font-size: 28px;
     text-align: left;
     letter-spacing: normal;
+  }
+
+  .production__inner {
+    margin-bottom: 20px;
   }
 
   .production__list {
@@ -32,12 +38,32 @@
     flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
+    height: 388px;
   }
 
   .production__item {
+    width: 288px;
+    height: 184px;
+    margin-bottom: 0;
+    overflow: hidden;
+    box-shadow: 0 10px 12.74px 0.2em rgba(163, 6, 60, 0.05);
+
+    &:focus,
+    &:hover {
+      box-shadow: 0 10px 13px 0.2em rgba(163, 6, 60, 0.12);
+    }
+
     &--big {
       width: 419px;
       height: 388px;
+    }
+
+    &:first-child {
+      margin-right: 20px;
+    }
+
+    &--bot-indent {
+      margin-bottom: 20px;
     }
   }
 }

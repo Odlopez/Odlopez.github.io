@@ -7,6 +7,7 @@
   font-family: @font-extra;
   color: @text-color;
 
+  &:focus .product-grade__img,
   &:hover .product-grade__img {
     opacity: 0.4;
   }
@@ -41,5 +42,80 @@
 @media @tablet {
   .product-grade {
     width: 100%;
+    height: 100%;
+
+    &:focus .product-grade__img,
+    &:hover .product-grade__img {
+      opacity: 1;
+    }
+  }
+
+  .product-grade__title {
+    top: 21px;
+    left: 25px;
+    z-index: 1;
+  }
+
+  .product-grade__amount {
+    top: 39px;
+    left: 25px;
+    z-index: 1;
+  }
+
+  .product-grade__link {
+    position: absolute;
+    z-index: 2;
+
+    &--visible {
+      right: 72px;
+      bottom: 20px;
+
+      display: block;
+
+      font-weight: 400;
+      font-size: 12px;
+      font-family: @font-extra;
+      color: @text-color;
+    }
+  }
+
+  .product-grade__img {
+    position: absolute;
+
+    &--classic {
+      top: 9px;
+
+      transform: scale(437/419, 407/388);
+    }
+
+    &--mousse {
+      top: 6px;
+
+      transform: scale(306/288, 203/184);
+    }
+
+    &--wedding {
+      top: 4px;
+
+      transform: scale(306/288, 203/184);
+    }
+
+    &--mans {
+      top: 5px;
+
+      transform: scale(306/288, 203/184);
+    }
+
+    &--womans {
+      top: 5px;
+
+      transform: scale(306/288, 203/184);
+    }
+
+    &--cids {
+      top: 9px;
+
+      transform: scale(437/419, 407/388);
+    }
   }
 }

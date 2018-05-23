@@ -80,3 +80,33 @@
     color: @color-decorative;
   }
 }
+
+@media @tablet {
+  .designer__title {
+    font-size: 28px;
+  }
+
+  .designer__description {
+    margin-bottom: 31px;
+
+    font-size: 26px;
+  }
+
+  .designer__filling {
+    margin-bottom: 21px;
+
+    &::before {
+      top: 29px;
+
+      font-size: 36px;
+    }
+  }
+
+  .designer__size {
+    &::before {
+      top: 31px;
+
+      font-size: 36px;
+    }
+  }
+}

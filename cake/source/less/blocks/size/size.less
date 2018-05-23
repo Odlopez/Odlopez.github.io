@@ -51,9 +51,6 @@
 }
 
 .size__weight {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 110px;
   height: 110px;
   margin-top: 31px;
@@ -62,6 +59,18 @@
   font-size: 16px;
 
   background-image: url("../../../img/dotted-circle-mobile.svg");
+}
+
+.size__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  font-size: 16px;
+  color: rgb(47, 47, 47);
+  text-decoration: none;
 }
 
 .size__radius {
@@ -78,4 +87,158 @@
   right: 50%;
 
   transform: translateX(50%);
+}
+
+.size__button {
+  align-self: center;
+  padding-right: 60px;
+  padding-left: 60px;
+
+  line-height: 27px;
+}
+
+@media @tablet {
+  .size {
+    position: relative;
+
+    width: 728px;
+    height: 348px;
+    padding: 53px 45px 72px;
+
+    box-shadow: 0 5px 12.74px 0.26px rgba(163, 6, 60, 0.1);
+  }
+
+  .size__wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+  }
+
+  .size__caption {
+    position: absolute;
+    top: 74px;
+
+    width: 90px;
+    margin: 0;
+
+    font-size: 18px;
+  }
+
+  .size__list {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .size__item {
+    position: relative;
+    z-index: 0;
+
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-bottom: 0;
+
+    &--first {
+      margin-right: 57px;
+      margin-left: 26px;
+
+      & .size__weight {
+        width: 77px;
+        height: 77px;
+
+        background-size: cover;
+      }
+    }
+
+    &--second {
+      display: flex;
+      margin-right: 35px;
+
+      & .size__weight {
+        width: 107px;
+        height: 107px;
+        margin-bottom: 3px;
+        margin-left: -9px;
+
+        background-image: url("../../../img/dotted-circle-2.svg");
+        background-size: cover;
+      }
+    }
+
+    &--third {
+      display: flex;
+      margin-right: 52px;
+
+      & .size__weight {
+        width: 120px;
+        height: 121px;
+
+        background-image: url("../../../img/dotted-circle-5-1.svg"), url("../../../img/dotted-circle-5-2.svg");
+        background-position: center, center;
+        background-size: cover, 84px 83px;
+      }
+    }
+
+    &--fourth {
+      display: flex;
+
+      & .size__weight {
+        width: 140px;
+        height: 140px;
+
+        background-image: url("../../../img/dotted-circle-8-1.svg"), url("../../../img/dotted-circle-8-2.svg"), url("../../../img/dotted-circle-8-3.svg");
+        background-position: center, center, center;
+        background-size: cover, 97px 97px, 67px 67px;
+      }
+    }
+  }
+
+  .size__weight {
+    margin: 0;
+
+    background-repeat: no-repeat;
+  }
+
+  .size__link {
+    position: relative;
+
+    font-size: 11.36px;
+
+    &:focus::before,
+    &:hover::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      z-index: -1;
+
+      width: calc(100% ~"+ 33px");
+      height: calc(100% ~"+ 33px");
+
+      background-color: rgb(255, 255, 255);
+      border-radius: 50%;
+      box-shadow: 0 6px 16px 0.3em rgba(103, 12, 40, 0.14);
+      transform: translate(50%, -50%);
+    }
+  }
+
+  .size__radius {
+    margin-top: 22px;
+
+    font-size: 12px;
+    text-align: left;
+  }
+
+  .size__amount {
+    margin-top: 8px;
+
+    font-size: 12px;
+    text-align: left;
+  }
+
+  .size__pagination,
+  .size__button {
+    display: none;
+  }
 }
