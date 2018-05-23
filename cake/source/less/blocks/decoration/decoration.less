@@ -29,11 +29,7 @@
   margin-bottom: 40px;
 }
 
-.decoration__left-control {
-  display: none;
-}
-
-.decoration__right-control {
+.decoration__control {
   display: none;
 }
 
@@ -48,11 +44,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    order: 5;
   }
 }
 
 .decoration__inner {
   margin-bottom: 24px;
+}
+
+.decoration__link {
+  font-size: 0;
 }
 
 .decoration__name {
@@ -79,4 +80,104 @@
 
 .decoration__button {
   padding: 13px 62px;
+}
+
+@media @tablet {
+  .decoration {
+    position: relative;
+
+    width: 728px;
+    padding: 53px 20px 5px 45px;
+
+    background: rgb(255, 255, 255) url("../../../img/decoration-bg-t.png") no-repeat 3px 124px;
+    box-shadow: 0 5px 12.74px 0.26px rgba(163, 6, 60, 0.1);
+  }
+
+  .decoration__caption {
+    position: absolute;
+    top: 74px;
+
+    width: 90px;
+    margin: 0;
+
+    font-size: 18px;
+    letter-spacing: normal;
+  }
+
+  .decoration__wrap {
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: -15px;
+    margin-bottom: 15px;
+  }
+
+  .decoration__control {
+    display: block;
+
+    &--left {
+      margin-top: 114px;
+      margin-right: 19px;
+      margin-left: 105px;
+
+      &::before {
+        transform: translate(50%, -50%) rotate(180deg);
+      }
+    }
+
+    &--right {
+      margin-top: 114px;
+    }
+  }
+
+  .decoration__list {
+    display: inline-flex;
+    margin-right: 19px;
+  }
+
+  .decoration__item {
+    position: relative;
+
+    display: inline-block;
+
+    &:last-child {
+      margin-right: 6px;
+    }
+  }
+
+  .decoration__inner {
+    margin-bottom: 0;
+  }
+
+  .decoration__image {
+    &:hover {
+      filter: drop-shadow(0 6px 9.7px rgba(0, 0, 0, 0.14));
+    }
+  }
+
+  .decoration__name {
+    position: absolute;
+    top: 214px;
+    right: 50%;
+
+    transform: translateX(50%);
+  }
+
+  .decoration__price {
+    position: absolute;
+    top: 231px;
+    right: 50%;
+
+    font-size: 14px;
+
+    transform: translateX(50%);
+  }
+
+  .decoration__counter {
+    top: 295px;
+    right: 33px;
+  }
+
+  .decoration__button {
+    display: none;
+  }
 }
