@@ -105,3 +105,75 @@
     padding: 0 50px;
   }
 }
+
+@media @tablet {
+  .advantages {
+    position: relative;
+
+    margin-bottom: 180px;
+
+    &::before {
+      content: url("../../../img/down-berries.png");
+      position: absolute;
+      top: 8px;
+      left: 0;
+    }
+  }
+
+  .advantages__title {
+    margin-bottom: 7px;
+
+    font-size: 28px;
+  }
+
+  .advantages__subtitle {
+    margin-bottom: 46px;
+
+    font-size: 26px;
+  }
+
+  .advantages__inner {
+    background-color: transparent;
+  }
+
+  .advantages__list {
+    align-items: flex-start;
+    width: 400px;
+    margin-left: 309px;
+    padding-left: 130px;
+  }
+
+  .advantages__termin {
+    margin: 0;
+    margin-bottom: 5px;
+
+    font-size: 15px;
+    text-align: left;
+
+    &:first-of-type::before {
+      top: 0;
+      right: 125%;
+
+      background: url("../../../img/cereals-big-t.png") no-repeat center;
+    }
+
+    &:last-of-type::before {
+      top: 6px;
+      right: 123%;
+
+      background: url("../../../img/gift-big-t.png") no-repeat center;
+    }
+  }
+
+  .advantages__description {
+    margin-bottom: 6px;
+    padding: 0;
+
+    text-align: left;
+    letter-spacing: 0.008em;
+
+    &:last-child {
+      padding: 0;
+    }
+  }
+}

@@ -226,7 +226,7 @@
           <!-- FILLING -->
           <div class="designer__filling filling">
             <h3 class="filling__caption">Выберите начинку</h3>
-            <button class="filling__control filling__control--left" type="button">Назад</button>
+            <button class="filling__control control filling__control--left" type="button">Назад</button>
             <picture>
               <source type="image/webp" media="(min-width: 1366px)" srcset="img/filling-d.webp 1x, img/filling-d@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/filling-t.webp 1x, img/filling-t@2x.webp 2x">
@@ -262,7 +262,7 @@
             </p>
             <span class="filling__price">1000 руб/кг</span>
             <a class="filling__button button" href="#">Выбрать</a>
-            <button class="filling__control filling__control--right" type="button">Вперед</button>
+            <button class="filling__control control filling__control--right" type="button">Вперед</button>
             <span class="filling__counter">1/12</span>
           </div>
           <!-- SIZE -->
@@ -319,40 +319,44 @@
           </div>
           <!-- DECORATION -->
           <div class="designer__decoration decoration">
-            <h3 class="decoration__caption">Офрмление</h3>
+            <h3 class="decoration__caption">Оформление</h3>
             <div class="decoration__wrap">
-              <button class="decoration__left-control" type="button">Назад</button>
+              <button class="decoration__control control decoration__control--left" type="button">Назад</button>
               <ul class="decoration__list">
                 <li class="decoration__item">
                   <div class="decoration__inner">
-                    <picture class="decoration__image">
-                      <source type="image/webp" media="(min-width: 1366px)" srcset="img/marshmallow-d.webp 1x, img/marshmallow-d@2x.webp 2x">
-                      <source type="image/webp" media="(min-width: 768px)" srcset="img/marshmallow-t.webp 1x, img/marshmallow-t@2x.webp 2x">
-                      <source type="image/webp" srcset="img/marshmallow-mobile.webp 1x, img/marshmallow-mobile@2x.webp 2x">
+                    <a class="decoration__link" href="#">
+                      <picture>
+                        <source type="image/webp" media="(min-width: 1366px)" srcset="img/marshmallow-d.webp 1x, img/marshmallow-d@2x.webp 2x">
+                        <source type="image/webp" media="(min-width: 768px)" srcset="img/marshmallow-t.webp 1x, img/marshmallow-t@2x.webp 2x">
+                        <source type="image/webp" srcset="img/marshmallow-mobile.webp 1x, img/marshmallow-mobile@2x.webp 2x">
 
-                      <source media="(min-width: 1366px)" srcset="img/marshmallow-d.png 1x, img/marshmallow-d@2x.png 2x">
-                      <source media="(min-width: 768px)" srcset="img/mans-t.jpg 1x, img/mans-t@2x.jpg 2x">
-                      <img src="img/marshmallow-mobile.jpg" srcset="img/marshmallow-mobile@2x.jpg 2x" alt="Маршмэллоу">
-                    </picture>
+                        <source media="(min-width: 1366px)" srcset="img/marshmallow-d.png 1x, img/marshmallow-d@2x.png 2x">
+                        <source media="(min-width: 768px)" srcset="img/marshmallow-t.png 1x, img/marshmallow-t@2x.png 2x">
+                        <img class="decoration__image" src="img/marshmallow-mobile.jpg" srcset="img/marshmallow-mobile@2x.jpg 2x" alt="Маршмэллоу">
+                      </picture>
+                    </a>
                   </div>
                   <span class="decoration__name">Маршмэллоу</span>
                   <span class="decoration__price">600 руб/кг</span>
                 </li>
                 <li class="decoration__item">
                   <div class="decoration__inner">
-                    <picture class="decoration__image">
-                      <source type="image/webp" media="(min-width: 1366px)" srcset="img/berries-d.webp 1x, img/berries-d@2x.webp 2x">
-                      <source type="image/webp" srcset="img/berries-t.webp 1x, img/berries-t@2x.webp 2x">
+                    <a class="decoration__link" href="#">
+                      <picture>
+                        <source type="image/webp" media="(min-width: 1366px)" srcset="img/berries-d.webp 1x, img/berries-d@2x.webp 2x">
+                        <source type="image/webp" srcset="img/berries-t.webp 1x, img/berries-t@2x.webp 2x">
 
-                      <source media="(min-width: 1366px)" srcset="img/berries-d.png 1x, img/berries-d@2x.png 2x">
-                      <img src="img/berries-t.png" srcset="img/berries-t@2x.png 2x" alt="Ягодное ассорти">
-                    </picture>
+                        <source media="(min-width: 1366px)" srcset="img/berries-d.png 1x, img/berries-d@2x.png 2x">
+                        <img class="decoration__image" src="img/berries-t.png" srcset="img/berries-t@2x.png 2x" alt="Ягодное ассорти">
+                      </picture>
+                    </a>
                   </div>
                   <span class="decoration__name">Ягодное ассорти</span>
                   <span class="decoration__price">700 руб/кг</span>
                 </li>
               </ul>
-              <button class="decoration__right-control" type="button">Вперед</button>
+              <button class="decoration__control control decoration__control--right" type="button">Вперед</button>
               <span class="decoration__counter">1/35</span>
               <button class="decoration__button button" type="button">Выбрать</button>
             </div>
@@ -381,28 +385,28 @@
       </section>
       <!-- REVIEWS -->
       <section class="reviews">
-        <div class="container">
+        <div class="reviews__container container">
           <h2 class="reviews__title">Отзывы</h2>
-          <button class="reviews__left-control" type="button">Назад</button>
+          <button class="reviews__control control reviews__control--left" type="button">Назад</button>
           <ul class="reviews__list">
             <li class="reviews__item">
               <article class="user-review">
                 <h2 class="visuallyhidden">Отзывы пользователей</h2>
-                <picture class="user-review__avatar">
+                <picture>
                   <source type="image/webp" media="(min-width: 1366px)" srcset="img/user-d.webp 1x, img/user-d@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/user-t.webp 1x, img/user-t@2x.webp 2x">
                   <source type="image/webp" srcset="img/user-mobile.webp 1x, img/user-mobile@2x.webp 2x">
 
                   <source media="(min-width: 1366px)" srcset="img/user-d.png 1x, img/user-d@2x.png 2x">
                   <source media="(min-width: 768px)" srcset="img/user-t.png 1x, img/user-t@2x.png 2x">
-                  <img src="img/user-mobile.png" srcset="img/user-mobile@2x.png 2x" alt="Аватар пользователя">
+                  <img class="user-review__avatar" src="img/user-mobile.png" srcset="img/user-mobile@2x.png 2x" alt="Аватар пользователя">
                 </picture>
                 <span class="user-review__name">Мария</span>
                 <span class="user-review__data-user">юрист, 33 года</span>
                 <p class="user-review__excerpt">
                   Заказывала торт брауни на юбилей мужа. Гости были в восторге!
                   Отдельное спасибо за своевременную доставку! Теперь будем заказывать торты
-                  только у вас для наших семейных праздников:)
+                  только у&nbsp;вас для наших семейных праздников:)
                   <a class="user-review__link" href="#">Развернуть</a>
                 </p>
                 <span class="user-review__counter">1/26</span>
@@ -427,7 +431,7 @@
               <a href="" class="pagination__link"></a>
             </li>
           </ul>
-          <button class="reviews__right-control" type="button">Вперед</button>
+          <button class="reviews__control control reviews__control--right" type="button">Вперед</button>
         </div>
       </section>
       <!-- INFO-ABPUT -->
@@ -467,14 +471,14 @@
               <a class="info-about__social-link social__link" href="#">Twitter</a>
             </li>
           </ul>
-          <picture class="info-about__image">
+          <picture class="info-about__picture">
             <source type="image/webp" media="(min-width: 1366px)" srcset="img/confectioner-d.webp 1x, img/confectioner-d@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)" srcset="img/confectioner-t.webp 1x, img/confectioner-t@2x.webp 2x">
             <source type="image/webp" srcset="img/confectioner-mobile.webp 1x, img/confectioner-mobile@2x.webp 2x">
 
             <source media="(min-width: 1366px)" srcset="img/confectioner-d.png 1x, img/confectioner-d@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/confectioner-t.png 1x, img/confectioner-t@2x.png 2x">
-            <img src="img/confectioner-mobile.png" srcset="img/confectioner-mobile@2x.png 2x" alt="Кондитер - Павел">
+            <img class="info-about__image" src="img/confectioner-mobile.png" srcset="img/confectioner-mobile@2x.png 2x" alt="Кондитер - Павел">
           </picture>
           <p class="info-about__quote">
             Я за простые рецепты. В Италии это называют cucina povera: когда обычные ингредиенты превращаются в божественное&nbsp;блюдо
@@ -499,7 +503,7 @@
               Свежий торт в день торжества
             </dt>
             <dd class="advantages__description">
-              Торты изготавливаются в течение  суток до отправки
+              Торты изготавливаются в течение суток&nbsp;до&nbsp;отправки
             </dd>
           </dl>
         </div>
@@ -516,7 +520,7 @@
       </section>
       <!-- ORDER -->
       <section class="order">
-        <div class="container">
+        <div class="order__container container">
           <h2 class="order__title">Как заказать</h2>
           <dl class="order__list">
             <dt class="order__termin">
@@ -529,7 +533,7 @@
               Доставка по городу
             </dt>
             <dd class="order__descripiont">
-              Доставка в пределах города 200 рубей , при заказе на сумму более 2000 доставка бесплатно
+              Доставка в пределах города 200 рубей , при&nbsp;заказе&nbsp;на&nbsp;сумму более 2000 доставка бесплатно
             </dd>
             <dt class="order__termin">
               Доставка за городом
@@ -542,10 +546,10 @@
       </section>
       <!-- CONTACTS -->
       <section class="contacts">
-        <div class="container">
-          <h2 class="contacts__title">Контакты</h2>
-          <span class="contacts__subtitle">Остались вопросы?</span>
+        <div class="contacts__container container">
           <div class="contacts__form-wrap">
+            <h2 class="contacts__title">Контакты</h2>
+            <span class="contacts__subtitle">Остались вопросы?</span>
             <p class="contacts__description">
               Заполните форму ниже и наш кондитер  свяжется с Вами
             </p>
@@ -580,7 +584,7 @@
       </section>
       <!-- FOOTER -->
       <footer class="footer">
-        <div class="container">
+        <div class="footer__container container">
           <a class="footer__logo" href="#">Cakes</a>
           <nav class="footer__navigation">
             <ul class="footer__menu-list">
@@ -618,10 +622,10 @@
           </nav>
           <span class="footer__tel tel">+7 906 899 92 96</span>
           <ul class="footer__social social">
-            <li class="footer__social-item social-item">
+            <li class="footer__social-item">
               <a class="footer__social-link social__link" href="#">Instagram</a>
             </li>
-            <li class="footer__social-item social__item">
+            <li class="footer__social-item">
               <a class="footer__social-link social__link" href="#">VK</a>
             </li>
           </ul>

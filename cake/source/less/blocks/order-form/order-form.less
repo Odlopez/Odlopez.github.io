@@ -42,3 +42,48 @@
   margin-left: 6px;
   padding: 13px 63px;
 }
+
+@media @tablet {
+  .order-form__inner {
+    display: inline-flex;
+    flex-direction: column;
+    margin-right: 14px;
+
+    vertical-align: top;
+
+    &:first-of-type {
+      width: 164px;
+    }
+
+    &:nth-of-type(2) {
+      width: 77px;
+    }
+
+    &:last-of-type {
+      width: 162px;
+    }
+  }
+
+  .order-form__label {
+    margin-bottom: 9px;
+
+    font-size: 18px;
+    text-align: left;
+  }
+
+  .order-form__input {
+    display: inline;
+    padding-top: 9px;
+
+    font-size: 12px;
+  }
+
+  .order-form__submit {
+    display: inline-block;
+    margin-top: 15px;
+    margin-left: 22px;
+    padding: 9px 40px;
+
+    font-size: 10px;
+  }
+}

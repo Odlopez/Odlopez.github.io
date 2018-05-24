@@ -11,13 +11,28 @@
 
 .form__feedback {
   height: 120px;
-  resize: vertical;
   margin-bottom: 20px;
+
+  resize: vertical;
 }
 
 .form__submit {
   align-self: center;
   padding: 13px 45px;
+
   font-size: 19px;
   text-transform: none;
+}
+
+@media @tablet {
+  .form__feedback {
+    margin-bottom: 27px;
+  }
+
+  .form__submit {
+    align-self: flex-start;
+    padding: 10px 47px;
+
+    font-size: 14px;
+  }
 }

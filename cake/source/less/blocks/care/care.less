@@ -33,3 +33,43 @@
   line-height: 1.25;
   font-family: @font-extra;
 }
+
+@media @tablet {
+  .care {
+    position: relative;
+
+    padding-bottom: 127px;
+
+    background-image: none;
+
+    &::before {
+      content: url("../../../img/down-cake-t.png");
+      position: absolute;
+      top: -165px;
+      right: -17px;
+      z-index: -1;
+    }
+  }
+
+  .care__title {
+    margin-bottom: 4px;
+    margin-left: 26px;
+
+    font-size: 28px;
+  }
+
+  .care__subtitle {
+    margin-left: 25px;
+
+    font-size: 26px;
+    line-height: 1.4;
+  }
+
+  .care__text {
+    width: 315px;
+    margin-left: 27px;
+    padding-right: 0;
+
+    font-size: 14px;
+  }
+}

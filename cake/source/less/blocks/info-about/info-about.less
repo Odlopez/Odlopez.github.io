@@ -9,10 +9,12 @@
 
 .info-about__title {
   .without-indentation;
-  text-align: center;
-  width: 100%;
+
   order: -3;
+  width: 100%;
   margin-bottom: 24px;
+
+  text-align: center;
 }
 
 .info-about__confectioner {
@@ -20,19 +22,22 @@
 }
 
 .info-about__social {
-  order: -1;
   .reset-list;
+
+  order: -1;
+
   font-size: 0;
 }
 
 .info-about__social-item {
   width: 36px;
   height: 36px;
-  border-radius: 50%;
+  margin-bottom: 15px;
+
   background-color: rgb(255, 255, 255);
   background-repeat: no-repeat;
   background-position: center;
-  margin-bottom: 15px;
+  border-radius: 50%;
 
   &:first-child {
     background-image: url("../../../img/insta-litle.png");
@@ -49,12 +54,12 @@
 }
 
 .info-about__social-link {
+  display: block;
   width: 100%;
   height: 100%;
-  display: block;
 }
 
-.info-about__image {
+.info-about__picture {
   order: -2;
   margin-right: 34px;
   margin-bottom: 9px;
@@ -62,31 +67,98 @@
 
 .info-about__quote {
   .without-indentation;
+
   position: relative;
 
-  font-family: @font-main;
-  color: @text-color;
-  font-size: 13px;
   font-weight: 700;
-  font-style: italic;
-  text-align: center;
+  font-size: 13px;
   line-height: 1.25;
+  font-family: @font-main;
+  text-align: center;
+  color: @text-color;
+  font-style: italic;
 
   &::before {
     content: "”";
     position: absolute;
+    top: -46px;
+    right: 48%;
+
+    font-weight: 700;
+    font-size: 60px;
     font-family: @font-main;
     color: rgb(255, 255, 254);
-    font-size: 60px;
-    font-weight: 700;
-    right: 48%;
-    top: -46px;
   }
 
   &::after {
     content: url("../../../img/signature-mobile.png");
     position: absolute;
-    bottom: -53px;
     right: 40%;
+    bottom: -53px;
+  }
+}
+
+@media @tablet {
+  .info-about {
+    padding-bottom: 130px;
+  }
+
+  .info-about__container {
+    position: relative;
+
+    flex-direction: column;
+    padding-top: 91px;
+    padding-left: 48px;
+  }
+
+  .info-about__title {
+    margin-bottom: 0;
+
+    font-size: 28px;
+    line-height: 1;
+    text-align: left;
+  }
+
+  .info-about__confectioner {
+    margin-bottom: 10px;
+  }
+
+  .info-about__social {
+    order: 0;
+    margin-bottom: 23px;
+  }
+
+  .info-about__social-item {
+    display: inline-block;
+    margin-right: 19px;
+  }
+
+  .info-about__image {
+    position: absolute;
+    top: 82px;
+    right: 46px;
+  }
+
+  .info-about__quote {
+    align-self: center;
+    width: 374px;
+    margin-left: -33px;
+
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+
+    &::before {
+      top: -23px;
+      right: 47%;
+
+      font-size: 77px;
+    }
+
+    &::after {
+      content: url("../../../img/signature-t.png");
+      right: 38%;
+      bottom: -68px;
+    }
   }
 }
