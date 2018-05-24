@@ -46,6 +46,7 @@
     height: 184px;
     margin-bottom: 0;
     overflow: hidden;
+
     box-shadow: 0 10px 12.74px 0.2em rgba(163, 6, 60, 0.05);
 
     &:focus,
@@ -64,6 +65,36 @@
 
     &--bot-indent {
       margin-bottom: 20px;
+    }
+  }
+}
+
+@media @desktop {
+  .production__title {
+    margin-bottom: 63px;
+
+    font-size: 40px;
+  }
+
+  .production__list {
+    height: 653px;
+  }
+
+  .production__item {
+    width: 484px;
+    height: 305px;
+
+    &--big {
+      width: 695px;
+      height: 653px;
+    }
+
+    &:first-child {
+      margin-right: 41px;
+    }
+
+    &--bot-indent {
+      margin-bottom: 42px;
     }
   }
 }

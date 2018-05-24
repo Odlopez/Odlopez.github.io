@@ -21,3 +21,31 @@
   text-transform: uppercase;
   text-decoration: none;
 }
+
+@media @desktop {
+  .main-menu {
+    width: 995px;
+    background-color: transparent;
+  }
+
+  .main-menu__item {
+    display: inline-block;
+    box-shadow: none;
+    padding: 0;
+    margin-right: 40px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .main-menu__link {
+    font-size: 13px;
+
+    &:focus,
+    &:hover,
+    &--active {
+      color: @color-decorative;
+    }
+  }
+}
