@@ -4,7 +4,7 @@
 
   color: rgb(255, 255, 255);
 
-  background: rgb(227, 57, 61) url("../../../img//bg-gift-mobile.png") no-repeat center bottom;
+  background: rgb(227, 57, 61) url("../../../img/bg-gift-mobile.png") no-repeat center bottom;
 
   counter-reset: order;
 }
@@ -60,4 +60,51 @@
   font-size: 14px;
   line-height: 1.25;
   font-family: @font-extra;
+}
+
+@media @tablet {
+  .order {
+    padding-top: 47px;
+    padding-bottom: 39px;
+
+    background-image: url("../../../img/bg-gift-t.png");
+    background-position: left top;
+  }
+
+  .order__container {
+    padding-left: 327px;
+  }
+
+  .order__title {
+    font-size: 28px;
+    text-align: left;
+  }
+
+  .order__list {
+    width: 375px;
+    margin-left: 42px;
+  }
+
+  .order__termin {
+    margin-bottom: 3px;
+
+    &::before {
+      top: -16px;
+      left: -41px;
+
+      font-size: 36px;
+    }
+  }
+
+  .order__descripiont {
+    margin-bottom: 29px;
+
+    &:first-of-type {
+      width: 265px;
+    }
+
+    &:last-of-type {
+      width: 215px;
+    }
+  }
 }
