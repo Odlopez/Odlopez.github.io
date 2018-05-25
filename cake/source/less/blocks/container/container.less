@@ -1,3 +1,19 @@
 .container {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 @indent-mobile;
+}
 
-}
+@media @tablet {
+  .container {
+    width: 768px;
+    padding: 0 @indent-tablet;
+  }
+}
+
+@media @desktop {
+  .container {
+    width: 1366px;
+    padding: 0 @indent-desktop;
+  }
+}

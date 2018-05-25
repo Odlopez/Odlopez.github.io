@@ -56,15 +56,15 @@
     align-items: center;
   }
 
-  .header__logo {
-    font-size: 20px;
-    line-height: 2;
-  }
-
   .header__inner {
     justify-content: flex-end;
     width: 138px;
     min-height: 60px;
+  }
+
+  .header__logo {
+    font-size: 20px;
+    line-height: 2;
   }
 
   .header__button {
@@ -91,5 +91,44 @@
 
   .header__menu-list {
     margin-top: 30px;
+  }
+}
+
+@media @desktop {
+  .header {
+    background-color: transparent;
+    padding-top: 41px;
+  }
+
+  .header__container {
+    justify-content: flex-start;
+  }
+
+  .header__inner {
+    width: auto;
+    margin-right: 42px;
+  }
+
+  .header__logo {
+    font-size: 23.24px;
+  }
+
+  .header__button {
+    display: none;
+  }
+
+  .header__navigation {
+    display: block;
+    margin-top: 11px;
+  }
+
+  .header__tel {
+    margin-right: 0;
+    margin-top: 11px;
+  }
+
+  .header__menu-list {
+    position: static;
+    margin-top: 0;
   }
 }

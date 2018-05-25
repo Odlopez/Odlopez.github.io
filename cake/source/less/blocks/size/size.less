@@ -242,3 +242,81 @@
     display: none;
   }
 }
+
+@media @desktop {
+  .size {
+    width: 1220px;
+    height: 570px;
+    padding: 88px 81px 147px;
+  }
+
+  .size__caption {
+    top: 121px;
+
+    font-size: 27px;
+  }
+
+  .size__item {
+    &--first {
+      margin-right: 73px;
+      margin-left: 112px;
+
+      & .size__weight {
+        width: 110px;
+        height: 110px;
+      }
+    }
+
+    &--second {
+      margin-right: 63px;
+
+      & .size__weight {
+        width: 154px;
+        height: 154px;
+        margin-bottom: 3px;
+        margin-left: -25px;
+      }
+    }
+
+    &--third {
+      margin-right: 76px;
+
+      & .size__weight {
+        width: 173px;
+        height: 174px;
+
+        background-image: url("../../../img/dotted-circle-5-1.svg"), url("../../../img/dotted-circle-5-2.svg");
+        background-position: center, center;
+        background-size: cover, 120px 121px;
+      }
+    }
+
+    &--fourth {
+      display: flex;
+
+      & .size__weight {
+        width: 200px;
+        height: 202px;
+        margin-left: -4px;
+
+        background-image: url("../../../img/dotted-circle-8-1.svg"), url("../../../img/dotted-circle-8-2.svg"), url("../../../img/dotted-circle-8-3.svg");
+        background-position: center, center, center;
+        background-size: cover, 141px 140px, 96px 96px;
+      }
+    }
+  }
+
+  .size__link {
+    font-size: 16.32px;
+  }
+
+  .size__radius {
+    margin-top: 34px;
+
+    font-size: 18px;
+  }
+
+  .size__amount {
+    font-size: 18px;
+  }
+}

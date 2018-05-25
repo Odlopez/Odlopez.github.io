@@ -87,3 +87,51 @@
     font-size: 10px;
   }
 }
+
+@media @desktop {
+  .order-form {
+    margin-left: -10px;
+  }
+
+  .order-form__inner {
+    margin-right: 75px;
+
+    &:first-of-type {
+      width: 255px;
+    }
+
+    &:nth-of-type(2) {
+      width: 141px;
+    }
+
+    &:last-of-type {
+      width: 255px;
+      margin-right: 0;
+    }
+  }
+
+  .order-form__label {
+    margin-bottom: 17px;
+
+    font-size: 27px;
+  }
+
+  .order-form__input {
+    padding-bottom: 18px;
+    padding-left: 0;
+
+    font-size: 18px;
+    text-align: left;
+
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius: 0;
+  }
+
+  .order-form__submit {
+    margin-top: 24px;
+    padding: 13px 61px;
+
+    font-size: 13px;
+  }
+}
