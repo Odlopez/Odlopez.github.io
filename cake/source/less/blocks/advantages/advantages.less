@@ -177,3 +177,58 @@
     }
   }
 }
+
+@media @desktop {
+  .advantages {
+    margin-bottom: 351px;
+
+    &::before {
+      content: url("../../../img/down-berries-d.png");
+      top: -24px;
+      left: 0;
+    }
+  }
+
+  .advantages__title {
+    margin-right: 15px;
+    margin-bottom: 34px;
+
+    font-size: 40px;
+  }
+
+  .advantages__subtitle {
+    margin-bottom: 116px;
+
+    font-size: 35px;
+  }
+
+  .advantages__list {
+    width: 510px;
+    margin-left: 579px;
+    padding-left: 120px;
+  }
+
+  .advantages__termin {
+    font-size: 20px;
+
+    &:first-of-type::before {
+      top: 11px;
+      right: 120%;
+
+      background: url("../../../img/cereals-big-d.png") no-repeat center;
+    }
+
+    &:last-of-type::before {
+      top: 6px;
+      right: 103%;
+
+      transform: scale(61 / 48);
+    }
+  }
+
+  .advantages__description {
+    margin-bottom: 36px;
+
+    font-size: 20px;
+  }
+}

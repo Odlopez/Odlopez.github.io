@@ -162,3 +162,50 @@
     }
   }
 }
+
+@media @desktop {
+  .info-about {
+    padding-bottom: 256px;
+  }
+
+  .info-about__container {
+    padding-top: 135px;
+    padding-left: @indent-desktop;
+  }
+
+  .info-about__title {
+    margin-bottom: 17px;
+
+    font-size: 40px;
+  }
+
+  .info-about__social {
+    margin-bottom: 245px;
+  }
+
+  .info-about__image {
+    top: 113px;
+    right: 144px;
+  }
+
+  .info-about__quote {
+    width: 674px;
+    margin-left: -1px;
+
+    font-size: 25px;
+    line-height: 37.82px;
+    letter-spacing: 0.01em;
+
+    &::before {
+      top: -43px;
+
+      font-size: 140px;
+    }
+
+    &::after {
+      content: url("../../../img/signature-d.png");
+      right: 39%;
+      bottom: -125px;
+    }
+  }
+}
