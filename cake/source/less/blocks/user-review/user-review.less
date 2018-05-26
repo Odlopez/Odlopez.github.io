@@ -51,16 +51,17 @@
 
 @media @tablet {
   .user-review {
-    padding-left: 135px;
     position: relative;
+
     align-items: flex-start;
     padding-top: 7px;
+    padding-left: 135px;
   }
 
   .user-review__avatar {
     position: absolute;
-    left: 0;
     top: 35px;
+    left: 0;
   }
 
   .user-review__name {
@@ -72,16 +73,55 @@
   }
 
   .user-review__excerpt {
-    text-align: left;
-    padding: 0;
-    font-size: 14px;
     width: 255px;
     margin-top: 12px;
     margin-bottom: 5px;
+    padding: 0;
+
+    font-size: 14px;
+    text-align: left;
   }
 
   .user-review__counter {
     right: 5px;
     bottom: -15px;
+  }
+}
+
+@media @desktop {
+  .user-review {
+    padding-top: 22px;
+    padding-bottom: 39px;
+    padding-left: 292px;
+  }
+
+  .user-review__avatar {
+    top: 26px;
+    left: 30px;
+  }
+
+  .user-review__name {
+    margin-bottom: 5px;
+
+    font-size: 27px;
+  }
+
+  .user-review__data-user {
+    font-size: 20px;
+  }
+
+  .user-review__excerpt {
+    width: 370px;
+    margin-top: 21px;
+
+    font-size: 18.42px;
+    line-height: 1.33;
+  }
+
+  .user-review__counter {
+    right: -11px;
+    bottom: 15px;
+
+    font-size: 18px;
   }
 }
