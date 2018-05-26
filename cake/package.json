@@ -48,6 +48,6 @@
   },
   "dependencies": {
     "gulp-rename": "^1.2.2",
-    "npm": "^5.8.0"
+    "npm": "^5.10.0"
   }
 }
