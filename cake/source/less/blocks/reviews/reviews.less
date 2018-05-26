@@ -36,10 +36,11 @@
 
 @media @tablet {
   .reviews {
+    padding-top: 37px;
+
     background-image: url("../../../img/reviews-bgl-t.png"), url("../../../img//reviews-bgr-t.png");
     background-repeat: no-repeat, no-repeat;
     background-position: left -11px, right -11px;
-    padding-top: 37px;
   }
 
   .reviews__title {
@@ -48,6 +49,7 @@
 
   .reviews__control {
     display: inline-block;
+
     vertical-align: middle;
 
     &--left {
@@ -61,13 +63,41 @@
   }
 
   .reviews__list {
-    width: 414px;
     display: inline-block;
-    vertical-align: middle;
+    width: 414px;
     margin-right: 40px;
+
+    vertical-align: middle;
   }
 
   .reviews__pagination {
     display: none;
+  }
+}
+
+@media @desktop {
+  .reviews {
+    padding-top: 104px;
+
+    background-image: url("../../../img/reviews-bgl-d.png"), url("../../../img//reviews-bgr-d.png");
+    background-position: left 0, right 0;
+  }
+
+  .reviews__list {
+    width: 714px;
+    margin-right: 21px;
+  }
+
+  .reviews__title {
+    margin-bottom: 33px;
+
+    font-size: 40px;
+  }
+
+  .reviews__control {
+    &--left {
+      margin-right: 50px;
+      margin-left: 169px;
+    }
   }
 }
