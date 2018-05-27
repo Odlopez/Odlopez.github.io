@@ -422,6 +422,7 @@ html {
     width: 26px;
     height: 20px;
     margin-left: 26px;
+    font-size: 0;
     background-size: contain;
   }
   .header__navigation {
@@ -441,8 +442,8 @@ html {
 }
 @media (min-width: 1366px) {
   .header {
-    background-color: transparent;
     padding-top: 41px;
+    background-color: transparent;
   }
   .header__container {
     -webkit-box-pack: start;
@@ -464,8 +465,8 @@ html {
     margin-top: 11px;
   }
   .header__tel {
-    margin-right: 0;
     margin-top: 11px;
+    margin-right: 0;
   }
   .header__menu-list {
     position: static;
@@ -1056,6 +1057,7 @@ html {
   display: block;
   width: inherit;
   height: inherit;
+  font-size: 0;
 }
 .filling {
   display: -webkit-box;
@@ -2450,7 +2452,7 @@ html {
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .advantages__termin:first-of-type::before {
-    background-image: url("../img//cereals-big-mobile@2x.png");
+    background: lime;
   }
   .advantages__termin:last-of-type::before {
     background-image: url("../img/gift-big-mobile.png");
