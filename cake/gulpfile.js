@@ -14,6 +14,7 @@ var svgmin = require('gulp-svgmin');
 var minify = require('gulp-csso');
 var rename = require("gulp-rename");
 var imagemin = require('gulp-imagemin');
+var htmlmin = require('gulp-htmlmin');
 
 gulp.task("style", function() {
   gulp.src("source/less/style.less")
@@ -71,10 +72,10 @@ gulp.task('svg-optim', function () {
       .pipe(gulp.dest('source/svgo'));
 });
 
-gulp.task('minify', function() {
-  return gulp.src("build/*.html")
+gulp.task('htmlmin', function() {
+  return gulp.src("source/*.html")
     .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest("build"));
+    .pipe(gulp.dest("."));
 });
 
 gulp.task("images-min", function () {
