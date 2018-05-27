@@ -154,3 +154,19 @@
     }
   }
 }
+
+@media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+  .order {
+    background-image: url("../img/bg-gift-mobile@2x.png");
+    background-size: 320px auto;
+
+    @media @tablet {
+      background-image: url("../img/bg-gift-t@2x.png");
+      background-size: auto 100%;
+    }
+
+    @media @desktop {
+      background-image: url("../img/bg-gift-d@2x.png");
+    }
+  }
+}
