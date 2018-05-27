@@ -1,0 +1,1 @@
+var button=document.querySelector(".header__button"),menu=document.querySelector(".header__navigation");window.addEventListener("resize",function(){1366<window.innerWidth&&menu.classList.remove("js-visible")}),button.addEventListener("click",function(e){e.preventDefault(),window.innerWidth<1366&&menu.classList.toggle("js-visible")});
