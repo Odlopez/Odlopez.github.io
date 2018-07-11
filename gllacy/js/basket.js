@@ -3,8 +3,9 @@
 (function () {
   const LINK_CLASS_NAME = 'basket__link_actual';
   const declinationBoundaries = {
-    FIRST: 1,
-    SECOND: [2, 4]
+    FIRST: [1, 11],
+    SECOND: [2, 4],
+    THIRD: [5, 20]
   };
   const template = document.querySelector('template');
   const basketLink = document.querySelector('.basket__link');
@@ -43,12 +44,14 @@
     var word = ' товар';
     var wordEnding = 'ов';
 
-    if (num % 10 === declinationBoundaries.FIRST) {
-      wordEnding = '';
+    if (num >= declinationBoundaries.THIRD[0] && num <= declinationBoundaries.THIRD[1]) {
+      wordEnding = 'ов';
     } else if (num % 10 >= declinationBoundaries.SECOND[0] && num % 10 <= declinationBoundaries.SECOND[1]) {
       wordEnding = 'a';
+    } else if (num % 10 === declinationBoundaries.FIRST[0] && num !== declinationBoundaries.FIRST[1]) {
+      wordEnding = '';
     }
-
+    
     return num + word + wordEnding;
   };
 
