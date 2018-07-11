@@ -30,7 +30,7 @@
 
   // Удаляет выбранный продукт из корзины
   const deleteProduct = function (product) {
-    for (let i = 0; i < basketArray.length; i++) {
+    for (var i = 0; i < basketArray.length; i++) {
       if (basketArray[i].element === product) {
         basketArray.splice(i, 1);
         break;
@@ -40,8 +40,8 @@
 
   // Склоняет слово "товар"
   const inclinesProduct = function (num) {
-    let word = ' товар';
-    let wordEnding = 'ов';
+    var word = ' товар';
+    var wordEnding = 'ов';
 
     if (num % 10 === declinationBoundaries.FIRST) {
       wordEnding = '';
