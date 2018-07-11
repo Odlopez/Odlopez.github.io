@@ -66,27 +66,7 @@
           </form>
         </div>
         <div class="basket">
-          <a class="basket__link basket__link_actual link-popup" href="#" aria-label="Корзина">2 товара</a>
-          <div class="basket__popup popup"> <!-- Скрытое наполнение корзины -->
-            <ul class="basket__list">
-              <li class="basket__item">
-                <a class="basket__delete-product" href="#">удалить выбранный продукт</a>
-                <span class="basket__image basket__image_first"></span>
-                <p class="basket__product">Пломбир с&nbsp;апельсиновым джемом</p>
-                <p class="basket__unit-price">1,5 кг х <span class="basket__price">200 руб.</span></p>
-                <p class="basket__cost">300 руб.</p>
-              </li>
-              <li class="basket__item">
-                <a class="basket__delete-product" href="#">удалить выбранный продукт</a>
-                <span class="basket__image basket__image_second"></span>
-                <p class="basket__product">Клубничный пломбир с&nbsp;присыпкой из&nbsp;белого шоколада</p>
-                <p class="basket__unit-price">1,5 кг х <span class="basket__price">300 руб.</span></p>
-                <p class="basket__cost">450 руб.</p>
-              </li>
-            </ul>
-            <p class="basket__amount">Итого: <span class="basket__sum">750 руб.</span></p>
-            <a class="basket__submit button" href="#">Оформить заказ</a>
-          </div>
+          <a class="basket__link link-popup" href="#" aria-label="Корзина">Пусто</a>
         </div>
         <div class="header-bottom-wrapper">
           <!-- BREAD-CRUMBS -->
@@ -436,5 +416,23 @@
         </ul>
       </footer>
     </div>
+    <!-- TEMPLATE -->
+    <template>
+      <div class="basket__popup popup"> <!-- Скрытое наполнение корзины -->
+        <ul class="basket__list">
+          <li class="basket__item">
+            <button class="basket__delete-product" href="#">удалить выбранный продукт</button>
+            <span class="basket__image basket__image_first"></span>
+            <p class="basket__product"></p>
+            <p class="basket__unit-price">1,5 кг х <span class="basket__price"></span></p>
+            <p class="basket__cost"></p>
+          </li>
+        </ul>
+        <p class="basket__amount">Итого: <span class="basket__sum"></span></p>
+        <a class="basket__submit button" href="#">Оформить заказ</a>
+      </div>
+    </template>
+    <!-- SCRIPTS -->
+    <script src="js/basket-min.js"></script>
   </body>
 </html>
