@@ -417,7 +417,7 @@
       </footer>
     </div>
     <!-- TEMPLATE -->
-    <template>
+    <div class="template" style="display: none">
       <div class="basket__popup popup"> <!-- Скрытое наполнение корзины -->
         <ul class="basket__list">
           <li class="basket__item">
@@ -431,8 +431,9 @@
         <p class="basket__amount">Итого: <span class="basket__sum"></span></p>
         <a class="basket__submit button" href="#">Оформить заказ</a>
       </div>
-    </template>
+    </div>
     <!-- SCRIPTS -->
+    <script src="js/closest-polyfill.js"></script>
     <script src="js/basket-min.js"></script>
   </body>
 </html>

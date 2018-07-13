@@ -51,7 +51,7 @@
     } else if (num % 10 === declinationBoundaries.FIRST[0] && num !== declinationBoundaries.FIRST[1]) {
       wordEnding = '';
     }
-    
+
     return num + word + wordEnding;
   };
 
