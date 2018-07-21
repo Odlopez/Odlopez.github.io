@@ -37,7 +37,7 @@
   var imageWrap = document.querySelector('.example__image-wrap');
   var imageAfter = document.querySelector('.example__image--after');
   var imageBefore = document.querySelector('.example__image--before');
-  var checkPoint = range.offsetWidth / 3.5;
+  var checkPoint = range.offsetWidth / 3;
 
   // Функция, позволяющая задавать стили по любому селектору. Работает только в хроме.
   var addRules = (function (style) {
