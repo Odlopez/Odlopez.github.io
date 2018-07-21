@@ -1266,7 +1266,7 @@ html {
     position: absolute;
     top: 196px;
     bottom: 0;
-    left: calc(50% + 18px);
+    left: 577px;
     width: 100vw;
     background-color: #eaeaea;
   }
@@ -1443,7 +1443,7 @@ html {
   .example__image-wrap {
     top: 0;
     left: calc(50% + 18px);
-    height: 652px;
+    height: 658px;
   }
 }
 .toggle__label {
@@ -3156,6 +3156,9 @@ html {
   margin-top: 20px;
   margin-bottom: 34px;
 }
+.js-visible-IE {
+
+}
 .js-hidden {
   display: none;
 }
@@ -3166,4 +3169,9 @@ html {
 }
 .js-button-close {
   background-image: url("../img/icon-close.svg");
+}
+.js-slide-right-IE{
+  left: 100%;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
