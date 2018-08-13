@@ -43,6 +43,7 @@ a {
   text-align: center;
 
   background-color: #101410;
+  outline: none;
 
   transition: background-color 0.5s cubic-bezier(.61,.34,.3,.42) 0.2s, color 0.5s cubic-bezier(.09,.96,.3,.42) 0.3s;
 }
@@ -79,7 +80,9 @@ a::after {
 }
 
 a:hover::before,
-a:hover::after {
+a:hover::after,
+a:focus::before,
+a:focus::after {
   width: calc(100% + 5px);
   height: calc(100% + 5px * 2);
 }
