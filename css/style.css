@@ -12,11 +12,22 @@
     font-weight: 700;
 }
 
+html {
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0 auto;
   background-color: #030404;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   min-height: 100vh;
   flex-direction: column;
@@ -27,7 +38,23 @@ img {
   height: auto;
 }
 
-a {
+.header {
+  background-color: #101410;
+  padding: 10px;
+  width: 100%;
+}
+
+.header__title {
+  color: #D16014;
+  font-size: 1rem;
+  font-family: Arial;
+}
+
+.main {
+  padding: 50px 0;
+}
+
+.main__link {
   position: relative;
 
   display: block;
@@ -48,15 +75,15 @@ a {
   transition: background-color 0.5s cubic-bezier(.61,.34,.3,.42) 0.2s, color 0.5s cubic-bezier(.09,.96,.3,.42) 0.3s;
 }
 
-a:hover,
-a:focus {
+.main__link:hover,
+.main__link:focus {
   color: #fff;
 
   background-color: #817274;
 }
 
-a::before,
-a::after {
+.main__link::before,
+.main__link::after {
   content: '';
 
   position: absolute;
@@ -69,39 +96,73 @@ a::after {
   transition: width 0.5s cubic-bezier(0.44, 0.73, 0, 0.97) 0.01s, height 0.5s cubic-bezier(0.44, 0.73, 0, 0.97) 0.35s;
 }
 
-a::before {
+.main__link::before {
   top: -5px;
   left: -5px;
 }
 
-a::after {
+.main__link::after {
   bottom: -5px;
   right: -5px;
 }
 
-a:hover::before,
-a:hover::after,
-a:focus::before,
-a:focus::after {
+.main__link:hover::before,
+.main__link:hover::after,
+.main__link:focus::before,
+.main__link:focus::after {
   width: calc(100% + 5px);
   height: calc(100% + 5px * 2);
 }
 
-a:active {
+.main__link:active {
   opacity: 0.4;
 }
 
-a + a {
+.main__link + .main__link {
   margin-top: 15px;
 }
 
-html {
-  box-sizing: border-box;
-  font-size: 20px;
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: #101410;
+  padding: 10px;
+  width: 100%;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
+.footer__link {
+  display: block;
+  width: 50px;
+  height: 50px;
+  transition: all 0.3s linear;
+  font-size: 0;
 }
+
+.footer__link + .footer__link {
+  margin-left: 15px;
+}
+
+.footer__svg {
+  fill: #D16014;
+}
+
+.footer__link:hover {
+  transform: rotate3d(0, 1, 0, 360deg)
+}
+
+.footer__link:hover .footer__svg--github {
+  fill: #FF6450;
+}
+
+.footer__link:hover .footer__svg--skype {
+  fill: #00AFF0;
+}
+
+.footer__link:hover .footer__svg--codepen {
+  fill: #8FC93A;
+}
+
+
+
+
+/* http://www.iconninja.com/chat-communication-skype-icon-15105 */
