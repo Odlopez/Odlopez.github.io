@@ -1,19 +1,22 @@
 @font-face {
+  font-weight: 400;
   font-family: "Open Sans";
+
   src: url("../fonts/opensans.woff2") format("woff2"),
-    url("../fonts/opensans.woff") format("woff");
-    font-weight: 400;
+  url("../fonts/opensans.woff") format("woff");
 }
 
 @font-face {
+  font-weight: 700;
   font-family: "Open Sans";
+
   src: url("../fonts/opensansbold.woff2") format("woff2"),
-    url("../fonts/opensansbold.woff") format("woff");
-    font-weight: 700;
+  url("../fonts/opensansbold.woff") format("woff");
 }
 
 html {
   box-sizing: border-box;
+
   font-size: 20px;
 }
 
@@ -24,13 +27,14 @@ html {
 }
 
 body {
-  margin: 0 auto;
-  background-color: #030404;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   min-height: 100vh;
-  flex-direction: column;
+  margin: 0 auto;
+
+  background-color: #030404;
 }
 
 img {
@@ -39,15 +43,16 @@ img {
 }
 
 .header {
-  background-color: #101410;
-  padding: 10px;
   width: 100%;
+  padding: 10px;
+
+  background-color: #101410;
 }
 
 .header__title {
-  color: #D16014;
   font-size: 1rem;
   font-family: Arial;
+  color: #d16014;
 }
 
 .main {
@@ -61,26 +66,27 @@ img {
   min-width: 350px;
   padding: 20px;
 
-  text-decoration: none;
-
-  font-family: "Open Sans";
   font-weight: 700;
   font-size: 1.5rem;
-  color: #D16014;
+  font-family: "Open Sans";
   text-align: center;
+  color: #d16014;
+  text-transform: uppercase;
+  text-decoration: none;
 
   background-color: #101410;
   outline: none;
 
-  transition: background-color 0.5s cubic-bezier(.61,.34,.3,.42) 0.2s, color 0.5s cubic-bezier(.09,.96,.3,.42) 0.3s;
+  transition: background-color 0.5s cubic-bezier(0.61,0.34,0.3,0.42) 0.2s, color 0.5s cubic-bezier(0.09,0.96,0.3,0.42) 0.3s;
 }
 
 .main__link:hover,
 .main__link:focus {
-  color: #fff;
+  color: #ffffff;
 
   background-color: #817274;
 }
+
 
 .main__link::before,
 .main__link::after {
@@ -92,7 +98,7 @@ img {
   width: 0;
   height: 5px;
 
-  background-color: #D16014;
+  background-color: #d16014;
   transition: width 0.5s cubic-bezier(0.44, 0.73, 0, 0.97) 0.01s, height 0.5s cubic-bezier(0.44, 0.73, 0, 0.97) 0.35s;
 }
 
@@ -142,8 +148,36 @@ img {
   margin-left: 15px;
 }
 
+.footer__link--codewars {
+  background-color: #d16014;
+  border-radius: 14px;
+}
+
+.footer__link--codewars:hover {
+  background-color: #a22d22;
+}
+
+.footer__link--mail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+  border-radius: 14px;
+  background-color: #d16014;
+}
+
+.footer__link--mail:hover {
+  background-color: #541388;
+}
+
 .footer__svg {
-  fill: #D16014;
+  fill: #d16014;
+}
+
+.footer__svg--mail {
+  width: 35px;
+  height: 35px;
 }
 
 .footer__link:hover {
@@ -151,18 +185,15 @@ img {
 }
 
 .footer__link:hover .footer__svg--github {
-  fill: #FF6450;
+  fill: #034748;
 }
 
 .footer__link:hover .footer__svg--skype {
-  fill: #00AFF0;
+  fill: #00aff0;
 }
 
 .footer__link:hover .footer__svg--codepen {
-  fill: #8FC93A;
+  fill: #8fc93A;
 }
-
-
-
 
 /* http://www.iconninja.com/chat-communication-skype-icon-15105 */
