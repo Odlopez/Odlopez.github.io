@@ -1,121 +1,542 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Личный сайт А.Палкина</title>
+  <link rel="stylesheet" href="css/style-min.css">
+  <title>Palkin</title>
 </head>
 <body>
+  <!-- svg-sprite -->
   <div style="display: none;">
     <svg xmlns="http://www.w3.org/2000/svg">
-      <symbol id="github" viewBox="0 0 520 520">
-        <path d="M374,511.7H138c-76.2,0-138-61.8-138-138v-236c0-76.2,61.8-138,138-138h236c76.2,0,138,61.8,138,138v236  C512,449.9,450.2,511.7,374,511.7z"/>
-        <g>
-          <path d="M364.9,198.6c0.2-11.8-2.4-23.8-4.5-35.6c-0.7-4.1-2.2-8-3.6-11.8c-1.1-2.9-4.3-4.7-7.3-4.1 c-1.9,0.4-3.7,0.8-5.3,1.4c-17.5,5.8-33.8,14.2-49.4,24c-2.1,1.3-5.1,1.8-7.7,1.6c-6.1-0.4-12-1.9-18.1-2.2   c-15-0.7-29.9-0.3-44.8,2.3c-2.1,0.4-4.8,0-6.5-1.1c-17-11-34.7-20.4-54.6-25.7c-3-0.8-6.1-0.4-6.8,0.8c-0.5,0.7-0.9,1.5-1.1,2.3   c-2.2,7.6-4.7,15.1-6,22.8c-1.5,9.2-2.9,18.7-2.2,27.9c0.4,5.8-1.2,9.3-4.3,13.4c-10.6,13.6-15.4,29.3-15.7,46.5   c-0.3,14.7,1.7,29,6.2,43c6.8,21.5,20.1,37.7,40,48.2c16.4,8.6,34.2,12,52.5,12.6c16.5,0.6,32.9,0.1,49.4,0.2   c16.5,0.1,32.8-1.4,48.6-6.5c15.8-5.2,29.5-13.5,40.1-26.5c15.3-18.9,20.1-41.1,21.1-64.7c0.8-18-2.9-34.9-13.5-49.7   C367.2,211.6,364.8,206.5,364.9,198.6z M333.1,336.5c-7.1,6.1-15.7,9-24.6,11.1c-17.4,4.2-35.1,5.2-52.9,4.4   c-17.6,0.8-34.9-0.3-52-4.4c-12.6-3-24.1-8-32.1-18.8c-12.8-17.2-16-50,5.1-67.9c5.4-4.6,11.4-7.5,18.5-7.9   c7.8-0.5,15.6-1.5,23.5-1.4c19.7,0.2,39.4,1.2,59.1,1.4c9,0.1,18.1-2,27-1.5c8.1,0.5,16.7,2,24,5.3c12.3,5.4,18.9,16.5,20.9,29.4   C352.6,305.6,348.6,323.1,333.1,336.5z"
-            fill="#FFFFFF" />
-          <ellipse cx="301" cy="299" fill="#FFFFFF" rx="18.8" ry="25.1" />
-          <ellipse cx="211.3" cy="299" fill="#FFFFFF" rx="18.8" ry="25.1" />
+      <style>
+        #logo-medium {
+          display: none;
+        }
+        #logo-micro {
+          display: none;
+        }
+        @media (max-width: 768px) {
+          #logo-full {
+            display: none;
+          }
+          #logo-medium {
+            display: block;
+          }
+        }
+        @media (max-width: 400px) {
+          #logo-medium {
+            display: none;
+          }
+          #logo-micro {
+            display: block;
+          }
+        }
+      </style>
+      <symbol id="logo-svg" viewbox="0 0 334 64">
+        <g id="logo-full" viewbox="0 0 334 64">
+          <path fill="#609F5E" d="M34.6 17.8v15.4L0 42.3v-9L28.8 26v-1.3L6.9 18.6V9.7l27.7 8.1z"></path>
+          <path fill="#E8524D" d="M53.4 32.4L49.2 52h-9.7l11-52h18.6c2.2 0 4.1.3 5.9 1 1.8.7 3.3 1.7 4.5 2.9 1.2 1.2 2.2 2.7 2.9 4.4.7 1.7 1 3.5 1 5.5 0 2.8-.5 5.3-1.4 7.6-.9 2.3-2.3 4.2-4 5.9-1.7 1.6-3.8 2.9-6.2 3.8-2.4.9-5.1 1.3-8.1 1.3H53.4zm2-9.4h9.1c2.5 0 4.6-.7 6.3-2.2s2.5-3.4 2.5-5.8c0-1.8-.6-3.2-1.7-4.2-1.2-1-2.7-1.4-4.6-1.4h-8.7L55.4 23zM110.5 40.8H93.4L88.6 52H78.2L101 0h18.1l1.3 52h-9.7l-.2-11.2zm-13.2-9.3h13.1L110 4.9h-1.3L97.3 31.5zM126.8 51.1L137.6 0h9.8l-9.1 42.6h22.6V52h-34.2v-.9zM177.1 52h-9.8l11.1-52h9.8l-4.5 21.3h1.8L202.2 0h11.4v.9l-19.7 24.6v1.3l12.5 24.6v.6h-10.8l-10.8-21.3h-3.1L177.1 52zM219.3 0h33.9v9.4h-12l-7.1 33.3h12V52h-33.9v-9.4h12l7.1-33.3h-12V0zM278.6 47.1h1.3l10-47.1h9.4l-11.1 52H270l3.5-47.1h-1.3l-10 47.1h-9.3l11-52h18.3l-3.6 47.1z"></path>
+          <path fill="#F2EFF0" d="M297.2 55.5h36.4V64h-36.4v-8.5z"></path>
         </g>
-      </symbol>
-      <symbol id="skype" viewBox="0 0 520 520">
-        <path d="M374,511.7H138c-76.2,0-138-61.8-138-138v-236c0-76.2,61.8-138,138-138h236c76.2,0,138,61.8,138,138v236  C512,449.9,450.2,511.7,374,511.7z"/>
-        <path d="M357.3,270.4c0.6-4.5,1-9.2,1-13.9c0-56.5-46-102.3-102.8-102.3c-5.6,0-11.2,0.5-16.6,1.3  c-9.7-6.3-21.1-10-33.5-10c-33.9,0-61.4,27.5-61.4,61.4c0,12.3,3.6,23.8,9.9,33.4c-0.8,5.3-1.3,10.6-1.3,16.1  c0,56.5,46,102.3,102.8,102.3c6.4,0,12.7-0.6,18.7-1.7c9.4,5.8,20.5,9.3,32.4,9.3c33.9,0,61.4-27.5,61.4-61.4  C368,292.2,364.1,280.3,357.3,270.4z M265.1,331.9c-32.7,1.7-48-5.5-62-18.7c-15.6-14.7-9.4-31.4,3.4-32.3  c12.7-0.8,20.4,14.4,27.2,18.7c6.8,4.2,32.6,13.9,46.3-1.7c14.9-17-9.9-25.8-28-28.4c-25.9-3.8-58.6-17.8-56-45.5  c2.5-27.6,23.4-41.7,45.4-43.7c28-2.5,46.3,4.2,60.7,16.6c16.7,14.2,7.7,30.1-3,31.4c-10.6,1.3-22.5-23.4-45.8-23.8  c-24.1-0.4-40.3,25-10.6,32.3c29.7,7.2,61.6,10.2,73,37.4C327.1,301.4,297.8,330.2,265.1,331.9z"
-          fill="#FFFFFF"/>
-      </symbol>
-      <symbol id="codepen" viewBox="0 0 520 520">
-        <path d="M374,511.7H138c-76.2,0-138-61.8-138-138v-236c0-76.2,61.8-138,138-138h236c76.2,0,138,61.8,138,138v236  C512,449.9,450.2,511.7,374,511.7z" />
-        <path d="M263.8,141.4c-6.3-4.2-14.6-4.1-20.9,0.3l-93.5,65.2c-5,3.5-8,9.2-8,15.3v70.2c0,6.2,3.1,12.1,8.3,15.5  l95.1,62.9c6.2,4.1,14.3,4.1,20.5,0l97-64.1c5.2-3.4,8.3-9.3,8.3-15.5v-69c0-6.2-3.1-12.1-8.3-15.5L263.8,141.4z M336.2,217.4  l-35.8,24.1l-33.6-24.4l-0.2-48.1L336.2,217.4z M242.2,169v47l-34.4,24.1l-34.4-23L242.2,169z M164,240.3l22.2,14.9L164,270.8V240.3  z M242.8,340.6l-69.4-46.5l34.6-24.2l34.7,23.3V340.6z M229.6,254.8l22.5-15.7l26.2,17.2l-23.2,15.6L229.6,254.8z M267.3,340.6  v-47.5l33.2-22.2l35.7,23.5L267.3,340.6z M346.1,271.6l-23.6-15.5l23.6-15.8V271.6z"
-          fill="#FFFFFF" />
-      </symbol>
-      <symbol id="codewars" viewBox="0 0 256 256">
-          <style type="text/css">
-            .st0 {
-              fill: none;
-              stroke: #ffffff;
-              stroke-width: 6;
-              stroke-linecap: round;
-              stroke-linejoin: round;
-              stroke-miterlimit: 10;
-            }
-          </style>
-        <g>
-          <path class="st0" d="M132.404,226.306c58.114-3.551,101.538-54.579,96.106-108.885C223.207,64.4,173.755,25.96,121.386,29.518   c-53.091,3.606-96.815,49.633-94.368,103.041c4.318,83.454,84.984,95.212,88.478,94.081" />
-          <path class="st0" d="M128.833,124.943c15-28.667,44.333-22.667,56.5-6.833s5.417,46.161-9.333,47.833" />
-          <path class="st0" d="M128.833,124.943c-16.344-27.922,5.503-50.27,25.379-52.185c24.462-2.356,43.287,20.435,37.658,32.591" />
-          <path class="st0" d="M128.833,124.943c-31.316-0.927-41.01-27.526-32.757-48.776C105,53.193,138.5,51.943,147.302,63.85" />
-          <path class="st0" d="M128.833,124.943c-17.967,26.907-49.903,21.476-60.315,4.437S63.75,84.193,83.902,81.6" />
-          <path class="st0" d="M128.833,124.943c13.278,29.504-10.266,53.482-30.234,53.483c-18.849,0.001-39.349-14.233-33.087-35.314" />
-          <path class="st0" d="M128.833,124.943c32.054,4.395,43.132,34.492,32.36,51.305s-39.694,23.861-49.487,10.315" />
+        <g id="logo-medium" viewbox="0 0 248 64">
+          <path fill="#609F5E" d="M34.6 17.8v15.4L0 42.3v-9L28.8 26v-1.3L6.9 18.6V9.7l27.7 8.1z"></path>
+          <path fill="#E8524D" d="M53.4 32.4L49.2 52h-9.7l11-52h18.6c2.2 0 4.1.3 5.9 1 1.8.7 3.3 1.7 4.5 2.9 1.2 1.2 2.2 2.7 2.9 4.4.7 1.7 1 3.5 1 5.5 0 2.8-.5 5.3-1.4 7.6-.9 2.3-2.3 4.2-4 5.9-1.7 1.6-3.8 2.9-6.2 3.8-2.4.9-5.1 1.3-8.1 1.3H53.4zm2-9.4h9.1c2.5 0 4.6-.7 6.3-2.2s2.5-3.4 2.5-5.8c0-1.8-.6-3.2-1.7-4.2-1.2-1-2.7-1.4-4.6-1.4h-8.7L55.4 23zM83.5 51.1L94.3 0h9.8L95 42.6h22.6V52H83.5v-.9zM133.8 52H124l11.1-52h9.8l-4.5 21.3h1.8L158.9 0h11.4v.9l-19.7 24.6v1.3L163 51.5v.5h-10.8l-10.8-21.3h-3.1L133.8 52zM193.3 47.1h1.3l10-47.1h9.4l-11.1 52h-18.3l3.5-47.1h-1.3l-10 47.1h-9.3l11-52h18.3l-3.5 47.1z"></path>
+          <path fill="#F2EFF0" d="M211.9 55.5h36.4V64h-36.4v-8.5z"></path>
         </g>
-      </symbol>
-      <symbol id="mail" viewBox="0 0 512 512">
-          <g>
-              <g>
-                <path d="M255,0C114.06,0,0,114.05,0,255c0,139.895,113.025,257,255,257c140.644,0,257-115.914,257-257C512,112.87,394.743,0,255,0    z M255,482.2C130.935,482.2,29.8,380.168,29.8,255C29.8,130.935,130.935,29.8,255,29.8c125.168,0,227.2,101.135,227.2,225.2    C482.2,380.168,380.168,482.2,255,482.2z" fill="#FFFFFF"/>
-              </g>
-            </g>
-            <g>
-              <g>
-                <path d="M255,90c-90.981,0-165,74.019-165,165c0,91.323,73.867,167,165,167c36.874,0,74.175-12.393,102.339-34.001    c6.573-5.043,7.813-14.459,2.77-21.032c-5.043-6.573-14.46-7.813-21.032-2.77C316.048,381.866,285.403,392.2,255,392.2    c-74.439,0-135-61.658-135-137.2c0-74.439,60.561-135.2,135-135.2c75.542,0,137,60.761,137,135.2v15c0,16.542-13.458,30-30,30    s-30-13.458-30-30c0-7.43,0-67.164,0-75c0-8.284-6.716-15-15-15s-15,6.716-15,15v0.951C288.454,185.622,272.068,180,255,180    c-41.355,0-75,33.645-75,75s33.645,75,75,75c22.423,0,43.059-9.622,57.735-25.812C323.583,319.772,341.615,330,362,330    c33.084,0,60-26.916,60-60v-15C422,163.746,346.21,90,255,90z M255,300.2c-24.813,0-45-20.387-45-45.2s20.187-45.2,45-45.2    c25.477,0,47,20.807,47,45.2S280.477,300.2,255,300.2z" fill="#FFFFFF"/>
-              </g>
-            </g>
+        <g id="logo-micro" viewbox="0 0 115 64">
+          <path fill="#609F5E" d="M34.6 17.8v15.4L0 42.3v-9L28.8 26v-1.3L6.9 18.6V9.7l27.7 8.1z"></path>
+          <path fill="#E8524D" d="M53.4 32.4L49.2 52h-9.7l11-52h18.6c2.2 0 4.1.3 5.9 1 1.8.7 3.3 1.7 4.5 2.9 1.2 1.2 2.2 2.7 2.9 4.4.7 1.7 1 3.5 1 5.5 0 2.8-.5 5.3-1.4 7.6-.9 2.3-2.3 4.2-4 5.9-1.7 1.6-3.8 2.9-6.2 3.8-2.4.9-5.1 1.3-8.1 1.3H53.4zm2-9.4h9.1c2.5 0 4.6-.7 6.3-2.2s2.5-3.4 2.5-5.8c0-1.8-.6-3.2-1.7-4.2-1.2-1-2.7-1.4-4.6-1.4h-8.7L55.4 23z"></path>
+          <path fill="#F2EFF0" d="M78.3 55.5h36.4V64H78.3v-8.5z"></path>
+        </g>
       </symbol>
     </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="download-icon" viewbox="0 0 20 25">
+    <polygon points="5,0 15,0 15,15 20,15 10,25 0,15 5,15 5,0"></polygon>
+</symbol><symbol id="email-icon" viewbox="0 0 612 612">
+<g>
+	<g id="Mail">
+		<g>
+			<path d="M573.75,57.375H38.25C17.136,57.375,0,74.511,0,95.625v420.75c0,21.133,17.136,38.25,38.25,38.25h535.5
+				c21.133,0,38.25-17.117,38.25-38.25V95.625C612,74.511,594.883,57.375,573.75,57.375z M554.625,497.25H57.375V204.657
+				l224.03,187.999c7.134,5.967,15.874,8.97,24.595,8.97c8.74,0,17.461-3.003,24.595-8.97l224.03-187.999V497.25z M554.625,129.763
+				L306,338.379L57.375,129.763V114.75h497.25V129.763z"></path>
+		</g>
+	</g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</symbol><symbol id="github-icon" viewbox="0 0 90 90">
+<g>
+	<path id="Github__x28_alt_x29_" d="M65.709,10.5c1.17,2.657,1.928,7.07,0.797,10.301c4.625,3.949,6.215,13.549,3.982,21.394
+		C77.08,42.698,84.932,41.953,90,43.976c-4.738-0.609-11.209-1.804-17.32-1.388c-1.158,0.079-2.873-0.044-2.789,1.585
+		c7.074,0.555,14.104,1.16,19.912,2.973c-5.761-0.941-12.754-2.375-19.912-2.574c-2.957,5.835-8.908,8.703-17.123,9.307
+		c0.883,1.922,2.574,2.653,2.987,5.744c0.616,4.618-0.964,11.381,0.595,14.459c0.748,1.475,1.967,1.514,2.789,2.775
+		c-2.012,2.381-7-0.268-7.568-2.775c-0.973-4.295,1.482-10.953-1.192-13.865c0.188,4.685-1.108,11.264,0.199,15.449
+		c0.515,1.646,2.002,2.281,1.593,3.766c-9.352,0.949-5.443-12.104-6.972-19.81c-1.411,0.101-0.791,2.113-0.796,2.972
+		c-0.04,7.524,1.54,17.844-6.57,16.838c-0.237-1.582,1.088-2.119,1.593-3.563c1.479-4.233-0.277-10.542,0.401-15.651
+		c-3.095,2.334,0.325,10.48-1.593,14.657c-1.105,2.404-4.666,3.45-7.367,2.377c0.352-1.79,2.2-1.501,2.984-3.169
+		c1.096-2.324,0.008-5.674,0.399-9.111c-5.729,1.144-10.173-0.166-12.348-3.764c-0.973-1.615-1.214-3.52-2.39-4.951
+		c-1.17-1.432-3.04-1.625-3.582-3.563c7.095-1.708,7.367,7.302,13.739,7.524c1.954,0.071,2.97-0.563,4.778-0.988
+		c0.506-2.272,1.589-3.967,3.186-5.153c-7.929-1.085-14.477-3.554-17.522-9.504c-7.208,0.354-13.804,1.317-19.913,2.771
+		c5.545-2.014,12.384-2.736,19.715-2.973c-0.432-2.596-4.219-1.882-6.57-1.782C8.973,42.781,3.473,43.324,0,43.976
+		c5.034-1.795,12.098-1.571,18.918-1.585c-2.086-6.54-1.363-16.929,3.186-20.798C20.815,18.344,21.215,13.03,22.9,10.5
+		c5.079,0.228,8.159,2.443,11.35,4.557c3.957-1.125,8.118-1.685,13.54-1.387c2.28,0.126,4.651,1.151,6.369,0.989
+		c1.685-0.158,3.542-2.049,5.178-2.771C61.468,10.947,63.271,10.588,65.709,10.5z"></path>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</symbol><symbol id="paused-icon" viewbox="0 0 20 20">
+<style type="text/css">
+	.st0{stroke-miterlimit:10;}
+</style>
+  <rect x="3.2" y="2.8" class="st0" width="4.8" height="14.2"></rect>
+  <rect x="12" y="2.8" class="st0" width="4.8" height="14.2"></rect>
+</symbol><symbol id="play-icon" viewbox="0 0 20 20">
+<style type="text/css">
+	.st0{stroke-miterlimit:10;}
+</style>
+<path class="st0" d="M3.9,0.9"></path>
+<polygon class="st1" points="0,0 0,20 20,10 "></polygon>
+<path class="st0" d="M23.6,8.2"></path>
+</symbol><symbol id="skype-icon" viewbox="0 0 24.08 24.08">
+  <g>
+    <path d="M23.029,13.494c0.34,0.481,0.599,1.003,0.78,1.575c0.18,0.57,0.271,1.16,0.271,1.771c0,0.875-0.177,1.697-0.527,2.467
+      c-0.351,0.768-0.834,1.445-1.45,2.033c-0.616,0.582-1.333,1.039-2.157,1.371s-1.691,0.495-2.613,0.495
+      c-1.313,0-2.491-0.31-3.536-0.929c-0.29,0.04-0.582,0.069-0.877,0.091c-0.296,0.02-0.589,0.028-0.882,0.028
+      c-1.534,0-2.974-0.275-4.321-0.823c-1.344-0.551-2.521-1.299-3.535-2.252c-1.011-0.949-1.808-2.068-2.382-3.349
+      c-0.579-1.281-0.868-2.65-0.868-4.105c0-0.282,0.014-0.55,0.044-0.798c0.027-0.248,0.064-0.501,0.102-0.754
+      C0.358,9.316,0,8.243,0,7.092c0-0.856,0.177-1.665,0.528-2.426c0.35-0.76,0.83-1.421,1.446-1.982C2.59,2.122,3.311,1.68,4.13,1.356
+      c0.821-0.324,1.692-0.482,2.614-0.482c0.664,0,1.287,0.078,1.879,0.237c0.592,0.161,1.146,0.385,1.657,0.678
+      c0.289-0.041,0.585-0.07,0.877-0.093c0.296-0.018,0.592-0.029,0.881-0.029c1.539,0,2.984,0.268,4.335,0.801
+      c1.348,0.529,2.528,1.262,3.542,2.192c1.014,0.934,1.813,2.015,2.393,3.245c0.578,1.232,0.867,2.554,0.867,3.962
+      C23.176,12.386,23.128,12.929,23.029,13.494z M17.333,16.696c0.474-0.624,0.708-1.357,0.708-2.199c0-0.663-0.132-1.22-0.392-1.672
+      c-0.271-0.45-0.653-0.827-1.146-1.128c-0.453-0.292-1.042-0.551-1.763-0.783c-0.725-0.182-1.494-0.36-2.307-0.542l-0.891-0.203
+      c-0.239-0.051-0.429-0.094-0.572-0.133c-0.159-0.039-0.306-0.082-0.446-0.133c-0.132-0.047-0.272-0.102-0.412-0.162
+      C9.84,9.627,9.612,9.472,9.431,9.29c-0.14-0.157-0.21-0.368-0.21-0.63c0-0.383,0.228-0.725,0.681-1.028
+      c0.513-0.283,1.14-0.419,1.885-0.41c0.861,0,1.466,0.127,1.807,0.382c0.412,0.302,0.735,0.674,0.966,1.113
+      c0.201,0.322,0.405,0.562,0.616,0.72c0.201,0.154,0.48,0.237,0.831,0.248c0.395,0,0.722-0.131,0.997-0.395
+      c0.269-0.246,0.398-0.523,0.391-0.835c0-0.361-0.102-0.716-0.302-1.058c-0.198-0.321-0.531-0.663-0.99-1.026
+      c-0.232-0.156-0.487-0.299-0.762-0.43c-0.276-0.132-0.586-0.248-0.923-0.346c-0.353-0.096-0.724-0.17-1.115-0.22
+      c-0.392-0.049-0.82-0.072-1.294-0.072c-1.194,0-2.201,0.146-3.021,0.438c-0.881,0.304-1.548,0.722-2,1.264
+      C6.536,7.521,6.31,8.141,6.31,8.865c0,0.762,0.219,1.382,0.651,1.86c0.435,0.517,1.024,0.908,1.769,1.173
+      c0.708,0.283,1.613,0.531,2.723,0.745c0.415,0.098,0.778,0.181,1.099,0.244c0.316,0.062,0.603,0.133,0.854,0.21
+      c0.473,0.129,0.857,0.345,1.15,0.652c0.313,0.266,0.47,0.608,0.47,1.03c0,0.583-0.286,1.055-0.851,1.415
+      c-0.534,0.369-1.256,0.551-2.165,0.538c-0.728,0-1.255-0.084-1.589-0.254c-0.415-0.189-0.721-0.429-0.922-0.715
+      c-0.255-0.326-0.459-0.688-0.623-1.079c-0.143-0.371-0.336-0.651-0.588-0.84c-0.235-0.191-0.51-0.286-0.833-0.286
+      c-0.412,0-0.752,0.115-1.021,0.341c-0.269,0.257-0.398,0.558-0.392,0.896c0,0.589,0.218,1.178,0.65,1.768
+      c0.429,0.607,0.98,1.081,1.651,1.422c0.983,0.508,2.218,0.765,3.702,0.775c1.211,0,2.29-0.18,3.229-0.539
+      C16.196,17.812,16.884,17.305,17.333,16.696z"></path>
+	</g>
+</symbol><symbol id="volume-icon" viewbox="0 0 20 20">
+<style type="text/css">
+	.st0{stroke-miterlimit:10;}
+</style>
+<polygon class="st0" points="7.8,15.3 7.8,6 17.8,0.8 17.8,19.3 "></polygon>
+<rect x="2.5" y="6" class="st0" width="3.3" height="9.2"></rect>
+</symbol></svg>
   </div>
+  <!--end svg-sprite -->
+
   <!-- HEADER -->
   <header class="header">
-    <h1 class="header__title">Личный сайт А.Палкина</h1>
-  </header>
-  <!--end HEADER -->
-
-  <!-- MAIN -->
-  <main class="main">
-    <div class="main__container">
-        <a class="main__link" href="http://odlopez.tk/gllacy" target="_blank">GLLACY</a>
-        <a class="main__link" href="http://odlopez.tk/cat" target="_blank">CAT</a>
-        <a class="main__link" href="http://odlopez.tk/memory" target="_blank">MEMORY</a>
-        <a class="main__link" href="http://odlopez.tk/chulakov-test" target="_blank">CHULAKOV-TEST</a>
-        <a class="main__link" href="http://odlopez.tk/test" target="_blank">ANIMATION</a>
-        <a class="main__link" href="http://odlopez.tk/keksobooking" target="_blank">keksobooking</a>
+    <div class="header__overlay"></div>
+    <div class="container header__container">
+      <a class="header__logo-link">
+        <svg class="header__svg" width="150" height="50">
+          <use xlink:href="#logo-svg"></use>
+        </svg>
+      </a>
+      <nav class="header__navigation main-menu">
+        <ul class="main-menu__list">
+          <li class="main-menu__item">
+            <a class="main-menu__link link" href="#about-me">Обо мне</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link link" href="#about-you">О вас</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link link" href="#portfolio">Портфолио</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link link" href="#music">Хобби</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link link" href="#footer">Контакты</a>
+          </li>
+        </ul>
+        <button class="main-menu__button" type="button"></button>
+      </nav>
     </div>
-  </main>
-  <!--end MAIN -->
-  
+  </header>
+    <!--end HEADER -->
+
+  <div class="container">
+    <!-- MAIN -->
+    <main class="main">
+      <h1 class="title main__title">Heading 1</h1>
+      <!-- ABOUT-ME -->
+      <section class="about-me" id="about-me">
+        <h2 class="title about-me__title">Немного обо мне</h2>
+        <p class="about-me__text">
+          Привет, меня зовут Александр. И я люблю frontend.
+        </p>
+        <p class="about-me__text">
+          Живу в г. Донецк, но готов к смене дислокации, если будет интересно.
+        </p>
+        <p class="about-me__text">
+          Имею опыт в руководящей должности, так что отлично знаю, чего руководитель ждет от работника.
+        </p>
+        <p class="about-me__text">
+          В текущий момент времени я работаю верстальщиком в&nbsp;<a class="link" href="https://liga-a.ru/" target="_blank">Лиге&#8209;А</a>
+        </p>
+        <h4 class="title about-me__subtitle">В работе использую:</h4>
+        <ul class="about-me__list">
+          <li class="about-me__item">HTML5</li>
+          <li class="about-me__item">CSS3</li>
+          <li class="about-me__item">Gulp</li>
+          <li class="about-me__item">SASS/SCSS/LESS</li>
+          <li class="about-me__item">JavaScript</li>
+          <li class="about-me__item">Canvas</li>
+          <li class="about-me__item">SVG</li>
+          <li class="about-me__item">AJAX</li>
+          <li class="about-me__item">БЭМ</li>
+          <li class="about-me__item">Адаптивная верстка</li>
+          <li class="about-me__item">Резиновая верстка</li>
+          <li class="about-me__item">Валидная и семантичная верстка</li>
+          <li class="about-me__item">CSS-анимации</li>
+          <li class="about-me__item">JS-анимации</li>
+          <li class="about-me__item">Mobile/desktop first</li>
+          <li class="about-me__item">немного PHP</li>
+        </ul>
+        <p class="about-me__text">
+          Портфолио немного
+          <a class="about-me__link link" href="#portfolio">
+            ниже <span class="about-me__arrow">&#8595;</span>
+          </a>
+        </p>
+      </section>
+      <!--end ABOUT-ME -->
+
+      <!-- ABOUT-YOU -->
+      <section class="about-you" id="about-you">
+        <h2 class="title about-you__title">Немного о вас</h2>
+        <p class="about-you__text">
+          Выберите наиболее предпочтительные для вас параметры трудовой деятельности:
+        </p>
+        <div class="about-you__switch-inner">
+          <input class="about-you__input" type="checkbox" id="in1">
+          <label class="about-you__toggle" for="in1">Быстро</label>
+
+          <input class="about-you__input" type="checkbox" id="in2">
+          <label class="about-you__toggle" for="in2">Качественно</label>
+
+          <input class="about-you__input" type="checkbox" id="in3">
+          <label class="about-you__toggle" for="in3">Дешево</label>
+        </div>
+      </section>
+      <!-- ABOUT-YOU -->
+
+      <!-- PORTFOLIO -->
+      <section class="portfolio" id="portfolio">
+        <h2 class="title portfolio__title">Портфолио</h2>
+        <!-- gllacy -->
+        <div class="portfolio__card card">
+          <p class="card__title">
+            <a class="link" href="http://odlopez.tk/gllacy/" target="_blank">Учебный проект Gllacy</a>
+          </p>
+          <div class="card__text">
+            <div class="card__copy-wrap">
+              <p class="card__copy">
+                Интернет-магазин по продаже мороженого
+              </p>
+            </div>
+            <div class="card__button-wrap">
+              <button class="card__text-button link" type="button">Читать далее...</button>
+            </div>
+          </div>
+          <p class="card__tags">
+            <span class="card__tag card__tag--html">#HTML</span>
+            <span class="card__tag card__tag--css">#CSS</span>
+            <span class="card__tag card__tag--sass">#LESS</span>
+            <span class="card__tag card__tag--resp">#Responsive</span>
+            <span class="card__tag card__tag--js">#JavaScript</span>
+          </p>
+          <a class="card__button button" href="https://github.com/Odlopez/615813-gllacy" target="_blank"><span class="button__icon"></span>Проект на GitHub</a>
+        </div>
+        <!--end gllacy -->
+
+        <!-- cat -->
+        <div class="portfolio__card card">
+          <p class="card__title">
+            <a class="link" href="http://odlopez.tk/cat/" target="_blank">Учебный проект Cat-Energy</a>
+          </p>
+          <div class="card__text">
+            <div class="card__copy-wrap">
+              <p class="card__copy">
+                Адаптивный сайт интернет-магазина по продаже корма для котов
+              </p>
+            </div>
+            <div class="card__button-wrap">
+              <button class="card__text-button link" type="button">Читать далее...</button>
+            </div>
+          </div>
+          <p class="card__tags">
+            <span class="card__tag card__tag--html">#HTML</span>
+            <span class="card__tag card__tag--css">#CSS</span>
+            <span class="card__tag card__tag--sass">#LESS</span>
+            <span class="card__tag card__tag--adpt">#Adaptive</span>
+            <span class="card__tag card__tag--resp">#Responsive</span>
+            <span class="card__tag card__tag--js">#JavaScript</span>
+          </p>
+          <a class="card__button button" href="https://github.com/Odlopez/615813-cat-energy" target="_blank"><span class="button__icon"></span>Проект на GitHub</a>
+        </div>
+        <!--end cat -->
+
+        <!-- memory -->
+        <div class="portfolio__card card">
+          <p class="card__title">
+            <a class="link" href="http://odlopez.tk/memory/" target="_blank">Карточная игра Memory</a>
+          </p>
+          <div class="card__text">
+            <div class="card__copy-wrap">
+              <p class="card__copy">
+                Симпатичная игра для детей и взрослых, помогающая развлечся и развить память
+              </p>
+            </div>
+            <div class="card__button-wrap">
+              <button class="card__text-button link" type="button">Читать далее...</button>
+            </div>
+          </div>
+          <p class="card__tags">
+            <span class="card__tag card__tag--html">#HTML</span>
+            <span class="card__tag card__tag--css">#CSS</span>
+            <span class="card__tag card__tag--sass">#LESS</span>
+            <span class="card__tag card__tag--resp">#Responsive</span>
+            <span class="card__tag card__tag--js">#JavaScript</span>
+          </p>
+          <a class="card__button button" href="https://github.com/Odlopez/memory" target="_blank"><span class="button__icon"></span>Проект на GitHub</a>
+        </div>
+        <!--end memory -->
+
+        <!-- chulakov -->
+        <div class="portfolio__card card">
+          <p class="card__title">
+            <a class="link" href="http://odlopez.tk/chulakov-test/" target="_blank">Проект по тестовому заданию</a>
+          </p>
+          <div class="card__text">
+            <div class="card__copy-wrap">
+              <p class="card__copy">
+                Задание предполагало верстку сайта по макету, а так же разработку адаптивноси на усмотрение исполнителя и js-валидацию формы.
+              </p>
+              <p class="card__copy">
+                Дополнительно был реализован простой графический редактор, работающий по следующему принципу:
+              </p>
+              <p class="card__copy">
+                - при нажатии на холст, в месте клика появляется точка, которая соединена линиями с двумя предыдущими точками.
+              </p>
+            </div>
+            <div class="card__button-wrap">
+              <button class="card__text-button link" type="button">Читать далее...</button>
+            </div>
+          </div>
+          <p class="card__tags">
+            <span class="card__tag card__tag--html">#HTML</span>
+            <span class="card__tag card__tag--css">#CSS</span>
+            <span class="card__tag card__tag--sass">#LESS</span>
+            <span class="card__tag card__tag--adpt">#Adaptive</span>
+            <span class="card__tag card__tag--resp">#Responsive</span>
+            <span class="card__tag card__tag--js">#JavaScript</span>
+            <span class="card__tag">#Canvas</span>
+          </p>
+          <a class="card__button button" href="https://github.com/Odlopez/chulakov-test" target="_blank"><span class="button__icon"></span>Проект на GitHub</a>
+        </div>
+        <!--end chulakov -->
+
+        <!-- animation -->
+        <div class="portfolio__card card">
+          <p class="card__title">
+            <a class="link" href="http://odlopez.tk/test/" target="_blank">Анимация (тестовое задание)</a>
+          </p>
+          <div class="card__text">
+            <div class="card__copy-wrap">
+              <p class="card__copy">
+                Лендинг со сложной css-анимацией
+              </p>
+            </div>
+            <div class="card__button-wrap">
+              <button class="card__text-button link" type="button">Читать далее...</button>
+            </div>
+          </div>
+          <p class="card__tags">
+            <span class="card__tag card__tag--html">#HTML</span>
+            <span class="card__tag card__tag--css">#CSS</span>
+            <span class="card__tag card__tag--sass">#LESS</span>
+            <span class="card__tag card__tag--js">#JavaScript</span>
+            <span class="card__tag">#SVG</span>
+          </p>
+          <a class="card__button button" href="https://github.com/Odlopez/test" target="_blank"><span class="button__icon"></span>Проект на GitHub</a>
+        </div>
+        <!--end animation -->
+
+        <!-- keksobooking -->
+        <div class="portfolio__card card">
+          <p class="card__title">
+            <a class="link" href="http://odlopez.tk/keksobooking/" target="_blank">Учебный проект Keksobooking</a>
+          </p>
+          <div class="card__text">
+            <div class="card__copy-wrap">
+              <p class="card__copy">
+                Кексобукинг — сервис размещения объявлений о сдаче в аренду недвижимости в центре Токио. Пользователям предоставляется возможность размещать объявления о своей недвижимости или просматривать уже размещённые объявления.
+              </p>
+            </div>
+            <div class="card__button-wrap">
+              <button class="card__text-button link" type="button">Читать далее...</button>
+            </div>
+          </div>
+          <p class="card__tags">
+            <span class="card__tag card__tag--html">#HTML</span>
+            <span class="card__tag card__tag--css">#CSS</span>
+            <span class="card__tag card__tag--js">#JavaScript</span>
+            <span class="card__tag">#AJAX</span>
+          </p>
+          <a class="card__button button" href="https://github.com/Odlopez/keksobooking" target="_blank"><span class="button__icon"></span>Проект на GitHub</a>
+        </div>
+        <!--end keksobooking -->
+      </section>
+      <!--end PORTFOLIO -->
+
+      <!-- MUSIC -->
+      <section class="music" id="music">
+        <h2 class="music__title title">Музыкальная пауза</h2>
+        <p class="music__text">
+          В отрочестве я увлекался музыкой. Можно послушать. Но лучше не надо.)
+        </p>
+        <div class="music__inner">
+          <audio class="music__audio" data-play="" controls="" volume="0.5">
+            <source src="audios/Питер.ogg" type="audio/ogg">
+            <source src="audios/Питер.mp3" type="audio/mp3">
+            Ваш браузер не поддерживает тег audio!
+          </audio>
+          <audio class="music__audio" data-play="" controls="" volume="0.5">
+            <source src="audios/Славянин.ogg" type="audio/ogg">
+            <source src="audios/Славянин.mp3" type="audio/mp3">
+            Ваш браузер не поддерживает тег audio!
+          </audio>
+          <audio class="music__audio" data-play="" controls="" volume="0.5">
+            <source src="audios/8-марта.ogg" type="audio/ogg">
+            <source src="audios/8-марта.mp3" type="audio/mp3">
+            Ваш браузер не поддерживает тег audio!
+          </audio>
+        </div>
+      </section>
+      <!--end MUSIC -->
+    </main>
+    <!--end MAIN -->
+  </div>
+
   <!-- FOOTER -->
-  <footer class="footer">
-    <a class="footer__link" href="https://github.com/Odlopez" target="_blank" title="github">
-      Github
-      <svg class="footer__svg footer__svg--github" width="50" height="50">
-        <use xlink:href="#github"></use>
-      </svg>
-    </a>
-    <a class="footer__link" href="skype:odlopex" target="_blank" title="odlopex">
-      Skype: odlopex
-      <svg class="footer__svg footer__svg--skype" width="50" height="50">
-        <use xlink:href="#skype"></use>
-      </svg>
-    </a>
-    <a class="footer__link" href="https://codepen.io/Odlopez/" target="_blank" title="codepen">
-      Codepen
-      <svg class="footer__svg footer__svg--codepen" width="50" height="50">
-        <use xlink:href="#codepen"></use>
-      </svg>
-    </a>
-    <a class="footer__link footer__link--codewars" href="https://www.codewars.com/users/Odlopez" target="_blank" title="codewars">
-      Codewars
-      <svg class="footer__svg footer__svg--codewars" width="50" height="50">
-        <use xlink:href="#codewars"></use>
-      </svg>
-    </a>
-    <a class="footer__link footer__link--mail" href="mailto:odlopez1@yandex.ru" title="odlopez1@yandex.ru">
-      Email
-      <svg class="footer__svg footer__svg--mail" width="50" height="50">
-        <use xlink:href="#mail"></use>
-      </svg>
-    </a>
+  <footer class="footer" id="footer">
+    <div class="container footer__container">
+      <h2 class="footer__title title">Контакты:</h2>
+      <a class="footer__logo-link">
+        <svg width="150" height="50">
+          <use xlink:href="#logo-svg"></use>
+        </svg>
+      </a>
+      <div class="footer__contacts-inner">
+        <a class="footer__contacts link" href="mailto:odlopez1@yandex.ru" target="_blank">
+          odlopez1@yandex.ru
+          <svg class="footer__svg" width="40" height="40">
+            <use xlink:href="#email-icon"></use>
+          </svg>
+        </a>
+        <a class="footer__contacts link" href="skype:odlopex" target="_blank">
+          Skype
+          <svg class="footer__svg" width="40" height="40">
+            <use xlink:href="#skype-icon"></use>
+          </svg>
+        </a>
+        <a class="footer__contacts link" href="https://github.com/Odlopez" target="_blank">
+          Github
+          <svg class="footer__svg" width="40" height="40">
+            <use xlink:href="#github-icon"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
   </footer>
   <!--end FOOTER -->
+
+
+  <!-- SCRIPTS -->
+  <script src="js/polifill.js"></script>
+  <script src="js/download.js"></script>
+  <script src="js/text-hidden.js"></script>
+  <script src="js/toggle.js"></script>
+  <script src="js/animate.js"></script>
+  <script src="js/code.js"></script>
+  <script src="js/slipping.js"></script>
+  <script src="js/mobile-menu.js"></script>
+  <script src="js/music.js"></script>
+  <!-- SCRIPTS -->
 </body>
 </html>
