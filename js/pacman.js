@@ -56,19 +56,21 @@
       // очищаем полотно
       clearCanvas(ctx);
 
+      var startX = getCoordX(radius, progress);
+
       // отрисовываем круг
       ctx.beginPath();
       ctx.fillStyle = PACMAN_COLOR;
-      ctx.arc(getCoordX(radius, progress), radius, radius, 0, Math.PI * 2);
+      ctx.arc(startX, radius, radius, 0, Math.PI * 2);
       ctx.fill();
       ctx.closePath();
 
       // открисовываем треугольник
       ctx.beginPath();
       ctx.fillStyle = BACKGROUND_COLOR;
-      ctx.moveTo(getCoordX(radius, progress), radius);
-      ctx.lineTo(getCoordX(radius, progress) + radius + MARGIN, radius - (radius * Math.sin(Math.PI * eatingIntensity * progress)));
-      ctx.lineTo(getCoordX(radius, progress) + radius + MARGIN, radius + (radius * Math.sin(Math.PI * eatingIntensity * progress)));
+      ctx.moveTo(startX, radius);
+      ctx.lineTo(startX + radius + MARGIN, radius - (radius * Math.sin(Math.PI * eatingIntensity * progress)));
+      ctx.lineTo(startX + radius + MARGIN, radius + (radius * Math.sin(Math.PI * eatingIntensity * progress)));
       ctx.fill();
       ctx.closePath();
     }
@@ -108,5 +110,7 @@
   };
 
   createCanvas();
-  startAnimatePacman();
+  setTimeout(function () {
+    startAnimatePacman();
+  }, getRandomNumber(REPEAT_DURATION[1], REPEAT_DURATION[0]));
 })();
